@@ -130,29 +130,36 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_CHUNK_SIZE"></a><span class="summary-name">_CHUNK_SIZE</span> = <code title="16384">16384</code>
+        <a name="_CHUNK_SIZE"></a><span class="summary-name">_CHUNK_SIZE</span> = <code title="16* 1024">16* 1024</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords-module.html#_SERVICE_MAP" class="summary-name" onclick="show_private();">_SERVICE_MAP</a> = <code title="{'v201402': {'AdGroupAdService': 'cm',
-             'AdGroupBidModifierService': 'cm',
-             'AdGroupCriterionService': 'cm',
-             'AdGroupFeedService': 'cm',
-             'AdGroupService': 'cm',
-             'AdParamService': 'cm',
-             'AdwordsUserListService': 'rm',
-             'AlertService': 'mcm',
-..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">v201402</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">AdGroupAdService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">AdGroup</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords-module.html#_SERVICE_MAP" class="summary-name" onclick="show_private();">_SERVICE_MAP</a> = <code title="{'v201402': {'AdGroupAdService': 'cm', 'AdGroupBidModifierService': 'c\
+m', 'AdGroupCriterionService': 'cm', 'AdGroupFeedService': 'cm', 'AdGr\
+oupService': 'cm', 'AdParamService': 'cm', 'AdwordsUserListService': '\
+rm', 'AlertService': 'mcm', 'BiddingStrategyService': 'cm', 'BudgetOrd\
+erService': 'billing', 'BudgetService': 'cm', 'CampaignAdExtensionServ\
+ice': 'cm', 'CampaignCriterionService': 'cm', 'CampaignFeedService': '\
+cm', 'CampaignService': 'cm', 'ConstantDataService': 'cm', 'Conversion\
+TrackerService': 'cm', 'CustomerFeedService': 'cm', 'CustomerService':\
+...">{'v201402': {'AdGroupAdService': 'cm', 'AdGroup<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
-<tr>
+<tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'googleads'"><code class="variable-quote">'</code><code class="variable-string">googleads</code><code class="variable-quote">'</code></code>
+        <a name="_DEFAULT_ENDPOINT"></a><span class="summary-name">_DEFAULT_ENDPOINT</span> = <code title="'https://adwords.google.com'">'https://adwords.google.com'</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_FINAL_RETURN_MONEY_IN_MICROS_VERSION"></a><span class="summary-name">_FINAL_RETURN_MONEY_IN_MICROS_VERSION</span> = <code title="'v201402'">'v201402'</code>
     </td>
   </tr>
 </table>
@@ -186,14 +193,14 @@
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">v201402</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">AdGroupAdService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-             <code class="variable-quote">'</code><code class="variable-string">AdGroupBidModifierService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-             <code class="variable-quote">'</code><code class="variable-string">AdGroupCriterionService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-             <code class="variable-quote">'</code><code class="variable-string">AdGroupFeedService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-             <code class="variable-quote">'</code><code class="variable-string">AdGroupService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-             <code class="variable-quote">'</code><code class="variable-string">AdParamService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-             <code class="variable-quote">'</code><code class="variable-string">AdwordsUserListService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">rm</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-             <code class="variable-quote">'</code><code class="variable-string">AlertService</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">mcm</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+{'v201402': {'AdGroupAdService': 'cm', 'AdGroupBidModifierService': 'c<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+m', 'AdGroupCriterionService': 'cm', 'AdGroupFeedService': 'cm', 'AdGr<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+oupService': 'cm', 'AdParamService': 'cm', 'AdwordsUserListService': '<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+rm', 'AlertService': 'mcm', 'BiddingStrategyService': 'cm', 'BudgetOrd<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+erService': 'billing', 'BudgetService': 'cm', 'CampaignAdExtensionServ<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+ice': 'cm', 'CampaignCriterionService': 'cm', 'CampaignFeedService': '<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+cm', 'CampaignService': 'cm', 'ConstantDataService': 'cm', 'Conversion<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+TrackerService': 'cm', 'CustomerFeedService': 'cm', 'CustomerService':<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 <code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
@@ -232,7 +239,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri May  9 11:35:53 2014
+    Generated by Epydoc 3.0.1 on Wed Sep  3 16:28:12 2014
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

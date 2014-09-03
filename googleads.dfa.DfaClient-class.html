@@ -111,7 +111,8 @@ Attributes:
         <span class="summary-sig-arg">username</span>,
         <span class="summary-sig-arg">oauth2_client</span>,
         <span class="summary-sig-arg">application_name</span>,
-        <span class="summary-sig-arg">https_proxy</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">https_proxy</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cache</span>=<span class="summary-sig-default">NoCache()</span>)</span><br />
       Initializes a DfaClient.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfa-pysrc.html#DfaClient.__init__">source&nbsp;code</a></span>
@@ -130,8 +131,8 @@ Attributes:
         <tr>
           <td><span class="summary-sig"><a href="googleads.dfa.DfaClient-class.html#GetService" class="summary-sig-name">GetService</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">service_name</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v1.20</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">https://advertisersapi.doubleclick.com</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">'https://advertisersapi.doubleclick.com'</span>)</span><br />
       Creates a service client for the given service.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfa-pysrc.html#DfaClient.GetService">source&nbsp;code</a></span>
@@ -185,7 +186,7 @@ Attributes:
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.dfa.DfaClient-class.html#LoadFromStorage" class="summary-sig-name">LoadFromStorage</a>(<span class="summary-sig-arg">cls</span>,
-        <span class="summary-sig-arg">path</span>=<span class="summary-sig-default">os.path.join(os.path.expanduser('~'), 'googleads.yaml')</span>)</span><br />
+        <span class="summary-sig-arg">path</span>=<span class="summary-sig-default">None</span>)</span><br />
       Creates an DfaClient with information stored in a yaml file.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfa-pysrc.html#DfaClient.LoadFromStorage">source&nbsp;code</a></span>
@@ -218,43 +219,42 @@ Attributes:
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_YAML_KEY"></a><span class="summary-name">_YAML_KEY</span> = <code title="'dfa'"><code class="variable-quote">'</code><code class="variable-string">dfa</code><code class="variable-quote">'</code></code>
+        <a name="_YAML_KEY"></a><span class="summary-name">_YAML_KEY</span> = <code title="'dfa'">'dfa'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_REQUIRED_INIT_VALUES"></a><span class="summary-name">_REQUIRED_INIT_VALUES</span> = <code title="('application_name', 'username')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">application_name</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">username</code><code class="variable-quote">'</code><code class="variable-group">)</code></code>
+        <a name="_REQUIRED_INIT_VALUES"></a><span class="summary-name">_REQUIRED_INIT_VALUES</span> = <code title="'application_name', 'username'">'application_name', 'username'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_OPTIONAL_INIT_VALUES"></a><span class="summary-name">_OPTIONAL_INIT_VALUES</span> = <code title="('https_proxy')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">https_proxy</code><code class="variable-quote">'</code><code class="variable-group">)</code></code>
+        <a name="_OPTIONAL_INIT_VALUES"></a><span class="summary-name">_OPTIONAL_INIT_VALUES</span> = <code title="'https_proxy',">'https_proxy',</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_SOAP_SERVICE_FORMAT"></a><span class="summary-name">_SOAP_SERVICE_FORMAT</span> = <code title="'%s/%s/api/dfa-api/%s?wsdl'"><code class="variable-quote">'</code><code class="variable-string">%s/%s/api/dfa-api/%s?wsdl</code><code class="variable-quote">'</code></code>
+        <a name="_SOAP_SERVICE_FORMAT"></a><span class="summary-name">_SOAP_SERVICE_FORMAT</span> = <code title="'%s/%s/api/dfa-api/%s?wsdl'">'%s/%s/api/dfa-api/%s?wsdl'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.dfa.DfaClient-class.html#_SERVICE_MAP" class="summary-name" onclick="show_private();">_SERVICE_MAP</a> = <code title="{'v1.19': ('ad',
-           'advertiser',
-           'advertisergroup',
-           'campaign',
-           'changelog',
-           'contentcategory',
-           'creative',
-           'creativefield',
-..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">v1.19</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">ad</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">advertiser</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">advertisergroup</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.dfa.DfaClient-class.html#_SERVICE_MAP" class="summary-name" onclick="show_private();">_SERVICE_MAP</a> = <code title="{'v1.19':('ad', 'advertiser', 'advertisergroup', 'campaign', 'changelo\
+g', 'contentcategory', 'creative', 'creativefield', 'creativegroup', '\
+login', 'network', 'placement', 'site', 'size', 'spotlight', 'strategy\
+', 'subnetwork', 'user', 'userrole', 'report'), 'v1.20':('ad', 'advert\
+iser', 'advertisergroup', 'campaign', 'changelog', 'contentcategory', \
+'creative', 'creativefield', 'creativegroup', 'login', 'network', 'pla\
+cement', 'site', 'size', 'spotlight', 'strategy', 'subnetwork', 'user'\
+, 'userrole', 'report'),}">{'v1.19':('ad', 'advertiser', 'advertisergroup'<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 </table>
@@ -309,7 +309,7 @@ Attributes:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">LoadFromStorage</span>(<span class="sig-arg">cls</span>,
-        <span class="sig-arg">path</span>=<span class="sig-default">os.path.join(os.path.expanduser('~'), 'googleads.yaml')</span>)</span>
+        <span class="sig-arg">path</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">Class Method</em>
   </h3>
   </td><td align="right" valign="top"
@@ -348,7 +348,8 @@ Raises:
         <span class="sig-arg">username</span>,
         <span class="sig-arg">oauth2_client</span>,
         <span class="sig-arg">application_name</span>,
-        <span class="sig-arg">https_proxy</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">https_proxy</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cache</span>=<span class="sig-default">NoCache()</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -372,6 +373,7 @@ Args:
   [optional]
   https_proxy: A string identifying the URL of a proxy that all HTTPS
       requests should be routed through.
+  cache: A subclass of suds.cache.Cache that defaults to NoCache.
 
 </pre>
   <dl class="fields">
@@ -390,8 +392,8 @@ Args:
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetService</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">service_name</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v1.20</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">server</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">https://advertisersapi.doubleclick.com</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="sig-arg">server</span>=<span class="sig-default">'https://advertisersapi.doubleclick.com'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfa-pysrc.html#DfaClient.GetService">source&nbsp;code</a></span>&nbsp;
@@ -453,15 +455,14 @@ Raises:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">v1.19</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">ad</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-           <code class="variable-quote">'</code><code class="variable-string">advertiser</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-           <code class="variable-quote">'</code><code class="variable-string">advertisergroup</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-           <code class="variable-quote">'</code><code class="variable-string">campaign</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-           <code class="variable-quote">'</code><code class="variable-string">changelog</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-           <code class="variable-quote">'</code><code class="variable-string">contentcategory</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-           <code class="variable-quote">'</code><code class="variable-string">creative</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-           <code class="variable-quote">'</code><code class="variable-string">creativefield</code><code class="variable-quote">'</code><code class="variable-op">,</code>
-<code class="variable-ellipsis">...</code>
+{'v1.19':('ad', 'advertiser', 'advertisergroup', 'campaign', 'changelo<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+g', 'contentcategory', 'creative', 'creativefield', 'creativegroup', '<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+login', 'network', 'placement', 'site', 'size', 'spotlight', 'strategy<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+', 'subnetwork', 'user', 'userrole', 'report'), 'v1.20':('ad', 'advert<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+iser', 'advertisergroup', 'campaign', 'changelog', 'contentcategory', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+'creative', 'creativefield', 'creativegroup', 'login', 'network', 'pla<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+cement', 'site', 'size', 'spotlight', 'strategy', 'subnetwork', 'user'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+, 'userrole', 'report'),}
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -499,7 +500,7 @@ Raises:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri May  9 11:35:53 2014
+    Generated by Epydoc 3.0.1 on Wed Sep  3 16:28:12 2014
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -133,7 +133,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="GetReportDownloadHeaders"></a><span class="summary-sig-name">GetReportDownloadHeaders</span>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.adwords._AdWordsHeaderHandler-class.html#GetReportDownloadHeaders" class="summary-sig-name">GetReportDownloadHeaders</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>)</span><br />
       Returns a dictionary of headers for a report download request.</td>
           <td align="right" valign="top">
@@ -185,21 +185,21 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_LIB_SIG"></a><span class="summary-name">_LIB_SIG</span> = <code title="' (AwApi-Python, googleads/1.0.5, Python/2.7)'"><code class="variable-quote">'</code><code class="variable-string"> (AwApi-Python, googleads/1.0.5, Python/2.7)</code><code class="variable-quote">'</code></code>
+        <a name="_LIB_SIG"></a><span class="summary-name">_LIB_SIG</span> = <code title="googleads.common.GenerateLibSig('AwApi-Python')">googleads.common.GenerateLibSig('AwApi-Python')</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords._AdWordsHeaderHandler-class.html#_SOAP_HEADER_CLASS" class="summary-name" onclick="show_private();">_SOAP_HEADER_CLASS</a> = <code title="'{https://adwords.google.com/api/adwords/cm/%s}SoapHeader'"><code class="variable-quote">'</code><code class="variable-string">{https://adwords.google.com/api/adwords/</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords._AdWordsHeaderHandler-class.html#_SOAP_HEADER_CLASS" class="summary-name" onclick="show_private();">_SOAP_HEADER_CLASS</a> = <code title="'{https://adwords.google.com/api/adwords/cm/%s}' 'SoapHeader'">'{https://adwords.google.com/api/adwords/<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_CONTENT_TYPE"></a><span class="summary-name">_CONTENT_TYPE</span> = <code title="'application/x-www-form-urlencoded'"><code class="variable-quote">'</code><code class="variable-string">application/x-www-form-urlencoded</code><code class="variable-quote">'</code></code>
+        <a name="_CONTENT_TYPE"></a><span class="summary-name">_CONTENT_TYPE</span> = <code title="'application/x-www-form-urlencoded'">'application/x-www-form-urlencoded'</code>
     </td>
   </tr>
 </table>
@@ -304,6 +304,41 @@ Args:
   </dl>
 </td></tr></table>
 </div>
+<a name="GetReportDownloadHeaders"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetReportDownloadHeaders</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.GetReportDownloadHeaders">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Returns a dictionary of headers for a report download request.
+
+Args:
+  return_money_in_micros: A boolean indicating whether money should be
+      represented as micros in reports. If None is supplied the AdWords
+      server will use its default value, which is currently True.
+
+Returns:
+  A dictionary containing the headers configured for downloading a report.
+
+Raises:
+  GoogleAdsValueError: if return_money_in_micros used with incompatible
+      version.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== CLASS VARIABLE DETAILS ==================== -->
 <a name="section-ClassVariableDetails"></a>
@@ -335,7 +370,7 @@ Args:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'</code><code class="variable-string">{https://adwords.google.com/api/adwords/cm/%s}SoapHeader</code><code class="variable-quote">'</code>
+'{https://adwords.google.com/api/adwords/cm/%s}' 'SoapHeader'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -373,7 +408,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri May  9 11:35:53 2014
+    Generated by Epydoc 3.0.1 on Wed Sep  3 16:28:12 2014
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
