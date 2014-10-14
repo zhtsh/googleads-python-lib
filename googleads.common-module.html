@@ -174,6 +174,42 @@
       
     </td>
   </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common-module.html#_RecurseOverObject" class="summary-sig-name" onclick="show_private();">_RecurseOverObject</a>(<span class="summary-sig-arg">obj</span>,
+        <span class="summary-sig-arg">factory</span>,
+        <span class="summary-sig-arg">parent</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Recurses over a nested structure to look for changes in Suds objects.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#_RecurseOverObject">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_IsSudsIterable"></a><span class="summary-sig-name">_IsSudsIterable</span>(<span class="summary-sig-arg">obj</span>)</span><br />
+      A short helper method to determine if a field is iterable for Suds.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#_IsSudsIterable">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 </table>
 <!-- ==================== VARIABLES ==================== -->
 <a name="section-Variables"></a>
@@ -196,14 +232,14 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'2.0.2'"><code class="variable-quote">'</code><code class="variable-string">2.0.2</code><code class="variable-quote">'</code></code>
+        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'2.1.0'"><code class="variable-quote">'</code><code class="variable-string">2.1.0</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/2.0.2'"><code class="variable-quote">'</code><code class="variable-string">googleads/2.0.2</code><code class="variable-quote">'</code></code>
+        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/2.1.0'"><code class="variable-quote">'</code><code class="variable-string">googleads/2.1.0</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -346,7 +382,8 @@ are recursively packed. Mutable types are copied - we don't mutate the input.
 Args:
   obj: A parameter for a SOAP request which will be packed. If this is
       a dictionary or list, the contents will recursively be packed. If this
-      is not a dictionary or list, the input object is returned unaltered.
+      is not a dictionary or list, the contents will be recursively searched
+      for instances of unpacked dictionaries or lists.
   factory: The suds.client.Factory object which can create instances of the
       classes generated from the WSDL.
 
@@ -354,6 +391,38 @@ Returns:
   If the given obj was a dictionary that contained the 'xsi_type' key, this
   will be an instance of a class generated from the WSDL. Otherwise, this will
   be the same data type as the input obj was.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_RecurseOverObject"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_RecurseOverObject</span>(<span class="sig-arg">obj</span>,
+        <span class="sig-arg">factory</span>,
+        <span class="sig-arg">parent</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#_RecurseOverObject">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Recurses over a nested structure to look for changes in Suds objects.
+
+Args:
+  obj: A parameter for a SOAP request field which is to be inspected and
+      will be packed for Suds if an xsi_type is specified, otherwise will be
+      left unaltered.
+  factory: The suds.client.Factory object which can create instances of the
+      classes generated from the WSDL.
+  parent: The parent object that contains the obj parameter to be inspected.
 
 </pre>
   <dl class="fields">
@@ -429,7 +498,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Sep 26 16:12:24 2014
+    Generated by Epydoc 3.0.1 on Tue Oct 14 15:18:30 2014
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

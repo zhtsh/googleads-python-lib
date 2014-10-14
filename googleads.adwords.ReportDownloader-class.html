@@ -96,7 +96,7 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">adwords_client</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201406</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201409</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span><br />
       Initializes a ReportDownloader.</td>
           <td align="right" valign="top">
@@ -135,10 +135,98 @@ object --+
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReport" class="summary-sig-name">DownloadReport</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">report_definition</span>,
         <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">sys.stdout</span>,
-        <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads an AdWords report using a report definition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReport">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStream" class="summary-sig-name">DownloadReportAsStream</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">report_definition</span>,
+        <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Downloads an AdWords report using a report definition.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportAsStream">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStreamWithAwql" class="summary-sig-name">DownloadReportAsStreamWithAwql</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">query</span>,
+        <span class="summary-sig-arg">file_format</span>,
+        <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Downloads an AdWords report using an AWQL query.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportAsStreamWithAwql">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsString" class="summary-sig-name">DownloadReportAsString</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">report_definition</span>,
+        <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Downloads an AdWords report using a report definition.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportAsString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStringWithAwql" class="summary-sig-name">DownloadReportAsStringWithAwql</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">query</span>,
+        <span class="summary-sig-arg">file_format</span>,
+        <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Downloads an AdWords report using an AWQL query.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportAsStringWithAwql">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -156,7 +244,9 @@ object --+
         <span class="summary-sig-arg">query</span>,
         <span class="summary-sig-arg">file_format</span>,
         <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">sys.stdout</span>,
-        <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">return_money_in_micros</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads an AdWords report using an AWQL query.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportWithAwql">source&nbsp;code</a></span>
@@ -176,10 +266,33 @@ object --+
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_DownloadReport" class="summary-sig-name" onclick="show_private();">_DownloadReport</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">post_body</span>,
         <span class="summary-sig-arg">output</span>,
-        <span class="summary-sig-arg">return_money_in_micros</span>)</span><br />
+        <span class="summary-sig-arg">return_money_in_micros</span>,
+        <span class="summary-sig-arg">skip_report_header</span>,
+        <span class="summary-sig-arg">skip_report_summary</span>)</span><br />
       Downloads an AdWords report, writing the contents to the given file.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._DownloadReport">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_DownloadReportAsStream" class="summary-sig-name" onclick="show_private();">_DownloadReportAsStream</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">post_body</span>,
+        <span class="summary-sig-arg">return_money_in_micros</span>,
+        <span class="summary-sig-arg">skip_report_header</span>,
+        <span class="summary-sig-arg">skip_report_summary</span>)</span><br />
+      Downloads an AdWords report, returning a stream.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._DownloadReportAsStream">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -359,7 +472,7 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">adwords_client</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201406</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201409</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">server</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -398,7 +511,9 @@ Args:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReport</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">report_definition</span>,
         <span class="sig-arg">output</span>=<span class="sig-default">sys.stdout</span>,
-        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReport">source&nbsp;code</a></span>&nbsp;
@@ -421,6 +536,234 @@ Args:
   return_money_in_micros: A boolean indicating whether money should be
       represented as micros in reports. If None is supplied the AdWords
       server will use its default value, which is currently True.
+  skip_report_header: A boolean indicating whether to include a header row
+      containing the report name and date range. If false or not specified,
+      report output will include the header row.
+  skip_report_summary: A boolean indicating whether to include a summary row
+      containing the report totals. If false or not specified, report output
+      will include the summary row.
+
+Raises:
+  AdWordsReportBadRequestError: if the report download fails due to
+      improper input.
+  GoogleAdsValueError: if the user-specified report format is incompatible
+      with the output.
+  AdWordsReportError: if the request fails for any other reason; e.g. a
+      network error.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="DownloadReportAsStream"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStream</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">report_definition</span>,
+        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportAsStream">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Downloads an AdWords report using a report definition.
+
+This will return a stream, allowing you to retrieve the report contents.
+
+Args:
+  report_definition: A dictionary or instance of the ReportDefinition class
+      generated from the schema. This defines the contents of the report
+      that will be downloaded.
+  [optional]
+  return_money_in_micros: A boolean indicating whether money should be
+      represented as micros in reports. If None is supplied the AdWords
+      server will use its default value, which is currently True.
+  skip_report_header: A boolean indicating whether to include a header row
+      containing the report name and date range. If false or not specified,
+      report output will include the header row.
+  skip_report_summary: A boolean indicating whether to include a summary row
+      containing the report totals. If false or not specified, report output
+      will include the summary row.
+
+Returns:
+  A stream to be used in retrieving the report contents.
+
+Raises:
+  AdWordsReportBadRequestError: if the report download fails due to
+      improper input.
+  GoogleAdsValueError: if the user-specified report format is incompatible
+      with the output.
+  AdWordsReportError: if the request fails for any other reason; e.g. a
+      network error.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="DownloadReportAsStreamWithAwql"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStreamWithAwql</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">query</span>,
+        <span class="sig-arg">file_format</span>,
+        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportAsStreamWithAwql">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Downloads an AdWords report using an AWQL query.
+
+The report contents will be returned as a stream.
+
+Args:
+  query: A string containing the query which specifies the data you want
+      your report to include.
+  file_format: A string representing the output format for your report.
+      Acceptable values can be found in our API documentation:
+      https://developers.google.com/adwords/api/docs/guides/reporting
+  [optional]
+  return_money_in_micros: A boolean indicating whether money should be
+      represented as micros in reports. If None is supplied the AdWords
+      server will use its default value, which is currently True.
+  skip_report_header: A boolean indicating whether to include a header row
+      containing the report name and date range. If false or not specified,
+      report output will include the header row.
+  skip_report_summary: A boolean indicating whether to include a summary row
+      containing the report totals. If false or not specified, report output
+      will include the summary row.
+
+Returns:
+  A stream to be used in retrieving the report contents.
+
+Raises:
+  AdWordsReportBadRequestError: if the report download fails due to
+      improper input.
+  GoogleAdsValueError: if the user-specified report format is incompatible
+      with the output.
+  AdWordsReportError: if the request fails for any other reason; e.g. a
+      network error.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="DownloadReportAsString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsString</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">report_definition</span>,
+        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportAsString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Downloads an AdWords report using a report definition.
+
+The report contents will be returned as a string.
+
+Args:
+  report_definition: A dictionary or instance of the ReportDefinition class
+      generated from the schema. This defines the contents of the report
+      that will be downloaded.
+  [optional]
+  return_money_in_micros: A boolean indicating whether money should be
+      represented as micros in reports. If None is supplied the AdWords
+      server will use its default value, which is currently True.
+  skip_report_header: A boolean indicating whether to include a header row
+      containing the report name and date range. If false or not specified,
+      report output will include the header row.
+  skip_report_summary: A boolean indicating whether to include a summary row
+      containing the report totals. If false or not specified, report output
+      will include the summary row.
+
+Returns:
+  A string containing the report contents.
+
+Raises:
+  AdWordsReportBadRequestError: if the report download fails due to
+      improper input.
+  GoogleAdsValueError: if the user-specified report format is incompatible
+      with the output.
+  AdWordsReportError: if the request fails for any other reason; e.g. a
+      network error.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="DownloadReportAsStringWithAwql"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStringWithAwql</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">query</span>,
+        <span class="sig-arg">file_format</span>,
+        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportAsStringWithAwql">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Downloads an AdWords report using an AWQL query.
+
+The report contents will be returned as a string.
+
+Args:
+  query: A string containing the query which specifies the data you want
+      your report to include.
+  file_format: A string representing the output format for your report.
+      Acceptable values can be found in our API documentation:
+      https://developers.google.com/adwords/api/docs/guides/reporting
+  [optional]
+  return_money_in_micros: A boolean indicating whether money should be
+      represented as micros in reports. If None is supplied the AdWords
+      server will use its default value, which is currently True.
+  skip_report_header: A boolean indicating whether to include a header row
+      containing the report name and date range. If false or not specified,
+      report output will include the header row.
+  skip_report_summary: A boolean indicating whether to include a summary row
+      containing the report totals. If false or not specified, report output
+      will include the summary row.
+
+Returns:
+  A string containing the report contents.
 
 Raises:
   AdWordsReportBadRequestError: if the report download fails due to
@@ -446,7 +789,9 @@ Raises:
         <span class="sig-arg">query</span>,
         <span class="sig-arg">file_format</span>,
         <span class="sig-arg">output</span>=<span class="sig-default">sys.stdout</span>,
-        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">return_money_in_micros</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.DownloadReportWithAwql">source&nbsp;code</a></span>&nbsp;
@@ -471,6 +816,12 @@ Args:
   return_money_in_micros: A boolean indicating whether money should be
       represented as micros in reports. If None is supplied the AdWords
       server will use its default value, which is currently True.
+  skip_report_header: A boolean indicating whether to include a header row
+      containing the report name and date range. If false or not specified,
+      report output will include the header row.
+  skip_report_summary: A boolean indicating whether to include a summary row
+      containing the report totals. If false or not specified, report output
+      will include the summary row.
 
 Raises:
   AdWordsReportBadRequestError: if the report download fails due to
@@ -495,7 +846,9 @@ Raises:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">_DownloadReport</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">post_body</span>,
         <span class="sig-arg">output</span>,
-        <span class="sig-arg">return_money_in_micros</span>)</span>
+        <span class="sig-arg">return_money_in_micros</span>,
+        <span class="sig-arg">skip_report_header</span>,
+        <span class="sig-arg">skip_report_summary</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._DownloadReport">source&nbsp;code</a></span>&nbsp;
@@ -513,6 +866,62 @@ Args:
   return_money_in_micros: A boolean indicating whether money should be
       represented as micros in reports. If None is supplied the AdWords
       server will use its default value, which is currently True.
+  skip_report_header: A boolean indicating whether to include a header row
+      containing the report name and date range. If false or not specified,
+      report output will include the header row.
+  skip_report_summary: A boolean indicating whether to include a summary row
+      containing the report totals. If false or not specified, report output
+      will include the summary row.
+
+Raises:
+  AdWordsReportBadRequestError: if the report download fails due to
+    improper input. In the event of certain other failures, a
+    urllib2.URLError (Python 2) or urllib.error.URLError (Python 3) will be
+    raised.
+  AdWordsReportError: if the request fails for any other reason; e.g. a
+      network error.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_DownloadReportAsStream"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_DownloadReportAsStream</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">post_body</span>,
+        <span class="sig-arg">return_money_in_micros</span>,
+        <span class="sig-arg">skip_report_header</span>,
+        <span class="sig-arg">skip_report_summary</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._DownloadReportAsStream">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Downloads an AdWords report, returning a stream.
+
+Args:
+  post_body: The contents of the POST request's body as a URL encoded
+      string.
+  return_money_in_micros: A boolean indicating whether money should be
+      represented as micros in reports. If None is supplied the AdWords
+      server will use its default value, which is currently True.
+  skip_report_header: A boolean indicating whether to include a header row
+      containing the report name and date range. If false or not specified,
+      report output will include the header row.
+  skip_report_summary: A boolean indicating whether to include a summary row
+      containing the report totals. If false or not specified, report output
+      will include the summary row.
+
+Returns:
+  A stream to be used in retrieving the report contents.
 
 Raises:
   AdWordsReportBadRequestError: if the report download fails due to
@@ -710,7 +1119,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Sep 26 16:12:24 2014
+    Generated by Epydoc 3.0.1 on Tue Oct 14 15:18:30 2014
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
