@@ -4,7 +4,6 @@ googleads.adwords	googleads.adwords-module.html
 googleads.adwords._SERVICE_MAP	googleads.adwords-module.html#_SERVICE_MAP
 googleads.adwords._CHUNK_SIZE	googleads.adwords-module.html#_CHUNK_SIZE
 googleads.adwords._DEFAULT_ENDPOINT	googleads.adwords-module.html#_DEFAULT_ENDPOINT
-googleads.adwords._FINAL_RETURN_MONEY_IN_MICROS_VERSION	googleads.adwords-module.html#_FINAL_RETURN_MONEY_IN_MICROS_VERSION
 googleads.adwords.__package__	googleads.adwords-module.html#__package__
 googleads.common	googleads.common-module.html
 googleads.common._PYTHON_VERSION	googleads.common-module.html#_PYTHON_VERSION
@@ -124,6 +123,7 @@ googleads.oauth2.GoogleOAuth2Client.CreateHttpHeader	googleads.oauth2.GoogleOAut
 googleads.oauth2.GoogleRefreshTokenClient	googleads.oauth2.GoogleRefreshTokenClient-class.html
 googleads.oauth2.GoogleRefreshTokenClient._TOKEN_URL	googleads.oauth2.GoogleRefreshTokenClient-class.html#_TOKEN_URL
 googleads.oauth2.GoogleRefreshTokenClient._GOOGLE_OAUTH2_ENDPOINT	googleads.oauth2.GoogleRefreshTokenClient-class.html#_GOOGLE_OAUTH2_ENDPOINT
+googleads.oauth2.GoogleRefreshTokenClient.Refresh	googleads.oauth2.GoogleRefreshTokenClient-class.html#Refresh
 googleads.oauth2.GoogleRefreshTokenClient._OAUTH2_REFRESH_HEADERS	googleads.oauth2.GoogleRefreshTokenClient-class.html#_OAUTH2_REFRESH_HEADERS
 googleads.oauth2.GoogleRefreshTokenClient.CreateHttpHeader	googleads.oauth2.GoogleRefreshTokenClient-class.html#CreateHttpHeader
 googleads.oauth2.GoogleRefreshTokenClient.__init__	googleads.oauth2.GoogleRefreshTokenClient-class.html#__init__
