@@ -80,7 +80,7 @@ matter which of Google's OAuth 2.0 flows you used to generate the refresh
 token (installed application, web flow, etc.).
 
 Attributes:
-  https_proxy: The address of a proxy to use for HTTPS refresh requests.
+  proxy_info: A ProxyInfo instance used for refresh requests.
 
 </pre>
 
@@ -111,7 +111,9 @@ Attributes:
         <span class="summary-sig-arg">client_id</span>,
         <span class="summary-sig-arg">client_secret</span>,
         <span class="summary-sig-arg">refresh_token</span>,
-        <span class="summary-sig-arg">https_proxy</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">proxy_info</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">disable_ssl_certificate_validation</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">ca_certs</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initializes a GoogleRefreshTokenClient.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.__init__">source&nbsp;code</a></span>
@@ -145,7 +147,7 @@ Attributes:
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="Refresh"></a><span class="summary-sig-name">Refresh</span>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.oauth2.GoogleRefreshTokenClient-class.html#Refresh" class="summary-sig-name">Refresh</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Uses the Refresh Token to retrieve and set a new Access Token.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.Refresh">source&nbsp;code</a></span>
@@ -196,21 +198,28 @@ Attributes:
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.oauth2.GoogleRefreshTokenClient-class.html#_OAUTH2_REFRESH_HEADERS" class="summary-name" onclick="show_private();">_OAUTH2_REFRESH_HEADERS</a> = <code title="{'content-type': 'application/x-www-form-urlencoded'}"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">content-type</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">application/x-www-</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.oauth2.GoogleRefreshTokenClient-class.html#_GOOGLE_OAUTH2_ENDPOINT" class="summary-name" onclick="show_private();">_GOOGLE_OAUTH2_ENDPOINT</a> = <code title="'https://accounts.google.com/o/oauth2/token'">'https://accounts.google.com/o/oauth<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.oauth2.GoogleRefreshTokenClient-class.html#_GOOGLE_OAUTH2_ENDPOINT" class="summary-name" onclick="show_private();">_GOOGLE_OAUTH2_ENDPOINT</a> = <code title="'https://accounts.google.com/o/oauth2/token'"><code class="variable-quote">'</code><code class="variable-string">https://accounts.google.com/o/oauth</code><code class="variable-ellipsis">...</code></code>
+        <a name="_OAUTH2_REFRESH_MINUTES_IN_ADVANCE"></a><span class="summary-name">_OAUTH2_REFRESH_MINUTES_IN_ADVANCE</span> = <code title="5">5</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_TOKEN_URL"></a><span class="summary-name">_TOKEN_URL</span> = <code title="'https://www.google.com'"><code class="variable-quote">'</code><code class="variable-string">https://www.google.com</code><code class="variable-quote">'</code></code>
+        <a name="_TOKEN_URL"></a><span class="summary-name">_TOKEN_URL</span> = <code title="'https://www.google.com'">'https://www.google.com'</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_USER_AGENT"></a><span class="summary-name">_USER_AGENT</span> = <code title="'Google Ads Python Client Library'">'Google Ads Python Client Library'</code>
     </td>
   </tr>
 </table>
@@ -268,7 +277,9 @@ Attributes:
         <span class="sig-arg">client_id</span>,
         <span class="sig-arg">client_secret</span>,
         <span class="sig-arg">refresh_token</span>,
-        <span class="sig-arg">https_proxy</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">proxy_info</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">disable_ssl_certificate_validation</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">ca_certs</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -284,8 +295,12 @@ Args:
   client_secret: A string containing your client secret.
   refresh_token: A string containing your refresh token.
   [optional]
-  https_proxy: A string identifying the URL of a proxy that all HTTPS
-      requests should be routed through.
+  proxy_info: A ProxyInfo instance identifying the proxy used for all
+              requests.
+  disable_ssl_certificate_validation: A boolean indicating whether ssl
+      certificate validation should be disabled while using a proxy.
+  ca_certs: A string identifying the path to a file containing root CA
+      certificates for SSL server certificate validation.
 
 </pre>
   <dl class="fields">
@@ -320,10 +335,41 @@ Returns:
   A dictionary containing one entry: the OAuth 2.0 Bearer header under the
   'Authorization' key.
 
+Raises:
+  AccessTokenRefreshError: If the refresh fails.
+
 </pre>
   <dl class="fields">
     <dt>Overrides:
         <a href="googleads.oauth2.GoogleOAuth2Client-class.html#CreateHttpHeader">GoogleOAuth2Client.CreateHttpHeader</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="Refresh"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Refresh</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.Refresh">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Uses the Refresh Token to retrieve and set a new Access Token.
+
+Raises:
+  AccessTokenRefreshError: If the refresh fails.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="googleads.oauth2.GoogleOAuth2Client-class.html#Refresh">GoogleOAuth2Client.Refresh</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -347,24 +393,6 @@ Returns:
   </td>
 </tr>
 </table>
-<a name="_OAUTH2_REFRESH_HEADERS"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">_OAUTH2_REFRESH_HEADERS</h3>
-  
-  <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">content-type</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">application/x-www-form-urlencoded</code><code class="variable-quote">'</code><code class="variable-group">}</code>
-</pre></td></tr></table>
-</dd>
-  </dl>
-</td></tr></table>
-</div>
 <a name="_GOOGLE_OAUTH2_ENDPOINT"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
@@ -377,7 +405,7 @@ Returns:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'</code><code class="variable-string">https://accounts.google.com/o/oauth2/token</code><code class="variable-quote">'</code>
+'https://accounts.google.com/o/oauth2/token'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -415,7 +443,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Dec  5 14:50:45 2014
+    Generated by Epydoc 3.0.1 on Wed Jan 21 14:42:07 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -143,9 +143,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.common-module.html#LoadFromStorage" class="summary-sig-name">LoadFromStorage</a>(<span class="summary-sig-arg">path</span>,
-        <span class="summary-sig-arg">yaml_key</span>,
-        <span class="summary-sig-arg">required_values</span>,
-        <span class="summary-sig-arg">optional_values</span>)</span><br />
+        <span class="summary-sig-arg">product_yaml_key</span>,
+        <span class="summary-sig-arg">required_client_values</span>,
+        <span class="summary-sig-arg">optional_product_values</span>)</span><br />
       Loads the data necessary for instantiating a client from file storage.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.common-pysrc.html#LoadFromStorage">source&nbsp;code</a></span>
@@ -232,35 +232,42 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'2.3.0'"><code class="variable-quote">'</code><code class="variable-string">2.3.0</code><code class="variable-quote">'</code></code>
+        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'3.0.1'">'3.0.1'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/2.3.0'"><code class="variable-quote">'</code><code class="variable-string">googleads/2.3.0</code><code class="variable-quote">'</code></code>
+        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/%s' % VERSION">'googleads/%s' % VERSION</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_PYTHON_VERSION"></a><span class="summary-name">_PYTHON_VERSION</span> = <code title="'Python/2.7'"><code class="variable-quote">'</code><code class="variable-string">Python/2.7</code><code class="variable-quote">'</code></code>
+        <a name="_PROXY_YAML_KEY"></a><span class="summary-name">_PROXY_YAML_KEY</span> = <code title="'proxy_info'">'proxy_info'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.common-module.html#_OAUTH_2_AUTH_KEYS" class="summary-name" onclick="show_private();">_OAUTH_2_AUTH_KEYS</a> = <code title="('client_id', 'client_secret', 'refresh_token')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">client_id</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">client_secret</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">refresh_t</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.common-module.html#_PYTHON_VERSION" class="summary-name" onclick="show_private();">_PYTHON_VERSION</a> = <code title="'Python/%d.%d' %(sys.version_info [0], sys.version_info [1])">'Python/%d.%d' %(sys.version_info [0], sys.v<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
-<tr>
+<tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'googleads'"><code class="variable-quote">'</code><code class="variable-string">googleads</code><code class="variable-quote">'</code></code>
+        <a href="googleads.common-module.html#_OAUTH_2_AUTH_KEYS" class="summary-name" onclick="show_private();">_OAUTH_2_AUTH_KEYS</a> = <code title="'client_id', 'client_secret', 'refresh_token'">'client_id', 'client_secret', 'refresh_to<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_PROXY_KEYS"></a><span class="summary-name">_PROXY_KEYS</span> = <code title="'host', 'port'">'host', 'port'</code>
     </td>
   </tr>
 </table>
@@ -317,9 +324,9 @@ Returns:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">LoadFromStorage</span>(<span class="sig-arg">path</span>,
-        <span class="sig-arg">yaml_key</span>,
-        <span class="sig-arg">required_values</span>,
-        <span class="sig-arg">optional_values</span>)</span>
+        <span class="sig-arg">product_yaml_key</span>,
+        <span class="sig-arg">required_client_values</span>,
+        <span class="sig-arg">optional_product_values</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.common-pysrc.html#LoadFromStorage">source&nbsp;code</a></span>&nbsp;
@@ -329,17 +336,18 @@ Returns:
   <pre class="literalblock">
 Loads the data necessary for instantiating a client from file storage.
 
-In addition to the required_values argument, the yaml file must supply the
-keys used to create OAuth 2.0 credentials.
+In addition to the required_client_values argument, the yaml file must supply
+the keys used to create OAuth 2.0 credentials. It may also optionally provide
+proxy_info in order to configure a proxy.
 
 Args:
   path: A path string to the yaml document whose keys should be used.
-  yaml_key: The key to read in the yaml as a string.
-  required_values: A tuple of strings representing values which must be in the
-      yaml file. If one of these keys is not in the yaml file, an error will
-      be raised.
-  optional_values: A tuple of strings representing optional values which may
-      be in the yaml file.
+  product_yaml_key: The key to read in the yaml as a string.
+  required_client_values: A tuple of strings representing values which must
+    be in the yaml file for a supported API. If one of these keys is not in
+    the yaml file, an error will  be raised.
+  optional_product_values: A tuple of strings representing optional values
+    which may be in the yaml file.
 
 Returns:
   A dictionary map of the keys in the yaml file to their values. This will not
@@ -349,7 +357,7 @@ Returns:
 Raises:
   A GoogleAdsValueError if the given yaml file does not contain the
   information necessary to instantiate a client object - either a
-  required_values key was missing or an OAuth 2.0 key was missing.
+  required_client_values key was missing or an OAuth 2.0 key was missing.
 
 </pre>
   <dl class="fields">
@@ -448,6 +456,24 @@ Args:
   </td>
 </tr>
 </table>
+<a name="_PYTHON_VERSION"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_PYTHON_VERSION</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+'Python/%d.%d' %(sys.version_info [0], sys.version_info [1])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="_OAUTH_2_AUTH_KEYS"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
@@ -460,7 +486,7 @@ Args:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">client_id</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">client_secret</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">refresh_token</code><code class="variable-quote">'</code><code class="variable-group">)</code>
+'client_id', 'client_secret', 'refresh_token'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -498,7 +524,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Dec  5 14:50:45 2014
+    Generated by Epydoc 3.0.1 on Wed Jan 21 14:42:07 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

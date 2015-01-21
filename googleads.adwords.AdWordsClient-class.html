@@ -143,8 +143,8 @@ Attributes:
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetService" class="summary-sig-name">GetService</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">service_name</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201409</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">_DEFAULT_ENDPOINT</span>)</span><br />
       Creates a service client for the given service.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetService">source&nbsp;code</a></span>
@@ -162,8 +162,8 @@ Attributes:
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetReportDownloader" class="summary-sig-name">GetReportDownloader</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201409</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">_DEFAULT_ENDPOINT</span>)</span><br />
       Creates a downloader for AdWords reports.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetReportDownloader">source&nbsp;code</a></span>
@@ -268,31 +268,28 @@ Attributes:
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_YAML_KEY"></a><span class="summary-name">_YAML_KEY</span> = <code title="'adwords'"><code class="variable-quote">'</code><code class="variable-string">adwords</code><code class="variable-quote">'</code></code>
+        <a name="_YAML_KEY"></a><span class="summary-name">_YAML_KEY</span> = <code title="'adwords'">'adwords'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_REQUIRED_INIT_VALUES"></a><span class="summary-name">_REQUIRED_INIT_VALUES</span> = <code title="('user_agent', 'developer_token')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">user_agent</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">developer_token</code><code class="variable-quote">'</code><code class="variable-group">)</code></code>
+        <a name="_REQUIRED_INIT_VALUES"></a><span class="summary-name">_REQUIRED_INIT_VALUES</span> = <code title="'user_agent', 'developer_token'">'user_agent', 'developer_token'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.AdWordsClient-class.html#_OPTIONAL_INIT_VALUES" class="summary-name" onclick="show_private();">_OPTIONAL_INIT_VALUES</a> = <code title="('validate_only',
- 'partial_failure',
- 'client_customer_id',
- 'https_proxy')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">validate_only</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">partial_failure</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.AdWordsClient-class.html#_OPTIONAL_INIT_VALUES" class="summary-name" onclick="show_private();">_OPTIONAL_INIT_VALUES</a> = <code title="'validate_only', 'partial_failure', 'client_customer_id'">'validate_only', 'partial_failure', 'c<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_SOAP_SERVICE_FORMAT"></a><span class="summary-name">_SOAP_SERVICE_FORMAT</span> = <code title="'%s/api/adwords/%s/%s/%s?wsdl'"><code class="variable-quote">'</code><code class="variable-string">%s/api/adwords/%s/%s/%s?wsdl</code><code class="variable-quote">'</code></code>
+        <a name="_SOAP_SERVICE_FORMAT"></a><span class="summary-name">_SOAP_SERVICE_FORMAT</span> = <code title="'%s/api/adwords/%s/%s/%s?wsdl'">'%s/api/adwords/%s/%s/%s?wsdl'</code>
     </td>
   </tr>
 </table>
@@ -422,8 +419,8 @@ Args:
       succeed, to result in a complete failure with no changes made or a
       partial failure with some changes made. Only certain services respect
       this header.
-  https_proxy: A string identifying the URL of a proxy that all HTTPS
-      requests should be routed through.
+  https_proxy: A string identifying the proxy that all HTTPS requests
+      should be routed through.
   cache: A subclass of suds.cache.Cache; defaults to None.
 
 </pre>
@@ -443,8 +440,8 @@ Args:
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetService</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">service_name</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201409</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">server</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="sig-arg">server</span>=<span class="sig-default">_DEFAULT_ENDPOINT</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetService">source&nbsp;code</a></span>&nbsp;
@@ -483,8 +480,8 @@ Raises:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetReportDownloader</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201409</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">server</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="sig-arg">server</span>=<span class="sig-default">_DEFAULT_ENDPOINT</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetReportDownloader">source&nbsp;code</a></span>&nbsp;
@@ -569,10 +566,7 @@ Args:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">validate_only</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">partial_failure</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">client_customer_id</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">https_proxy</code><code class="variable-quote">'</code><code class="variable-group">)</code>
+'validate_only', 'partial_failure', 'client_customer_id'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -610,7 +604,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Dec  5 14:50:45 2014
+    Generated by Epydoc 3.0.1 on Wed Jan 21 14:42:07 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
