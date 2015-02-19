@@ -18,6 +18,7 @@ googleads.common._PYTHON_VERSION	googleads.common-module.html#_PYTHON_VERSION
 googleads.dfa	googleads.dfa-module.html
 googleads.dfp	googleads.dfp-module.html
 googleads.dfp._CHUNK_SIZE	googleads.dfp-module.html#_CHUNK_SIZE
+googleads.dfp.DfpClassType	googleads.dfp-module.html#DfpClassType
 googleads.dfp._SERVICE_MAP	googleads.dfp-module.html#_SERVICE_MAP
 googleads.dfp.DEFAULT_ENDPOINT	googleads.dfp-module.html#DEFAULT_ENDPOINT
 googleads.dfp.SUGGESTED_PAGE_LIMIT	googleads.dfp-module.html#SUGGESTED_PAGE_LIMIT
