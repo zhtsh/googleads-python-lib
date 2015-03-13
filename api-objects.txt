@@ -2,9 +2,9 @@ googleads	googleads-module.html
 googleads.__package__	googleads-module.html#__package__
 googleads.adwords	googleads.adwords-module.html
 googleads.adwords._SERVICE_MAP	googleads.adwords-module.html#_SERVICE_MAP
-googleads.adwords._CHUNK_SIZE	googleads.adwords-module.html#_CHUNK_SIZE
 googleads.adwords._DEFAULT_ENDPOINT	googleads.adwords-module.html#_DEFAULT_ENDPOINT
 googleads.adwords.__package__	googleads.adwords-module.html#__package__
+googleads.adwords.CHUNK_SIZE	googleads.adwords-module.html#CHUNK_SIZE
 googleads.common	googleads.common-module.html
 googleads.common._OAUTH_2_AUTH_KEYS	googleads.common-module.html#_OAUTH_2_AUTH_KEYS
 googleads.common._PROXY_KEYS	googleads.common-module.html#_PROXY_KEYS
@@ -27,6 +27,7 @@ googleads.dfp.DEFAULT_ENDPOINT	googleads.dfp-module.html#DEFAULT_ENDPOINT
 googleads.dfp.SUGGESTED_PAGE_LIMIT	googleads.dfp-module.html#SUGGESTED_PAGE_LIMIT
 googleads.dfp._CHUNK_SIZE	googleads.dfp-module.html#_CHUNK_SIZE
 googleads.dfp._SERVICE_MAP	googleads.dfp-module.html#_SERVICE_MAP
+googleads.dfp.DEFAULT_APPLICATION_NAME	googleads.dfp-module.html#DEFAULT_APPLICATION_NAME
 googleads.errors	googleads.errors-module.html
 googleads.errors.__package__	googleads.errors-module.html#__package__
 googleads.oauth2	googleads.oauth2-module.html
