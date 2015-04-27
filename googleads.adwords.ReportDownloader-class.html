@@ -136,6 +136,7 @@ object --+
         <span class="summary-sig-arg">report_definition</span>,
         <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">sys.stdout</span>,
         <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_column_header</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads an AdWords report using a report definition.</td>
           <td align="right" valign="top">
@@ -156,6 +157,7 @@ object --+
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStream" class="summary-sig-name">DownloadReportAsStream</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">report_definition</span>,
         <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_column_header</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads an AdWords report using a report definition.</td>
           <td align="right" valign="top">
@@ -177,6 +179,7 @@ object --+
         <span class="summary-sig-arg">query</span>,
         <span class="summary-sig-arg">file_format</span>,
         <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_column_header</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads an AdWords report using an AWQL query.</td>
           <td align="right" valign="top">
@@ -197,6 +200,7 @@ object --+
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsString" class="summary-sig-name">DownloadReportAsString</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">report_definition</span>,
         <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_column_header</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads an AdWords report using a report definition.</td>
           <td align="right" valign="top">
@@ -218,6 +222,7 @@ object --+
         <span class="summary-sig-arg">query</span>,
         <span class="summary-sig-arg">file_format</span>,
         <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_column_header</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads an AdWords report using an AWQL query.</td>
           <td align="right" valign="top">
@@ -240,6 +245,7 @@ object --+
         <span class="summary-sig-arg">file_format</span>,
         <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">sys.stdout</span>,
         <span class="summary-sig-arg">skip_report_header</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">skip_column_header</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">skip_report_summary</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads an AdWords report using an AWQL query.</td>
           <td align="right" valign="top">
@@ -261,6 +267,7 @@ object --+
         <span class="summary-sig-arg">post_body</span>,
         <span class="summary-sig-arg">output</span>,
         <span class="summary-sig-arg">skip_report_header</span>,
+        <span class="summary-sig-arg">skip_column_header</span>,
         <span class="summary-sig-arg">skip_report_summary</span>)</span><br />
       Downloads an AdWords report, writing the contents to the given file.</td>
           <td align="right" valign="top">
@@ -281,6 +288,7 @@ object --+
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_DownloadReportAsStream" class="summary-sig-name" onclick="show_private();">_DownloadReportAsStream</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">post_body</span>,
         <span class="summary-sig-arg">skip_report_header</span>,
+        <span class="summary-sig-arg">skip_column_header</span>,
         <span class="summary-sig-arg">skip_report_summary</span>)</span><br />
       Downloads an AdWords report, returning a stream.</td>
           <td align="right" valign="top">
@@ -504,6 +512,7 @@ Args:
         <span class="sig-arg">report_definition</span>,
         <span class="sig-arg">output</span>=<span class="sig-default">sys.stdout</span>,
         <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_column_header</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -527,6 +536,9 @@ Args:
   skip_report_header: A boolean indicating whether to include a header row
       containing the report name and date range. If false or not specified,
       report output will include the header row.
+  skip_column_header: A boolean indicating whether to include column names
+      in reports. If false or not specified, report output will include the
+      column names.
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
@@ -554,6 +566,7 @@ Raises:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStream</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">report_definition</span>,
         <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_column_header</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -574,6 +587,9 @@ Args:
   skip_report_header: A boolean indicating whether to include a header row
       containing the report name and date range. If false or not specified,
       report output will include the header row.
+  skip_column_header: A boolean indicating whether to include column names
+      in reports. If false or not specified, report output will include the
+      column names.
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
@@ -605,6 +621,7 @@ Raises:
         <span class="sig-arg">query</span>,
         <span class="sig-arg">file_format</span>,
         <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_column_header</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -627,6 +644,9 @@ Args:
   skip_report_header: A boolean indicating whether to include a header row
       containing the report name and date range. If false or not specified,
       report output will include the header row.
+  skip_column_header: A boolean indicating whether to include column names
+      in reports. If false or not specified, report output will include the
+      column names.
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
@@ -657,6 +677,7 @@ Raises:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsString</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">report_definition</span>,
         <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_column_header</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -677,6 +698,9 @@ Args:
   skip_report_header: A boolean indicating whether to include a header row
       containing the report name and date range. If false or not specified,
       report output will include the header row.
+  skip_column_header: A boolean indicating whether to include column names
+      in reports. If false or not specified, report output will include the
+      column names.
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
@@ -708,6 +732,7 @@ Raises:
         <span class="sig-arg">query</span>,
         <span class="sig-arg">file_format</span>,
         <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_column_header</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -730,6 +755,9 @@ Args:
   skip_report_header: A boolean indicating whether to include a header row
       containing the report name and date range. If false or not specified,
       report output will include the header row.
+  skip_column_header: A boolean indicating whether to include column names
+      in reports. If false or not specified, report output will include the
+      column names.
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
@@ -762,6 +790,7 @@ Raises:
         <span class="sig-arg">file_format</span>,
         <span class="sig-arg">output</span>=<span class="sig-default">sys.stdout</span>,
         <span class="sig-arg">skip_report_header</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">skip_column_header</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">skip_report_summary</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -787,6 +816,9 @@ Args:
   skip_report_header: A boolean indicating whether to include a header row
       containing the report name and date range. If false or not specified,
       report output will include the header row.
+  skip_column_header: A boolean indicating whether to include column names
+      in reports. If false or not specified, report output will include the
+      column names.
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
@@ -815,6 +847,7 @@ Raises:
         <span class="sig-arg">post_body</span>,
         <span class="sig-arg">output</span>,
         <span class="sig-arg">skip_report_header</span>,
+        <span class="sig-arg">skip_column_header</span>,
         <span class="sig-arg">skip_report_summary</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -833,6 +866,9 @@ Args:
   skip_report_header: A boolean indicating whether to include a header row
       containing the report name and date range. If false or not specified,
       report output will include the header row.
+  skip_column_header: A boolean indicating whether to include column names
+      in reports. If false or not specified, report output will include the
+      column names.
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
@@ -860,6 +896,7 @@ Raises:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">_DownloadReportAsStream</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">post_body</span>,
         <span class="sig-arg">skip_report_header</span>,
+        <span class="sig-arg">skip_column_header</span>,
         <span class="sig-arg">skip_report_summary</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -876,6 +913,9 @@ Args:
   skip_report_header: A boolean indicating whether to include a header row
       containing the report name and date range. If false or not specified,
       report output will include the header row.
+  skip_column_header: A boolean indicating whether to include column names
+      in reports. If false or not specified, report output will include the
+      column names.
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
@@ -1079,7 +1119,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Mar 13 14:41:47 2015
+    Generated by Epydoc 3.0.1 on Mon Apr 27 18:02:14 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
