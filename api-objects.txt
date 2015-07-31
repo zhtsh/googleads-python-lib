@@ -1,9 +1,10 @@
 googleads	googleads-module.html
 googleads.__package__	googleads-module.html#__package__
 googleads.adwords	googleads.adwords-module.html
-googleads.adwords._DEFAULT_ENDPOINT	googleads.adwords-module.html#_DEFAULT_ENDPOINT
-googleads.adwords.__package__	googleads.adwords-module.html#__package__
 googleads.adwords._SERVICE_MAP	googleads.adwords-module.html#_SERVICE_MAP
+googleads.adwords.__package__	googleads.adwords-module.html#__package__
+googleads.adwords._DEFAULT_ENDPOINT	googleads.adwords-module.html#_DEFAULT_ENDPOINT
+googleads.adwords._REPORT_HEADER_KWARGS	googleads.adwords-module.html#_REPORT_HEADER_KWARGS
 googleads.common	googleads.common-module.html
 googleads.common._OAUTH_2_AUTH_KEYS	googleads.common-module.html#_OAUTH_2_AUTH_KEYS
 googleads.common._PROXY_KEYS	googleads.common-module.html#_PROXY_KEYS
