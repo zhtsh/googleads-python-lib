@@ -22,9 +22,9 @@ googleads.dfa	googleads.dfa-module.html
 googleads.dfa.__package__	googleads.dfa-module.html#__package__
 googleads.dfp	googleads.dfp-module.html
 googleads.dfp.DfpClassType	googleads.dfp-module.html#DfpClassType
-googleads.dfp.__package__	googleads.dfp-module.html#__package__
 googleads.dfp.DEFAULT_ENDPOINT	googleads.dfp-module.html#DEFAULT_ENDPOINT
 googleads.dfp.SUGGESTED_PAGE_LIMIT	googleads.dfp-module.html#SUGGESTED_PAGE_LIMIT
+googleads.dfp.__package__	googleads.dfp-module.html#__package__
 googleads.dfp._CHUNK_SIZE	googleads.dfp-module.html#_CHUNK_SIZE
 googleads.dfp._SERVICE_MAP	googleads.dfp-module.html#_SERVICE_MAP
 googleads.dfp.DEFAULT_APPLICATION_NAME	googleads.dfp-module.html#DEFAULT_APPLICATION_NAME
