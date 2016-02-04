@@ -71,6 +71,58 @@ object --+
 <hr />
 <p>A utility that simplifies working with the BatchJobService.</p>
 
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.BatchJobHelper.AbstractResponseParser-class.html" class="summary-name">AbstractResponseParser</a><br />
+      Interface for parsing responses from the BatchJobService.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.BatchJobHelper._XMLToDictResponseParser-class.html" class="summary-name" onclick="show_private();">_XMLToDictResponseParser</a><br />
+      Parses responses from the BatchJobService, returning as a 
+        dictionary.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.BatchJobHelper.AbstractUploadRequestBuilder-class.html" class="summary-name">AbstractUploadRequestBuilder</a><br />
+      Interface for building requests used to upload batch job 
+        operations.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html" class="summary-name" onclick="show_private();">_SudsUploadRequestBuilder</a><br />
+      Builds requests used to upload operations for Batch Jobs.
+    </td>
+  </tr>
+</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -95,8 +147,9 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">adwords_client</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201509</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">request_builder</span>,
+        <span class="summary-sig-arg">response_parser</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201601</code><code class="variable-quote">'</code></span>)</span><br />
       Initializes the BatchJobHelper.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.__init__">source&nbsp;code</a></span>
@@ -130,102 +183,48 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#UploadBatchJobOperations" class="summary-sig-name">UploadBatchJobOperations</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a name="GetIncrementalUploadHelper"></a><span class="summary-sig-name">GetIncrementalUploadHelper</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">upload_url</span>,
+        <span class="summary-sig-arg">current_content_length</span>=<span class="summary-sig-default">0</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.GetIncrementalUploadHelper">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#ParseResponse" class="summary-sig-name">ParseResponse</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">batch_job_response</span>)</span><br />
+      Parses a Batch Job Service response and returns it as a suds object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.ParseResponse">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#UploadOperations" class="summary-sig-name">UploadOperations</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">upload_url</span>,
         <span class="summary-sig-arg">*operations</span>)</span><br />
-      Uploads operations to the given uploadUrl.</td>
+      Uploads all operations to the given uploadUrl in a single request.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.UploadBatchJobOperations">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#_GenerateOperationsXML" class="summary-sig-name" onclick="show_private();">_GenerateOperationsXML</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">operations</span>)</span><br />
-      Generates XML for the given list of operations.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._GenerateOperationsXML">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#_GenerateRawRequestXML" class="summary-sig-name" onclick="show_private();">_GenerateRawRequestXML</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">operations</span>)</span><br />
-      Generates the raw XML for the operations sent to the given service.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._GenerateRawRequestXML">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#_ExtractOperations" class="summary-sig-name" onclick="show_private();">_ExtractOperations</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">full_soap_xml</span>)</span><br />
-      Extracts operations from API Request XML for use with BatchJobService.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._ExtractOperations">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#_FormatForBatchJobService" class="summary-sig-name" onclick="show_private();">_FormatForBatchJobService</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">element</span>)</span><br />
-      Formats contents of all operations for use with the BatchJobService.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._FormatForBatchJobService">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#_GetRawOperationsFromXML" class="summary-sig-name" onclick="show_private();">_GetRawOperationsFromXML</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">raw_request_xml</span>)</span><br />
-      Retrieve the raw set of operations from the request XML.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._GetRawOperationsFromXML">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.UploadOperations">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -252,38 +251,57 @@ object --+
     </td>
   </tr>
 </table>
-<!-- ==================== CLASS VARIABLES ==================== -->
-<a name="section-ClassVariables"></a>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td colspan="2" class="table-header">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr valign="top">
-        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="left"><span class="table-header">Class Methods</span></td>
         <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariables"
+         ><span class="options">[<a href="#section-ClassMethods"
          class="privatelink" onclick="toggle_private();"
          >hide private</a>]</span></td>
       </tr>
     </table>
   </td>
 </tr>
-<tr class="private">
+<tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_ATTRIB_NAMESPACE_SUB"></a><span class="summary-name">_ATTRIB_NAMESPACE_SUB</span> = <code title="re.compile(r'ns[0-1]:')">re.compile(r'ns<code class="re-group">[</code>0<code class="re-op">-</code>1<code class="re-group">]</code>:')</code>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetRequestBuilder"></a><span class="summary-sig-name">GetRequestBuilder</span>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Get a new AbstractUploadRequestBuilder instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.GetRequestBuilder">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
-<tr class="private">
+<tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.BatchJobHelper-class.html#_UPLOAD_REQUEST_BODY_TEMPLATE" class="summary-name" onclick="show_private();">_UPLOAD_REQUEST_BODY_TEMPLATE</a> = <code title="'''&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;mutate xmlns=&quot;%s&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instanc\
-e&quot;&gt;%s
-&lt;/mutate&gt;'''"><code class="variable-quote">'</code><code class="variable-string">&lt;?xml version=&quot;1.0&quot; encoding=</code><code class="variable-ellipsis">...</code></code>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetResponseParser"></a><span class="summary-sig-name">GetResponseParser</span>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Get a new AbstractResponseParser instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.GetResponseParser">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
 </table>
@@ -338,8 +356,9 @@ e&quot;&gt;%s
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">adwords_client</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201509</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">request_builder</span>,
+        <span class="sig-arg">response_parser</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201601</code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -350,10 +369,16 @@ e&quot;&gt;%s
   <pre class="literalblock">
 Initializes the BatchJobHelper.
 
+For general use, consider using AdWordsClient's GetBatchJobHelper method to
+receive an initialized BatchJobHelper using the default request builder and
+response parser.
+
 Args:
-  adwords_client: an initialized AdWordsClient.
-  version: a str indicating version of the AdWords API you intend to use.
-    This will be set to the latest version of AdWords by default.
+  request_builder: an AbstractUploadRequestBuilder instance.
+  response_parser: an AbstractResponseParser instance.
+  version: A string identifying the AdWords version to connect to. This
+    defaults to what is currently the latest version. This will be updated
+    in future releases to point to what is then the latest version.
 
 </pre>
   <dl class="fields">
@@ -388,24 +413,57 @@ Returns:
   </dl>
 </td></tr></table>
 </div>
-<a name="UploadBatchJobOperations"></a>
+<a name="ParseResponse"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">UploadBatchJobOperations</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">upload_url</span>,
-        <span class="sig-arg">*operations</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseResponse</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">batch_job_response</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.UploadBatchJobOperations">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.ParseResponse">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Uploads operations to the given uploadUrl.
+Parses a Batch Job Service response and returns it as a suds object.
+
+Note: Unlike suds objects generated via an API call with suds, type
+information will be lost. All values are strings.
+
+Args:
+  batch_job_response: a str containing the response from the
+  BatchJobService.
+
+Returns:
+  A suds object response generated from the provided batch_job_response.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="UploadOperations"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">UploadOperations</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">upload_url</span>,
+        <span class="sig-arg">*operations</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.UploadOperations">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Uploads all operations to the given uploadUrl in a single request.
 
 Note: Each list of operations is expected to contain operations of the same
 type, similar to how one would normally send operations in an AdWords API
@@ -418,209 +476,6 @@ Args:
 
 </pre>
   <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<a name="_GenerateOperationsXML"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_GenerateOperationsXML</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">operations</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._GenerateOperationsXML">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <pre class="literalblock">
-Generates XML for the given list of operations.
-
-Args:
-  operations: a list of operations for single AdWords Service.
-Returns:
-  A str containing the XML for only the operations, formatted to work
-  with the BatchJobService.
-Raises:
-  ValueError: if no xsi_type is specified for the operations.
-
-</pre>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<a name="_GenerateRawRequestXML"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_GenerateRawRequestXML</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">operations</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._GenerateRawRequestXML">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <pre class="literalblock">
-Generates the raw XML for the operations sent to the given service.
-
-Args:
-  operations: a list containing operations that could be run by the given
-    service.
-
-Returns:
-  A str containing the raw XML of the request to the given service that
-  would execute the given operations.
-
-</pre>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<a name="_ExtractOperations"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ExtractOperations</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">full_soap_xml</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._ExtractOperations">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <pre class="literalblock">
-Extracts operations from API Request XML for use with BatchJobService.
-
-Args:
-  full_soap_xml: The full XML for the desired operation, as generated by
-    suds.
-
-Returns:
-  A string containing only the operations portion of the full XML request,
-  formatted for use with the BatchJobService. If no operations are found,
-  returns an empty string.
-
-Raises:
-  ValueError: If no Operation.Type element is found in the operations. This
-    ordinarily happens if no xsi_type is specified for the operations.
-
-</pre>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<a name="_FormatForBatchJobService"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_FormatForBatchJobService</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">element</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._FormatForBatchJobService">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <pre class="literalblock">
-Formats contents of all operations for use with the BatchJobService.
-
-This will recursively remove unnecessary namespaces generated by suds that
-would prevent the operations from executing via the BatchJobService. It will
-also remove namespaces appended to the xsi:type in some cases that also
-cause issues for the BatchJobService.
-
-Args:
-  element: a starting Element to be modified to the correct format.
-
-</pre>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<a name="_GetRawOperationsFromXML"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_GetRawOperationsFromXML</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">raw_request_xml</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper._GetRawOperationsFromXML">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <pre class="literalblock">
-Retrieve the raw set of operations from the request XML.
-
-Args:
-  raw_request_xml: The full XML for the desired operation, as generated by
-    suds.
-
-Returns:
-  An unmodified mutate Element containing the operations from the raw
-  request xml.
-
-Raises:
-  AttributeError: if the provided XML isn't from AdWords.
-
-</pre>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
-<a name="section-ClassVariableDetails"></a>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="_UPLOAD_REQUEST_BODY_TEMPLATE"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">_UPLOAD_REQUEST_BODY_TEMPLATE</h3>
-  
-  <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'''</code><code class="variable-string">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</code>
-<code class="variable-string">&lt;mutate xmlns=&quot;%s&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instanc</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-<code class="variable-string">e&quot;&gt;%s</code>
-<code class="variable-string">&lt;/mutate&gt;</code><code class="variable-quote">'''</code>
-</pre></td></tr></table>
-</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -656,7 +511,7 @@ Raises:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Nov 19 14:07:49 2015
+    Generated by Epydoc 3.0.1 on Thu Feb  4 15:00:04 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

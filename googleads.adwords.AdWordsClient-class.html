@@ -143,7 +143,7 @@ Attributes:
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetService" class="summary-sig-name">GetService</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">service_name</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201509</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201601</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span><br />
       Creates a service client for the given service.</td>
           <td align="right" valign="top">
@@ -161,7 +161,9 @@ Attributes:
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetBatchJobHelper" class="summary-sig-name">GetBatchJobHelper</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetBatchJobHelper" class="summary-sig-name">GetBatchJobHelper</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201601</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span><br />
       Returns a BatchJobHelper to work with the BatchJobService.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetBatchJobHelper">source&nbsp;code</a></span>
@@ -179,7 +181,7 @@ Attributes:
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetReportDownloader" class="summary-sig-name">GetReportDownloader</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201509</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201601</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span><br />
       Creates a downloader for AdWords reports.</td>
           <td align="right" valign="top">
@@ -457,7 +459,7 @@ Args:
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetService</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">service_name</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201509</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201601</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">server</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -496,7 +498,9 @@ Raises:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetBatchJobHelper</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetBatchJobHelper</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201601</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">server</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetBatchJobHelper">source&nbsp;code</a></span>&nbsp;
@@ -506,11 +510,18 @@ Raises:
   <pre class="literalblock">
 Returns a BatchJobHelper to work with the BatchJobService.
 
-This is a convenience method. It is functionally identical to calling
-BatchJobHelper(adwords_client, version).
+  This is a convenience method. It is functionally identical to calling
+  BatchJobHelper(adwords_client, version).
 
-Returns:
-  An initialized BatchJobHelper tied to this client.
+Args:
+  [optional]
+  version: A string identifying the AdWords version to connect to. This
+      defaults to what is currently the latest version. This will be updated
+      in future releases to point to what is then the latest version.
+  server: A string identifying the webserver hosting the AdWords API.
+
+  Returns:
+    An initialized BatchJobHelper tied to this client.
 
 </pre>
   <dl class="fields">
@@ -525,7 +536,7 @@ Returns:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetReportDownloader</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201509</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201601</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">server</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -649,7 +660,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Nov 19 14:07:49 2015
+    Generated by Epydoc 3.0.1 on Thu Feb  4 15:00:04 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
