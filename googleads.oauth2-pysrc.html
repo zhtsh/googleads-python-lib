@@ -281,56 +281,57 @@ googleads.oauth2.GoogleServiceAccountClient._USER_AGENT" class="py-name" href="#
 <a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">                                                 <tt class="py-string">' does not exist.'</tt> <tt class="py-op">%</tt> <tt class="py-name">key_file</tt><tt class="py-op">)</tt> </tt>
 <a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line"> </tt>
 <a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt> <tt class="py-op">=</tt> <tt class="py-name">oauth2client</tt><tt class="py-op">.</tt><tt class="py-name">client</tt><tt class="py-op">.</tt><tt class="py-name">SignedJwtAssertionCredentials</tt><tt class="py-op">(</tt> </tt>
-<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">        <tt class="py-name">client_email</tt><tt class="py-op">,</tt> <tt class="py-name">private_key</tt><tt class="py-op">,</tt> <tt class="py-name">scope</tt><tt class="py-op">,</tt> <tt class="py-name">private_key_password</tt><tt class="py-op">,</tt> </tt>
-<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="googleads.oauth2.GoogleRefreshTokenClient._USER_AGENT
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">        <tt class="py-name">client_email</tt><tt class="py-op">,</tt> <tt class="py-name">private_key</tt><tt class="py-op">,</tt> <tt class="py-name">scope</tt><tt class="py-op">,</tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">        <tt class="py-name">private_key_password</tt><tt class="py-op">=</tt><tt class="py-name">private_key_password</tt><tt class="py-op">,</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">        <tt class="py-name">user_agent</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="googleads.oauth2.GoogleRefreshTokenClient._USER_AGENT
 googleads.oauth2.GoogleServiceAccountClient._USER_AGENT" class="py-name" href="#" onclick="return doclink('link-21', '_USER_AGENT', 'link-11');">_USER_AGENT</a></tt><tt class="py-op">,</tt> <tt class="py-name">sub</tt><tt class="py-op">=</tt><tt class="py-name">sub</tt><tt class="py-op">)</tt> </tt>
-<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">proxy_info</tt> <tt class="py-op">=</tt> <tt class="py-name">proxy_info</tt> </tt>
-<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">disable_ssl_certificate_validation</tt> <tt class="py-op">=</tt> <tt class="py-name">disable_ssl_certificate_validation</tt> </tt>
-<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ca_certs</tt> <tt class="py-op">=</tt> <tt class="py-name">ca_certs</tt> </tt>
-<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="googleads.oauth2.GoogleOAuth2Client.Refresh
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">proxy_info</tt> <tt class="py-op">=</tt> <tt class="py-name">proxy_info</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">disable_ssl_certificate_validation</tt> <tt class="py-op">=</tt> <tt class="py-name">disable_ssl_certificate_validation</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ca_certs</tt> <tt class="py-op">=</tt> <tt class="py-name">ca_certs</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="googleads.oauth2.GoogleOAuth2Client.Refresh
 googleads.oauth2.GoogleRefreshTokenClient.Refresh
 googleads.oauth2.GoogleServiceAccountClient.Refresh" class="py-name" href="#" onclick="return doclink('link-22', 'Refresh', 'link-15');">Refresh</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
-</div><a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line"> </tt>
-<a name="GoogleServiceAccountClient.CreateHttpHeader"></a><div id="GoogleServiceAccountClient.CreateHttpHeader-def"><a name="L220"></a><tt class="py-lineno">220</tt> <a class="py-toggle" href="#" id="GoogleServiceAccountClient.CreateHttpHeader-toggle" onclick="return toggle('GoogleServiceAccountClient.CreateHttpHeader');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="googleads.oauth2.GoogleServiceAccountClient-class.html#CreateHttpHeader">CreateHttpHeader</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="GoogleServiceAccountClient.CreateHttpHeader-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="GoogleServiceAccountClient.CreateHttpHeader-expanded"><a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">    <tt class="py-docstring">"""Creates an OAuth 2.0 HTTP header.</tt> </tt>
-<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
-<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"><tt class="py-docstring">    The OAuth 2.0 credentials will be refreshed as necessary. In the event that</tt> </tt>
-<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line"><tt class="py-docstring">    the credentials fail to refresh, a message is logged but no exception is</tt> </tt>
-<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line"><tt class="py-docstring">    raised.</tt> </tt>
-<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
-<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"><tt class="py-docstring">    Returns:</tt> </tt>
-<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line"><tt class="py-docstring">      A dictionary containing one entry: the OAuth 2.0 Bearer header under the</tt> </tt>
-<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"><tt class="py-docstring">      'Authorization' key.</tt> </tt>
-<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
-<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line"><tt class="py-docstring">    Raises:</tt> </tt>
-<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line"><tt class="py-docstring">      AccessTokenRefreshError: If the refresh fails.</tt> </tt>
-<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
-<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line">    <tt class="py-name">oauth2_header</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
-<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"> </tt>
-<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt><tt class="py-op">.</tt><tt class="py-name">token_expiry</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt> <tt class="py-keyword">and</tt> </tt>
-<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">       <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt><tt class="py-op">.</tt><tt class="py-name">token_expiry</tt> <tt class="py-op">-</tt> <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">utcnow</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">&lt;</tt> </tt>
-<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line">        <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">timedelta</tt><tt class="py-op">(</tt><tt class="py-name">minutes</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="googleads.oauth2.GoogleRefreshTokenClient._OAUTH2_REFRESH_MINUTES_IN_ADVANCE
+</div><a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line"> </tt>
+<a name="GoogleServiceAccountClient.CreateHttpHeader"></a><div id="GoogleServiceAccountClient.CreateHttpHeader-def"><a name="L221"></a><tt class="py-lineno">221</tt> <a class="py-toggle" href="#" id="GoogleServiceAccountClient.CreateHttpHeader-toggle" onclick="return toggle('GoogleServiceAccountClient.CreateHttpHeader');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="googleads.oauth2.GoogleServiceAccountClient-class.html#CreateHttpHeader">CreateHttpHeader</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GoogleServiceAccountClient.CreateHttpHeader-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="GoogleServiceAccountClient.CreateHttpHeader-expanded"><a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">    <tt class="py-docstring">"""Creates an OAuth 2.0 HTTP header.</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line"><tt class="py-docstring">    The OAuth 2.0 credentials will be refreshed as necessary. In the event that</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line"><tt class="py-docstring">    the credentials fail to refresh, a message is logged but no exception is</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line"><tt class="py-docstring">    raised.</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line"><tt class="py-docstring">    Returns:</tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"><tt class="py-docstring">      A dictionary containing one entry: the OAuth 2.0 Bearer header under the</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"><tt class="py-docstring">      'Authorization' key.</tt> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line"><tt class="py-docstring">    Raises:</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line"><tt class="py-docstring">      AccessTokenRefreshError: If the refresh fails.</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line">    <tt class="py-name">oauth2_header</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line"> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt><tt class="py-op">.</tt><tt class="py-name">token_expiry</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt> <tt class="py-keyword">and</tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line">       <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt><tt class="py-op">.</tt><tt class="py-name">token_expiry</tt> <tt class="py-op">-</tt> <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">utcnow</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">&lt;</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">        <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">timedelta</tt><tt class="py-op">(</tt><tt class="py-name">minutes</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="googleads.oauth2.GoogleRefreshTokenClient._OAUTH2_REFRESH_MINUTES_IN_ADVANCE
 googleads.oauth2.GoogleServiceAccountClient._OAUTH2_REFRESH_MINUTES_IN_ADVANCE" class="py-name" href="#" onclick="return doclink('link-23', '_OAUTH2_REFRESH_MINUTES_IN_ADVANCE', 'link-9');">_OAUTH2_REFRESH_MINUTES_IN_ADVANCE</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="googleads.oauth2.GoogleOAuth2Client.Refresh
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="googleads.oauth2.GoogleOAuth2Client.Refresh
 googleads.oauth2.GoogleRefreshTokenClient.Refresh
 googleads.oauth2.GoogleServiceAccountClient.Refresh" class="py-name" href="#" onclick="return doclink('link-24', 'Refresh', 'link-15');">Refresh</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
-<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line"> </tt>
-<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt><tt class="py-op">.</tt><tt class="py-name">apply</tt><tt class="py-op">(</tt><tt class="py-name">oauth2_header</tt><tt class="py-op">)</tt> </tt>
-<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">oauth2_header</tt> </tt>
-</div><a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"> </tt>
-<a name="GoogleServiceAccountClient.Refresh"></a><div id="GoogleServiceAccountClient.Refresh-def"><a name="L244"></a><tt class="py-lineno">244</tt> <a class="py-toggle" href="#" id="GoogleServiceAccountClient.Refresh-toggle" onclick="return toggle('GoogleServiceAccountClient.Refresh');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="googleads.oauth2.GoogleServiceAccountClient-class.html#Refresh">Refresh</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="GoogleServiceAccountClient.Refresh-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="GoogleServiceAccountClient.Refresh-expanded"><a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">    <tt class="py-docstring">"""Retrieve and set a new Access Token.</tt> </tt>
-<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
-<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line"><tt class="py-docstring">    Raises:</tt> </tt>
-<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line"><tt class="py-docstring">      AccessTokenRefreshError: If the refresh fails.</tt> </tt>
-<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
-<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt><tt class="py-op">.</tt><tt class="py-name">refresh</tt><tt class="py-op">(</tt> </tt>
-<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">        <tt class="py-name">httplib2</tt><tt class="py-op">.</tt><tt class="py-name">Http</tt><tt class="py-op">(</tt> </tt>
-<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">            <tt class="py-name">proxy_info</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">proxy_info</tt><tt class="py-op">,</tt> </tt>
-<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">            <tt class="py-name">ca_certs</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ca_certs</tt><tt class="py-op">,</tt> </tt>
-<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">            <tt class="py-name">disable_ssl_certificate_validation</tt><tt class="py-op">=</tt><tt class="py-op">(</tt> </tt>
-<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">disable_ssl_certificate_validation</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
-</div></div><a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line"> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt><tt class="py-op">.</tt><tt class="py-name">apply</tt><tt class="py-op">(</tt><tt class="py-name">oauth2_header</tt><tt class="py-op">)</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">oauth2_header</tt> </tt>
+</div><a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line"> </tt>
+<a name="GoogleServiceAccountClient.Refresh"></a><div id="GoogleServiceAccountClient.Refresh-def"><a name="L245"></a><tt class="py-lineno">245</tt> <a class="py-toggle" href="#" id="GoogleServiceAccountClient.Refresh-toggle" onclick="return toggle('GoogleServiceAccountClient.Refresh');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="googleads.oauth2.GoogleServiceAccountClient-class.html#Refresh">Refresh</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GoogleServiceAccountClient.Refresh-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="GoogleServiceAccountClient.Refresh-expanded"><a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line">    <tt class="py-docstring">"""Retrieve and set a new Access Token.</tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line"><tt class="py-docstring">    Raises:</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line"><tt class="py-docstring">      AccessTokenRefreshError: If the refresh fails.</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oauth2credentials</tt><tt class="py-op">.</tt><tt class="py-name">refresh</tt><tt class="py-op">(</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">        <tt class="py-name">httplib2</tt><tt class="py-op">.</tt><tt class="py-name">Http</tt><tt class="py-op">(</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">            <tt class="py-name">proxy_info</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">proxy_info</tt><tt class="py-op">,</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">            <tt class="py-name">ca_certs</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ca_certs</tt><tt class="py-op">,</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">            <tt class="py-name">disable_ssl_certificate_validation</tt><tt class="py-op">=</tt><tt class="py-op">(</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">disable_ssl_certificate_validation</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line"> </tt><script type="text/javascript">
 <!--
 expandto(location.href);
 // -->
@@ -368,7 +369,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Feb  5 14:45:03 2016
+    Generated by Epydoc 3.0.1 on Tue Feb 23 15:07:05 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
