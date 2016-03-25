@@ -61,14 +61,14 @@
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
 <h1 class="epydoc">Module oauth2</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.oauth2-pysrc.html">source&nbsp;code</a></span></p>
-<p>OAuth 2.0 integration for the googleads library.</p>
+<p>OAuth2 integration for the googleads library.</p>
   <p>This module provides a basic interface which the googleads library 
   uses to authorize API requests and some simple implementations built on 
-  oauth2client. If our OAuth 2.0 workflows doesn't meet your requirements, 
-  you can implement this interface in your own way. For example, you could 
-  pull credentials from a shared server and/or centralize refreshing 
-  credentials to prevent every Python process from independently refreshing
-  the credentials.</p>
+  oauth2client. If our OAuth2 workflows doesn't meet your requirements, you
+  can implement this interface in your own way. For example, you could pull
+  credentials from a shared server and/or centralize refreshing credentials
+  to prevent every Python process from independently refreshing the 
+  credentials.</p>
 
 <!-- ==================== CLASSES ==================== -->
 <a name="section-Classes"></a>
@@ -92,7 +92,7 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="googleads.oauth2.GoogleOAuth2Client-class.html" class="summary-name">GoogleOAuth2Client</a><br />
-      An OAuth 2.0 client for use with Google APIs.
+      An OAuth2 client for use with Google APIs.
     </td>
   </tr>
 <tr>
@@ -100,7 +100,7 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="googleads.oauth2.GoogleRefreshTokenClient-class.html" class="summary-name">GoogleRefreshTokenClient</a><br />
-      A simple client for using OAuth 2.0 for Google APIs with a refresh token.
+      A simple client for using OAuth2 for Google APIs with a refresh token.
     </td>
   </tr>
 <tr>
@@ -108,7 +108,7 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="googleads.oauth2.GoogleServiceAccountClient-class.html" class="summary-name">GoogleServiceAccountClient</a><br />
-      A simple client for using OAuth 2.0 for Google APIs with a service account.
+      A simple client for using OAuth2 for Google APIs with a service account.
     </td>
   </tr>
 </table>
@@ -168,8 +168,15 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.oauth2-module.html#SCOPES" class="summary-name">SCOPES</a> = <code title="{'adwords': 'https://www.googleapis.com/auth/adwords', 'dfp': 'https:/\
-/www.googleapis.com/auth/dfp'}">{'adwords': 'https://www.googleapis.com/auth/adwords'<code class="variable-ellipsis">...</code></code>
+        <a href="googleads.oauth2-module.html#SCOPES" class="summary-name">SCOPES</a> = <code title="{'adwords': 'https://www.googleapis.com/auth/adwords',
+ 'dfp': 'https://www.googleapis.com/auth/dfp'}"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">adwords</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">https://www.googleapis.com/auth/adwords</code><code class="variable-quote">'</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'googleads'"><code class="variable-quote">'</code><code class="variable-string">googleads</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -255,8 +262,8 @@ Raises:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-{'adwords': 'https://www.googleapis.com/auth/adwords', 'dfp': 'https:/<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-/www.googleapis.com/auth/dfp'}
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">adwords</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">https://www.googleapis.com/auth/adwords</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">dfp</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">https://www.googleapis.com/auth/dfp</code><code class="variable-quote">'</code><code class="variable-group">}</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -294,7 +301,7 @@ Raises:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Feb 23 15:07:05 2016
+    Generated by Epydoc 3.0.1 on Fri Mar 25 12:08:34 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
