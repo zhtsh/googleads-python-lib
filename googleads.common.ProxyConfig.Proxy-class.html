@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.adwords</title>
+  <title>googleads.common.ProxyConfig.Proxy</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,7 +43,9 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        Module&nbsp;adwords
+        <a href="googleads.common-module.html">Module&nbsp;common</a> ::
+        <a href="googleads.common.ProxyConfig-class.html">Class&nbsp;ProxyConfig</a> ::
+        Class&nbsp;Proxy
       </span>
     </td>
     <td>
@@ -53,27 +55,34 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.adwords-module.html"
+            >]&nbsp;|&nbsp;<a href="googleads.common.ProxyConfig.Proxy-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
-<!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module adwords</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.adwords-pysrc.html">source&nbsp;code</a></span></p>
-<p>Client library for the AdWords API.</p>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Proxy</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">ProxyConfig.Proxy</strong>
+</pre>
 
-<!-- ==================== CLASSES ==================== -->
-<a name="section-Classes"></a>
+<hr />
+<p>Defines settings for a proxy connection.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td colspan="2" class="table-header">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr valign="top">
-        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="left"><span class="table-header">Instance Methods</span></td>
         <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Classes"
+         ><span class="options">[<a href="#section-InstanceMethods"
          class="privatelink" onclick="toggle_private();"
          >hide private</a>]</span></td>
       </tr>
@@ -84,103 +93,126 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.AdWordsClient-class.html" class="summary-name">AdWordsClient</a><br />
-      A central location to set headers and create web service clients.
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="googleads.adwords._AdWordsHeaderHandler-class.html" class="summary-name" onclick="show_private();">_AdWordsHeaderHandler</a><br />
-      Handler which generates the headers for AdWords requests.
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="googleads.adwords.BatchJobHelper-class.html" class="summary-name">BatchJobHelper</a><br />
-      A utility that simplifies working with the BatchJobService.
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common.ProxyConfig.Proxy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">host</span>,
+        <span class="summary-sig-arg">port</span>,
+        <span class="summary-sig-arg">username</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">password</span>=<span class="summary-sig-default">''</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.IncrementalUploadHelper-class.html" class="summary-name">IncrementalUploadHelper</a><br />
-      A utility for uploading operations for a BatchJob incrementally.
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common.ProxyConfig.Proxy-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      str(x)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy.__str__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="googleads.adwords.ReportDownloader-class.html" class="summary-name">ReportDownloader</a><br />
-      A utility that can be used to download reports from AdWords.
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__subclasshook__</code>
+      </p>
     </td>
   </tr>
 </table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td colspan="2" class="table-header">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="left"><span class="table-header">Class Variables</span></td>
         <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
+         ><span class="options">[<a href="#section-ClassVariables"
          class="privatelink" onclick="toggle_private();"
          >hide private</a>]</span></td>
       </tr>
     </table>
   </td>
 </tr>
-<tr class="private">
+<tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords-module.html#_SERVICE_MAP" class="summary-name" onclick="show_private();">_SERVICE_MAP</a> = <code title="{'v201509': {'AccountLabelService': 'mcm', 'AdCustomizerFeedService': \
-'cm', 'AdGroupAdService': 'cm', 'AdGroupBidModifierService': 'cm', 'Ad\
-GroupCriterionService': 'cm', 'AdGroupExtensionSettingService': 'cm', \
-'AdGroupFeedService': 'cm', 'AdGroupService': 'cm', 'AdParamService': \
-'cm', 'BatchJobService': 'cm', 'BudgetOrderService': 'billing', 'Campa\
-ignCriterionService': 'cm', 'CampaignExtensionSettingService': 'cm', '\
-CampaignFeedService': 'cm', 'CampaignService': 'cm', 'CampaignSharedSe\
-tService': 'cm', 'ConstantDataService': 'cm', 'ConversionTrackerServic\
-...">{'v201509': {'AccountLabelService': 'mcm', 'AdC<code class="variable-ellipsis">...</code></code>
+        <a name="STR_TEMPLATE"></a><span class="summary-name">STR_TEMPLATE</span> = <code title="'%s:%s'">'%s:%s'</code>
     </td>
   </tr>
-<tr class="private">
+<tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords-module.html#_REPORT_HEADER_KWARGS" class="summary-name" onclick="show_private();">_REPORT_HEADER_KWARGS</a> = <code title="{'include_zero_impressions': 'includeZeroImpressions', 'skip_report_he\
-ader': 'skipReportHeader', 'skip_column_header': 'skipColumnHeader', '\
-skip_report_summary': 'skipReportSummary'}">{'include_zero_impressions': 'includeZ<code class="variable-ellipsis">...</code></code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_DEFAULT_ENDPOINT"></a><span class="summary-name">_DEFAULT_ENDPOINT</span> = <code title="'https://adwords.google.com'">'https://adwords.google.com'</code>
+        <a name="CRED_TEMPLATE"></a><span class="summary-name">CRED_TEMPLATE</span> = <code title="'%s@%s'">'%s@%s'</code>
     </td>
   </tr>
 </table>
-<!-- ==================== VARIABLES DETAILS ==================== -->
-<a name="section-VariablesDetails"></a>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td colspan="2" class="table-header">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr valign="top">
-        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="left"><span class="table-header">Method Details</span></td>
         <td align="right" valign="top"
-         ><span class="options">[<a href="#section-VariablesDetails"
+         ><span class="options">[<a href="#section-MethodDetails"
          class="privatelink" onclick="toggle_private();"
          >hide private</a>]</span></td>
       </tr>
@@ -188,49 +220,55 @@ skip_report_summary': 'skipReportSummary'}">{'include_zero_impressions': 'includ
   </td>
 </tr>
 </table>
-<a name="_SERVICE_MAP"></a>
-<div class="private">
+<a name="__init__"></a>
+<div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">_SERVICE_MAP</h3>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">host</span>,
+        <span class="sig-arg">port</span>,
+        <span class="sig-arg">username</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">password</span>=<span class="sig-default">''</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
   <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-{'v201509': {'AccountLabelService': 'mcm', 'AdCustomizerFeedService': <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'cm', 'AdGroupAdService': 'cm', 'AdGroupBidModifierService': 'cm', 'Ad<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-GroupCriterionService': 'cm', 'AdGroupExtensionSettingService': 'cm', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'AdGroupFeedService': 'cm', 'AdGroupService': 'cm', 'AdParamService': <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'cm', 'BatchJobService': 'cm', 'BudgetOrderService': 'billing', 'Campa<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-ignCriterionService': 'cm', 'CampaignExtensionSettingService': 'cm', '<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-CampaignFeedService': 'cm', 'CampaignService': 'cm', 'CampaignSharedSe<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-tService': 'cm', 'ConstantDataService': 'cm', 'ConversionTrackerServic<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-<code class="variable-ellipsis">...</code>
-</pre></td></tr></table>
-</dd>
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="_REPORT_HEADER_KWARGS"></a>
-<div class="private">
+<a name="__str__"></a>
+<div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">_REPORT_HEADER_KWARGS</h3>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Informal representation operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy.__str__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
+  <p>str(x)</p>
   <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-{'include_zero_impressions': 'includeZeroImpressions', 'skip_report_he<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-ader': 'skipReportHeader', 'skip_column_header': 'skipColumnHeader', '<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-skip_report_summary': 'skipReportSummary'}
-</pre></td></tr></table>
-</dd>
+    <dt>Overrides:
+        object.__str__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
   </dl>
 </td></tr></table>
 </div>

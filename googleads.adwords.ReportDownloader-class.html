@@ -96,8 +96,8 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">adwords_client</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201603</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">_DEFAULT_ENDPOINT</span>)</span><br />
       Initializes a ReportDownloader.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.__init__">source&nbsp;code</a></span>
@@ -379,28 +379,28 @@ object --+
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.ReportDownloader-class.html#_NAMESPACE_FORMAT" class="summary-name" onclick="show_private();">_NAMESPACE_FORMAT</a> = <code title="'https://adwords.google.com/api/adwords/cm/%s'"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com/api/adwords/cm</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.ReportDownloader-class.html#_NAMESPACE_FORMAT" class="summary-name" onclick="show_private();">_NAMESPACE_FORMAT</a> = <code title="'https://adwords.google.com/api/adwords/cm/%s'">'https://adwords.google.com/api/adwords/cm<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_END_POINT_FORMAT"></a><span class="summary-name">_END_POINT_FORMAT</span> = <code title="'%s/api/adwords/reportdownload/%s'"><code class="variable-quote">'</code><code class="variable-string">%s/api/adwords/reportdownload/%s</code><code class="variable-quote">'</code></code>
+        <a name="_END_POINT_FORMAT"></a><span class="summary-name">_END_POINT_FORMAT</span> = <code title="'%s/api/adwords/reportdownload/%s'">'%s/api/adwords/reportdownload/%s'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.ReportDownloader-class.html#_SCHEMA_FORMAT" class="summary-name" onclick="show_private();">_SCHEMA_FORMAT</a> = <code title="'%s/api/adwords/reportdownload/%s/reportDefinition.xsd'"><code class="variable-quote">'</code><code class="variable-string">%s/api/adwords/reportdownload/%s/reportDefin</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.ReportDownloader-class.html#_SCHEMA_FORMAT" class="summary-name" onclick="show_private();">_SCHEMA_FORMAT</a> = <code title="'/'.join([_END_POINT_FORMAT, 'reportDefinition.xsd'])">'/'.join([_END_POINT_FORMAT, 'reportDefinitio<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_REPORT_DEFINITION_NAME"></a><span class="summary-name">_REPORT_DEFINITION_NAME</span> = <code title="'reportDefinition'"><code class="variable-quote">'</code><code class="variable-string">reportDefinition</code><code class="variable-quote">'</code></code>
+        <a name="_REPORT_DEFINITION_NAME"></a><span class="summary-name">_REPORT_DEFINITION_NAME</span> = <code title="'reportDefinition'">'reportDefinition'</code>
     </td>
   </tr>
 </table>
@@ -456,8 +456,8 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">adwords_client</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201603</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">server</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="sig-arg">server</span>=<span class="sig-default">_DEFAULT_ENDPOINT</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -1067,7 +1067,7 @@ Returns:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com/api/adwords/cm/%s</code><code class="variable-quote">'</code>
+'https://adwords.google.com/api/adwords/cm/%s'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -1085,7 +1085,7 @@ Returns:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'</code><code class="variable-string">%s/api/adwords/reportdownload/%s/reportDefinition.xsd</code><code class="variable-quote">'</code>
+'/'.join([_END_POINT_FORMAT, 'reportDefinition.xsd'])
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -1123,7 +1123,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Apr 11 09:09:58 2016
+    Generated by Epydoc 3.0.1 on Tue May 17 12:44:32 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

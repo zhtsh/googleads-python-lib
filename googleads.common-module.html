@@ -84,6 +84,14 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
+        <a href="googleads.common.ProxyConfig-class.html" class="summary-name">ProxyConfig</a><br />
+      A utility for configuring the usage of a proxy.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
         <a href="googleads.common.SudsServiceProxy-class.html" class="summary-name">SudsServiceProxy</a><br />
       Wraps a suds service object, allowing custom logic to be injected.
     </td>
@@ -228,56 +236,64 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'3.15.0'"><code class="variable-quote">'</code><code class="variable-string">3.15.0</code><code class="variable-quote">'</code></code>
+        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'4.0.0'">'4.0.0'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/3.15.0'"><code class="variable-quote">'</code><code class="variable-string">googleads/3.15.0</code><code class="variable-quote">'</code></code>
+        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/%s' % VERSION">'googleads/%s' % VERSION</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_PROXY_YAML_KEY"></a><span class="summary-name">_PROXY_YAML_KEY</span> = <code title="'proxy_info'"><code class="variable-quote">'</code><code class="variable-string">proxy_info</code><code class="variable-quote">'</code></code>
+        <a name="_HTTP_PROXY_YAML_KEY"></a><span class="summary-name">_HTTP_PROXY_YAML_KEY</span> = <code title="'http_proxy'">'http_proxy'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_PYTHON_VERSION"></a><span class="summary-name">_PYTHON_VERSION</span> = <code title="'Python/2.7.6'"><code class="variable-quote">'</code><code class="variable-string">Python/2.7.6</code><code class="variable-quote">'</code></code>
+        <a name="_HTTPS_PROXY_YAML_KEY"></a><span class="summary-name">_HTTPS_PROXY_YAML_KEY</span> = <code title="'https_proxy'">'https_proxy'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.common-module.html#_OAUTH2_INSTALLED_APP_KEYS" class="summary-name" onclick="show_private();">_OAUTH2_INSTALLED_APP_KEYS</a> = <code title="('client_id', 'client_secret', 'refresh_token')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">client_id</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">client_secret</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">r</code><code class="variable-ellipsis">...</code></code>
+        <a name="_PROXY_CONFIG_KEY"></a><span class="summary-name">_PROXY_CONFIG_KEY</span> = <code title="'proxy_config'">'proxy_config'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.common-module.html#_OAUTH2_SERVICE_ACCT_KEYS" class="summary-name" onclick="show_private();">_OAUTH2_SERVICE_ACCT_KEYS</a> = <code title="('service_account_email', 'path_to_private_key_file')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">service_account_email</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">path_to</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.common-module.html#_PYTHON_VERSION" class="summary-name" onclick="show_private();">_PYTHON_VERSION</a> = <code title="'Python/%d.%d.%d' %(sys.version_info [0], sys.version_info [1], sys.ve\
+rsion_info [2])">'Python/%d.%d.%d' %(sys.version_info [0], sy<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_PROXY_KEYS"></a><span class="summary-name">_PROXY_KEYS</span> = <code title="('host', 'port')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">host</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">port</code><code class="variable-quote">'</code><code class="variable-group">)</code></code>
+        <a href="googleads.common-module.html#_OAUTH2_INSTALLED_APP_KEYS" class="summary-name" onclick="show_private();">_OAUTH2_INSTALLED_APP_KEYS</a> = <code title="'client_id', 'client_secret', 'refresh_token'">'client_id', 'client_secret', 're<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
-<tr>
+<tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'googleads'"><code class="variable-quote">'</code><code class="variable-string">googleads</code><code class="variable-quote">'</code></code>
+        <a href="googleads.common-module.html#_OAUTH2_SERVICE_ACCT_KEYS" class="summary-name" onclick="show_private();">_OAUTH2_SERVICE_ACCT_KEYS</a> = <code title="'service_account_email', 'path_to_private_key_file'">'service_account_email', 'path_to_<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_PROXY_KEYS"></a><span class="summary-name">_PROXY_KEYS</span> = <code title="'host', 'port'">'host', 'port'</code>
     </td>
   </tr>
 </table>
@@ -347,8 +363,8 @@ Returns:
 Loads the data necessary for instantiating a client from file storage.
 
 In addition to the required_client_values argument, the yaml file must supply
-the keys used to create OAuth2 credentials. It may also optionally provide
-proxy_info in order to configure a proxy.
+the keys used to create OAuth2 credentials. It may also optionally set proxy
+configurations.
 
 Args:
   path: A path string to the yaml document whose keys should be used.
@@ -466,6 +482,25 @@ Args:
   </td>
 </tr>
 </table>
+<a name="_PYTHON_VERSION"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_PYTHON_VERSION</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+'Python/%d.%d.%d' %(sys.version_info [0], sys.version_info [1], sys.ve<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+rsion_info [2])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="_OAUTH2_INSTALLED_APP_KEYS"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
@@ -478,7 +513,7 @@ Args:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">client_id</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">client_secret</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">refresh_token</code><code class="variable-quote">'</code><code class="variable-group">)</code>
+'client_id', 'client_secret', 'refresh_token'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -496,7 +531,7 @@ Args:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">service_account_email</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">path_to_private_key_file</code><code class="variable-quote">'</code><code class="variable-group">)</code>
+'service_account_email', 'path_to_private_key_file'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -534,7 +569,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Apr 11 09:09:58 2016
+    Generated by Epydoc 3.0.1 on Tue May 17 12:44:32 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
