@@ -120,11 +120,7 @@ Attributes:
         <span class="summary-sig-arg">developer_token</span>,
         <span class="summary-sig-arg">oauth2_client</span>,
         <span class="summary-sig-arg">user_agent</span>,
-        <span class="summary-sig-arg">client_customer_id</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">validate_only</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">partial_failure</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">cache</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">proxy_config</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Initializes an AdWordsClient.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.__init__">source&nbsp;code</a></span>
@@ -144,7 +140,7 @@ Attributes:
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetService" class="summary-sig-name">GetService</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">service_name</span>,
         <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
-        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">_DEFAULT_ENDPOINT</span>)</span><br />
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Creates a service client for the given service.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetService">source&nbsp;code</a></span>
@@ -163,7 +159,7 @@ Attributes:
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetBatchJobHelper" class="summary-sig-name">GetBatchJobHelper</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
-        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">_DEFAULT_ENDPOINT</span>)</span><br />
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Returns a BatchJobHelper to work with the BatchJobService.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetBatchJobHelper">source&nbsp;code</a></span>
@@ -182,7 +178,7 @@ Attributes:
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetReportDownloader" class="summary-sig-name">GetReportDownloader</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
-        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">_DEFAULT_ENDPOINT</span>)</span><br />
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Creates a downloader for AdWords reports.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetReportDownloader">source&nbsp;code</a></span>
@@ -301,7 +297,8 @@ Attributes:
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.AdWordsClient-class.html#_OPTIONAL_INIT_VALUES" class="summary-name" onclick="show_private();">_OPTIONAL_INIT_VALUES</a> = <code title="'validate_only', 'partial_failure', 'client_customer_id'">'validate_only', 'partial_failure', 'c<code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.AdWordsClient-class.html#_OPTIONAL_INIT_VALUES" class="summary-name" onclick="show_private();">_OPTIONAL_INIT_VALUES</a> = <code title="'validate_only', 'partial_failure', 'client_customer_id', 'report_down\
+loader_headers'">'validate_only', 'partial_failure', 'c<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -402,11 +399,7 @@ Raises:
         <span class="sig-arg">developer_token</span>,
         <span class="sig-arg">oauth2_client</span>,
         <span class="sig-arg">user_agent</span>,
-        <span class="sig-arg">client_customer_id</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">validate_only</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">partial_failure</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">cache</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">proxy_config</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">**kwargs</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -426,7 +419,9 @@ Args:
       your requests.
   user_agent: An arbitrary string which will be used to identify your
       application
-  [optional]
+  **kwargs: Optional keyword arguments.
+
+Keyword Arguments:
   client_customer_id: A string identifying which AdWords customer you want
       to act as. You do not have to provide this if you are using a client
       account. You probably want to provide this if you're using an AdWords
@@ -441,6 +436,8 @@ Args:
   cache: A subclass of suds.cache.Cache; defaults to None.
   proxy_config: A googleads.common.ProxyConfig instance or None if a proxy
     isn't being used.
+  report_downloader_headers: A dict containing optional headers to be used
+    by default when making requests with the ReportDownloader.
 
 </pre>
   <dl class="fields">
@@ -460,7 +457,7 @@ Args:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetService</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">service_name</span>,
         <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
-        <span class="sig-arg">server</span>=<span class="sig-default">_DEFAULT_ENDPOINT</span>)</span>
+        <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetService">source&nbsp;code</a></span>&nbsp;
@@ -500,7 +497,7 @@ Raises:
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetBatchJobHelper</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
-        <span class="sig-arg">server</span>=<span class="sig-default">_DEFAULT_ENDPOINT</span>)</span>
+        <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetBatchJobHelper">source&nbsp;code</a></span>&nbsp;
@@ -537,7 +534,7 @@ Args:
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetReportDownloader</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
-        <span class="sig-arg">server</span>=<span class="sig-default">_DEFAULT_ENDPOINT</span>)</span>
+        <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#AdWordsClient.GetReportDownloader">source&nbsp;code</a></span>&nbsp;
@@ -622,7 +619,8 @@ Args:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-'validate_only', 'partial_failure', 'client_customer_id'
+'validate_only', 'partial_failure', 'client_customer_id', 'report_down<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+loader_headers'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -660,7 +658,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue May 17 12:44:32 2016
+    Generated by Epydoc 3.0.1 on Fri May 27 13:22:59 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

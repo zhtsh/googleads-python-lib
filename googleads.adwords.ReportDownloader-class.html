@@ -97,7 +97,7 @@ object --+
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">adwords_client</span>,
         <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
-        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">_DEFAULT_ENDPOINT</span>)</span><br />
+        <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initializes a ReportDownloader.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader.__init__">source&nbsp;code</a></span>
@@ -254,7 +254,7 @@ object --+
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_DownloadReport" class="summary-sig-name" onclick="show_private();">_DownloadReport</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">post_body</span>,
         <span class="summary-sig-arg">output</span>,
-        <span class="summary-sig-arg">kwargs</span>)</span><br />
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Downloads an AdWords report, writing the contents to the given file.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._DownloadReport">source&nbsp;code</a></span>
@@ -273,7 +273,7 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_DownloadReportAsStream" class="summary-sig-name" onclick="show_private();">_DownloadReportAsStream</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">post_body</span>,
-        <span class="summary-sig-arg">kwargs</span>)</span><br />
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Downloads an AdWords report, returning a stream.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._DownloadReportAsStream">source&nbsp;code</a></span>
@@ -457,7 +457,7 @@ object --+
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">adwords_client</span>,
         <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
-        <span class="sig-arg">server</span>=<span class="sig-default">_DEFAULT_ENDPOINT</span>)</span>
+        <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -529,6 +529,8 @@ Keyword Arguments:
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
+  use_raw_enum_values: A boolean indicating whether to return enum field
+      values as enums instead of display values.
 
 Raises:
   AdWordsReportBadRequestError: if the report download fails due to
@@ -582,6 +584,8 @@ Keyword Arguments:
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
+  use_raw_enum_values: A boolean indicating whether to return enum field
+      values as enums instead of display values.
 
 Returns:
   A stream to be used in retrieving the report contents.
@@ -641,6 +645,8 @@ Keyword Arguments:
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
+  use_raw_enum_values: A boolean indicating whether to return enum field
+      values as enums instead of display values.
 
 Returns:
   A stream to be used in retrieving the report contents.
@@ -697,6 +703,8 @@ Keyword Arguments:
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
+  use_raw_enum_values: A boolean indicating whether to return enum field
+      values as enums instead of display values.
 
 Returns:
   A string containing the report contents.
@@ -756,6 +764,8 @@ Keyword Arguments:
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
+  use_raw_enum_values: A boolean indicating whether to return enum field
+      values as enums instead of display values.
 
 Returns:
   A string containing the report contents.
@@ -820,6 +830,8 @@ Keyword Arguments:
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
+  use_raw_enum_values: A boolean indicating whether to return enum field
+      values as enums instead of display values.
 
 Raises:
   AdWordsReportBadRequestError: if the report download fails due to
@@ -844,7 +856,7 @@ Raises:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">_DownloadReport</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">post_body</span>,
         <span class="sig-arg">output</span>,
-        <span class="sig-arg">kwargs</span>)</span>
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._DownloadReport">source&nbsp;code</a></span>&nbsp;
@@ -859,7 +871,7 @@ Args:
       string.
   output: A writable object where the contents of the report will be written
       to.
-  kwargs: A dictionary containing optional keyword arguments.
+  **kwargs: A dictionary containing optional keyword arguments.
 
 Keyword Arguments:
   include_zero_impressions: A boolean indicating whether the report should
@@ -873,6 +885,8 @@ Keyword Arguments:
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
+  use_raw_enum_values: A boolean indicating whether to return enum field
+      values as enums instead of display values.
 
 Raises:
   AdWordsReportBadRequestError: if the report download fails due to
@@ -896,7 +910,7 @@ Raises:
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">_DownloadReportAsStream</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">post_body</span>,
-        <span class="sig-arg">kwargs</span>)</span>
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._DownloadReportAsStream">source&nbsp;code</a></span>&nbsp;
@@ -909,7 +923,7 @@ Downloads an AdWords report, returning a stream.
 Args:
   post_body: The contents of the POST request's body as a URL encoded
       string.
-  kwargs: A dictionary containing optional keyword arguments.
+  **kwargs: Optional keyword arguments.
 
 Keyword Arguments:
   include_zero_impressions: A boolean indicating whether the report should
@@ -923,6 +937,8 @@ Keyword Arguments:
   skip_report_summary: A boolean indicating whether to include a summary row
       containing the report totals. If false or not specified, report output
       will include the summary row.
+  use_raw_enum_values: A boolean indicating whether to return enum field
+      values as enums instead of display values.
 
 Returns:
   A stream to be used in retrieving the report contents.
@@ -1123,7 +1139,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue May 17 12:44:32 2016
+    Generated by Epydoc 3.0.1 on Fri May 27 13:22:59 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

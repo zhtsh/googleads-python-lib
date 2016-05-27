@@ -166,6 +166,61 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="googleads.common-module.html#_ExtractOAuth2Client" class="summary-sig-name" onclick="show_private();">_ExtractOAuth2Client</a>(<span class="summary-sig-arg">product_yaml_key</span>,
+        <span class="summary-sig-arg">product_data</span>,
+        <span class="summary-sig-arg">proxy_config</span>)</span><br />
+      Generates an GoogleOAuth2Client subclass using the given product_data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#_ExtractOAuth2Client">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common-module.html#_ExtractProxyConfig" class="summary-sig-name" onclick="show_private();">_ExtractProxyConfig</a>(<span class="summary-sig-arg">product_yaml_key</span>,
+        <span class="summary-sig-arg">proxy_config_data</span>)</span><br />
+      Returns an initialized ProxyConfig using the given proxy_config_data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#_ExtractProxyConfig">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common-module.html#_ExtractProxy" class="summary-sig-name" onclick="show_private();">_ExtractProxy</a>(<span class="summary-sig-arg">proxy_yaml_key</span>,
+        <span class="summary-sig-arg">proxy_config_data</span>)</span><br />
+      Extracts a ProxyConfig.Proxy from the proxy_config for a given key.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#_ExtractProxy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="googleads.common-module.html#_PackForSuds" class="summary-sig-name" onclick="show_private();">_PackForSuds</a>(<span class="summary-sig-arg">obj</span>,
         <span class="summary-sig-arg">factory</span>)</span><br />
       Packs SOAP input into the format we want for suds.</td>
@@ -236,7 +291,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'4.0.0'">'4.0.0'</code>
+        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'4.1.0'">'4.1.0'</code>
     </td>
   </tr>
 <tr class="private">
@@ -384,6 +439,116 @@ Raises:
   A GoogleAdsValueError if the given yaml file does not contain the
   information necessary to instantiate a client object - either a
   required_client_values key was missing or an OAuth2 key was missing.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ExtractOAuth2Client"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ExtractOAuth2Client</span>(<span class="sig-arg">product_yaml_key</span>,
+        <span class="sig-arg">product_data</span>,
+        <span class="sig-arg">proxy_config</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#_ExtractOAuth2Client">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Generates an GoogleOAuth2Client subclass using the given product_data.
+
+Args:
+  product_yaml_key: a string key identifying the product being configured.
+  product_data: a dict containing the configurations for a given product.
+  proxy_config: a ProxyConfig instance.
+
+Returns:
+  An instantiated GoogleOAuth2Client subclass.
+
+Raises:
+  A GoogleAdsValueError if the OAuth2 configuration for the given product is
+  misconfigured.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ExtractProxyConfig"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ExtractProxyConfig</span>(<span class="sig-arg">product_yaml_key</span>,
+        <span class="sig-arg">proxy_config_data</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#_ExtractProxyConfig">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Returns an initialized ProxyConfig using the given proxy_config_data.
+
+Args:
+  product_yaml_key: a string indicating the client being loaded.
+  proxy_config_data: a dict containing the contents of proxy_config from the
+    YAML file.
+
+Returns:
+  If there is a proxy to configure in proxy_config, this will return a
+  ProxyConfig instance with those settings. Otherwise, it will return None.
+
+Raises:
+  A GoogleAdsValueError if one of the required keys specified by _PROXY_KEYS
+  is missing.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ExtractProxy"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ExtractProxy</span>(<span class="sig-arg">proxy_yaml_key</span>,
+        <span class="sig-arg">proxy_config_data</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#_ExtractProxy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Extracts a ProxyConfig.Proxy from the proxy_config for a given key.
+
+Args:
+  proxy_yaml_key: a key specifying the type of proxy for which data is being
+    loaded.
+  proxy_config_data: a dict containing the proxy configurations loaded from
+    the YAML file.
+
+Returns:
+  If the proxy_yaml_key exists in the proxy_config_data, this will return a
+  ProxyConfig.Proxy instance initialized with the data associated with it.
+  Otherwise, this will return None.
+
+Raises:
+  A GoogleAdsValueError if one of the required keys specified by _PROXY_KEYS
+  is missing.
 
 </pre>
   <dl class="fields">
@@ -569,7 +734,7 @@ rsion_info [2])
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue May 17 12:44:32 2016
+    Generated by Epydoc 3.0.1 on Fri May 27 13:22:59 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
