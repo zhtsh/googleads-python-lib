@@ -98,6 +98,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">client</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Initializes a _SudsUploadRequestBuilder.</td>
           <td align="right" valign="top">
@@ -327,15 +328,22 @@ e&quot;&gt;&quot;&quot;&quot;">&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#_OPERATION_MAP" class="summary-name" onclick="show_private();">_OPERATION_MAP</a> = <code title="{op [0]: namedtuple('Operation', ['operation_type', 'service', 'method\
-'])(op [0], op [1], op [2]) for op in(('AdGroupAdOperation', 'AdGroupA\
-dService', 'mutate'), ('AdGroupAdLabelOperation', 'AdGroupAdService', \
-'mutateLabel'), ('AdGroupBidModifierOperation', 'AdGroupBidModifierSer\
-vice', 'mutate'), ('AdGroupCriterionOperation', 'AdGroupCriterionServi\
-ce', 'mutate'), ('AdGroupCriterionLabelOperation', 'AdGroupCriterionSe\
-rvice', 'mutateLabel'), ('AdGroupOperation', 'AdGroupService', 'mutate\
-'), ('AdGroupLabelOperation', 'AdGroupService', 'mutateLabel'), ('Budg\
-...">{op [0]: namedtuple('Operation', ['operation_<code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#_OPERATION" class="summary-name" onclick="show_private();">_OPERATION</a> = <code title="namedtuple('Operation', ['operation_type', 'service', 'method'])">namedtuple('Operation', ['operation_type', 'servi<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#_OPERATION_MAP" class="summary-name" onclick="show_private();">_OPERATION_MAP</a> = <code title="{'AdGroupAdOperation': _OPERATION('AdGroupAdOperation', 'AdGroupAdServ\
+ice', 'mutate'), 'AdGroupAdLabelOperation': _OPERATION('AdGroupAdLabel\
+Operation', 'AdGroupAdService', 'mutateLabel'), 'AdGroupBidModifierOpe\
+ration': _OPERATION('AdGroupBidModifierOperation', 'AdGroupBidModifier\
+Service', 'mutate'), 'AdGroupCriterionOperation': _OPERATION('AdGroupC\
+riterionOperation', 'AdGroupCriterionService', 'mutate'), 'AdGroupCrit\
+erionLabelOperation': _OPERATION('AdGroupCriterionLabelOperation', 'Ad\
+GroupCriterionService', 'mutateLabel'), 'AdGroupOperation': _OPERATION\
+...">{'AdGroupAdOperation': _OPERATION('AdGroupAdO<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 </table>
@@ -390,6 +398,7 @@ rvice', 'mutateLabel'), ('AdGroupOperation', 'AdGroupService', 'mutate\
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">client</span>,
         <span class="sig-arg">**kwargs</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -402,15 +411,12 @@ rvice', 'mutateLabel'), ('AdGroupOperation', 'AdGroupService', 'mutate\
 Initializes a _SudsUploadRequestBuilder.
 
 Arguments:
+  client: an AdWordsClient instance.
   **kwargs: Keyword arguments.
 
 Keyword Arguments:
-  client: an AdWordsClient instance.
   version: a string identifying the AdWords version to connect to.
   server: a string identifying the webserver hosting the AdWords API.
-
-Raises:
-  AttributeError: if no client is specified in the Keyword Arguments.
 
 </pre>
   <dl class="fields">
@@ -628,6 +634,9 @@ Returns:
   A str containing the raw XML of the request to the given service that
   would execute the given operations.
 
+Raises:
+  KeyError: If the given operation type is not supported.
+
 </pre>
   <dl class="fields">
   </dl>
@@ -736,6 +745,24 @@ e&quot;&gt;&quot;&quot;&quot;
   </dl>
 </td></tr></table>
 </div>
+<a name="_OPERATION"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_OPERATION</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+namedtuple('Operation', ['operation_type', 'service', 'method'])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="_OPERATION_MAP"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
@@ -748,14 +775,14 @@ e&quot;&gt;&quot;&quot;&quot;
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-{op [0]: namedtuple('Operation', ['operation_type', 'service', 'method<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'])(op [0], op [1], op [2]) for op in(('AdGroupAdOperation', 'AdGroupA<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-dService', 'mutate'), ('AdGroupAdLabelOperation', 'AdGroupAdService', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'mutateLabel'), ('AdGroupBidModifierOperation', 'AdGroupBidModifierSer<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-vice', 'mutate'), ('AdGroupCriterionOperation', 'AdGroupCriterionServi<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-ce', 'mutate'), ('AdGroupCriterionLabelOperation', 'AdGroupCriterionSe<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-rvice', 'mutateLabel'), ('AdGroupOperation', 'AdGroupService', 'mutate<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'), ('AdGroupLabelOperation', 'AdGroupService', 'mutateLabel'), ('Budg<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+{'AdGroupAdOperation': _OPERATION('AdGroupAdOperation', 'AdGroupAdServ<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+ice', 'mutate'), 'AdGroupAdLabelOperation': _OPERATION('AdGroupAdLabel<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+Operation', 'AdGroupAdService', 'mutateLabel'), 'AdGroupBidModifierOpe<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+ration': _OPERATION('AdGroupBidModifierOperation', 'AdGroupBidModifier<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+Service', 'mutate'), 'AdGroupCriterionOperation': _OPERATION('AdGroupC<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+riterionOperation', 'AdGroupCriterionService', 'mutate'), 'AdGroupCrit<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+erionLabelOperation': _OPERATION('AdGroupCriterionLabelOperation', 'Ad<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+GroupCriterionService', 'mutateLabel'), 'AdGroupOperation': _OPERATION<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 <code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
@@ -794,7 +821,7 @@ rvice', 'mutateLabel'), ('AdGroupOperation', 'AdGroupService', 'mutate<span clas
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri May 27 13:22:59 2016
+    Generated by Epydoc 3.0.1 on Tue Aug 23 14:29:54 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

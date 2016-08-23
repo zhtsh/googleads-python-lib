@@ -269,6 +269,41 @@
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common-module.html#IncludeUtilitiesInUserAgent" class="summary-sig-name">IncludeUtilitiesInUserAgent</a>(<span class="summary-sig-arg">value</span>)</span><br />
+      Configures the logging of utilities in the User-Agent.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#IncludeUtilitiesInUserAgent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common-module.html#RegisterUtility" class="summary-sig-name">RegisterUtility</a>(<span class="summary-sig-arg">utility_name</span>,
+        <span class="summary-sig-arg">version_mapping</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Decorator that registers a class with the given utility name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#RegisterUtility">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 </table>
 <!-- ==================== VARIABLES ==================== -->
 <a name="section-Variables"></a>
@@ -291,7 +326,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'4.1.0'">'4.1.0'</code>
+        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'4.4.0'">'4.4.0'</code>
     </td>
   </tr>
 <tr class="private">
@@ -349,6 +384,27 @@ rsion_info [2])">'Python/%d.%d.%d' %(sys.version_info [0], sy<code class="variab
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="_PROXY_KEYS"></a><span class="summary-name">_PROXY_KEYS</span> = <code title="'host', 'port'">'host', 'port'</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_utility_registry"></a><span class="summary-name">_utility_registry</span> = <code title="googleads.util.UtilityRegistry()">googleads.util.UtilityRegistry()</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_UTILITY_REGISTER_YAML_KEY"></a><span class="summary-name">_UTILITY_REGISTER_YAML_KEY</span> = <code title="'include_utilities_in_user_agent'">'include_utilities_in_user_agent'</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_UTILITY_LOCK"></a><span class="summary-name">_UTILITY_LOCK</span> = <code title="threading.Lock()">threading.Lock()</code>
     </td>
   </tr>
 </table>
@@ -628,6 +684,68 @@ Args:
   </dl>
 </td></tr></table>
 </div>
+<a name="IncludeUtilitiesInUserAgent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">IncludeUtilitiesInUserAgent</span>(<span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#IncludeUtilitiesInUserAgent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Configures the logging of utilities in the User-Agent.
+
+Args:
+  value: a bool indicating that you want to include utility names in the
+    User-Agent if set True, otherwise, these will not be added.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="RegisterUtility"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RegisterUtility</span>(<span class="sig-arg">utility_name</span>,
+        <span class="sig-arg">version_mapping</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#RegisterUtility">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Decorator that registers a class with the given utility name.
+
+This will only register the utilities being used if the UtilityRegistry is
+enabled. Note that only the utility class's public methods will cause the
+utility name to be added to the registry.
+
+Args:
+  utility_name: A str specifying the utility name associated with the class.
+  version_mapping: A dict containing optional version strings to append to the
+  utility string for individual methods; where the key is the method name and
+  the value is the text to be appended as the version.
+
+Returns:
+  The decorated class.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== VARIABLES DETAILS ==================== -->
 <a name="section-VariablesDetails"></a>
@@ -734,7 +852,7 @@ rsion_info [2])
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri May 27 13:22:59 2016
+    Generated by Epydoc 3.0.1 on Tue Aug 23 14:29:54 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

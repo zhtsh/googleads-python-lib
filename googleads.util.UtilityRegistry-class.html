@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.oauth2.GoogleOAuth2Client</title>
+  <title>googleads.util.UtilityRegistry</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,8 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.oauth2-module.html">Module&nbsp;oauth2</a> ::
-        Class&nbsp;GoogleOAuth2Client
+        <a href="googleads.util-module.html">Module&nbsp;util</a> ::
+        Class&nbsp;UtilityRegistry
       </span>
     </td>
     <td>
@@ -54,24 +54,23 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.oauth2.GoogleOAuth2Client-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.util.UtilityRegistry-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class GoogleOAuth2Client</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleOAuth2Client">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class UtilityRegistry</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry">source&nbsp;code</a></span></p>
 <pre class="base-tree">
 object --+
          |
-        <strong class="uidshort">GoogleOAuth2Client</strong>
+        <strong class="uidshort">UtilityRegistry</strong>
 </pre>
 
 <hr />
-<p>An OAuth2 client for use with Google APIs.</p>
-  <p>This interface assumes all responsibilty for refreshing credentials 
-  when necessary.</p>
+<p>Utility that registers product utilities used in generating a 
+  request.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -96,10 +95,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.oauth2.GoogleOAuth2Client-class.html#CreateHttpHeader" class="summary-sig-name">CreateHttpHeader</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Creates an OAuth2 HTTP header.</td>
+          <td><span class="summary-sig"><a name="__contains__"></a><span class="summary-sig-name">__contains__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">utility</span>)</span></td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleOAuth2Client.CreateHttpHeader">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry.__contains__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -113,10 +112,92 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="Refresh"></a><span class="summary-sig-name">Refresh</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Refreshes the access token used by the client.</td>
+          <td><span class="summary-sig"><a href="googleads.util.UtilityRegistry-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleOAuth2Client.Refresh">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__iter__"></a><span class="summary-sig-name">__iter__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry.__iter__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__len__"></a><span class="summary-sig-name">__len__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry.__len__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="Add"></a><span class="summary-sig-name">Add</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">obj</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry.Add">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="Clear"></a><span class="summary-sig-name">Clear</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry.Clear">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="SetEnabled"></a><span class="summary-sig-name">SetEnabled</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry.SetEnabled">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -131,7 +212,6 @@ object --+
       <code>__format__</code>,
       <code>__getattribute__</code>,
       <code>__hash__</code>,
-      <code>__init__</code>,
       <code>__new__</code>,
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
@@ -141,52 +221,6 @@ object --+
       <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
-    </td>
-  </tr>
-</table>
-<!-- ==================== CLASS VARIABLES ==================== -->
-<a name="section-ClassVariables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="googleads.oauth2.GoogleOAuth2Client-class.html#_GOOGLE_OAUTH2_ENDPOINT" class="summary-name" onclick="show_private();">_GOOGLE_OAUTH2_ENDPOINT</a> = <code title="'https://accounts.google.com/o/oauth2/token'">'https://accounts.google.com/o/oauth<code class="variable-ellipsis">...</code></code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_OAUTH2_REFRESH_MINUTES_IN_ADVANCE"></a><span class="summary-name">_OAUTH2_REFRESH_MINUTES_IN_ADVANCE</span> = <code title="5">5</code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_TOKEN_URL"></a><span class="summary-name">_TOKEN_URL</span> = <code title="'https://www.google.com'">'https://www.google.com'</code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_USER_AGENT"></a><span class="summary-name">_USER_AGENT</span> = <code title="'Google Ads Python Client Library'">'Google Ads Python Client Library'</code>
     </td>
   </tr>
 </table>
@@ -233,68 +267,27 @@ object --+
   </td>
 </tr>
 </table>
-<a name="CreateHttpHeader"></a>
+<a name="__init__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">CreateHttpHeader</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleOAuth2Client.CreateHttpHeader">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.util-pysrc.html#UtilityRegistry.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-Creates an OAuth2 HTTP header.
-
-The OAuth2 credentials will be refreshed as necessary.
-
-Returns:
-  A dictionary containing one entry: the OAuth2 Bearer header under the
-  'Authorization' key.
-
-</pre>
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
   <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
-<a name="section-ClassVariableDetails"></a>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="_GOOGLE_OAUTH2_ENDPOINT"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">_GOOGLE_OAUTH2_ENDPOINT</h3>
-  
-  <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-'https://accounts.google.com/o/oauth2/token'
-</pre></td></tr></table>
-</dd>
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
   </dl>
 </td></tr></table>
 </div>

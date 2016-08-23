@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.patches</title>
+  <title>googleads.util</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,7 +43,7 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        Module&nbsp;patches
+        Module&nbsp;util
       </span>
     </td>
     <td>
@@ -53,27 +53,27 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.patches-module.html"
+            >]&nbsp;|&nbsp;<a href="googleads.util-module.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module patches</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.patches-pysrc.html">source&nbsp;code</a></span></p>
-<p>Patches applied by the Google Ads Client Library.</p>
+<h1 class="epydoc">Module util</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.util-pysrc.html">source&nbsp;code</a></span></p>
+<p>Utilities used by the client library.</p>
 
-<!-- ==================== FUNCTIONS ==================== -->
-<a name="section-Functions"></a>
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td colspan="2" class="table-header">
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr valign="top">
-        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="left"><span class="table-header">Classes</span></td>
         <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Functions"
+         ><span class="options">[<a href="#section-Classes"
          class="privatelink" onclick="toggle_private();"
          >hide private</a>]</span></td>
       </tr>
@@ -84,79 +84,21 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="Apply"></a><span class="summary-sig-name">Apply</span>()</span><br />
-      Apply patches used by the Google Ads Client Library.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.patches-pysrc.html#Apply">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
+        <a href="googleads.util.PatchHelper-class.html" class="summary-name">PatchHelper</a><br />
+      Utility that applies patches on behalf of the Google Ads Client 
+        Library.
     </td>
   </tr>
-<tr class="private">
+<tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.patches-module.html#_ApplySudsJurkoAppenderPatch" class="summary-sig-name" onclick="show_private();">_ApplySudsJurkoAppenderPatch</a>()</span><br />
-      Appends a Monkey Patch to the suds.mx.appender module.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.patches-pysrc.html#_ApplySudsJurkoAppenderPatch">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
+        <a href="googleads.util.UtilityRegistry-class.html" class="summary-name">UtilityRegistry</a><br />
+      Utility that registers product utilities used in generating a 
+        request.
     </td>
   </tr>
 </table>
-<!-- ==================== FUNCTION DETAILS ==================== -->
-<a name="section-FunctionDetails"></a>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Function Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-FunctionDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="_ApplySudsJurkoAppenderPatch"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ApplySudsJurkoAppenderPatch</span>()</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.patches-pysrc.html#_ApplySudsJurkoAppenderPatch">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Appends a Monkey Patch to the suds.mx.appender module.</p>
-  <p>This resolves an issue where empty objects are ignored and stripped 
-  from the request output. More details can be found on the suds-jurko 
-  issue tracker: 
-  https://bitbucket.org/jurko/suds/issues/81/suds-should-support-an-empty-object</p>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
-<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -188,7 +130,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri May 27 13:22:59 2016
+    Generated by Epydoc 3.0.1 on Tue Aug 23 14:29:54 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
