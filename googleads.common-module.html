@@ -154,6 +154,26 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="googleads.common-module.html#LoadFromString" class="summary-sig-name">LoadFromString</a>(<span class="summary-sig-arg">yaml_doc</span>,
+        <span class="summary-sig-arg">product_yaml_key</span>,
+        <span class="summary-sig-arg">required_client_values</span>,
+        <span class="summary-sig-arg">optional_product_values</span>)</span><br />
+      Loads the data necessary for instantiating a client from file storage.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#LoadFromString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="googleads.common-module.html#LoadFromStorage" class="summary-sig-name">LoadFromStorage</a>(<span class="summary-sig-arg">path</span>,
         <span class="summary-sig-arg">product_yaml_key</span>,
         <span class="summary-sig-arg">required_client_values</span>,
@@ -371,14 +391,14 @@ compatibility with this library, upgrade to Python 2.7.9 or higher.'"><code clas
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'4.7.0'"><code class="variable-quote">'</code><code class="variable-string">4.7.0</code><code class="variable-quote">'</code></code>
+        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'4.8.0'"><code class="variable-quote">'</code><code class="variable-string">4.8.0</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/4.7.0'"><code class="variable-quote">'</code><code class="variable-string">googleads/4.7.0</code><code class="variable-quote">'</code></code>
+        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/4.8.0'"><code class="variable-quote">'</code><code class="variable-string">googleads/4.8.0</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -498,6 +518,54 @@ Args:
   short_name: The short, product-specific string name for the library.
 Returns:
   A library signature string to append to user-supplied user-agent value.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="LoadFromString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">LoadFromString</span>(<span class="sig-arg">yaml_doc</span>,
+        <span class="sig-arg">product_yaml_key</span>,
+        <span class="sig-arg">required_client_values</span>,
+        <span class="sig-arg">optional_product_values</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#LoadFromString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Loads the data necessary for instantiating a client from file storage.
+
+In addition to the required_client_values argument, the yaml file must supply
+the keys used to create OAuth2 credentials. It may also optionally set proxy
+configurations.
+
+Args:
+  yaml_doc: the yaml document whose keys should be used.
+  product_yaml_key: The key to read in the yaml as a string.
+  required_client_values: A tuple of strings representing values which must
+    be in the yaml file for a supported API. If one of these keys is not in
+    the yaml file, an error will  be raised.
+  optional_product_values: A tuple of strings representing optional values
+    which may be in the yaml file.
+
+Returns:
+  A dictionary map of the keys in the yaml file to their values. This will not
+  contain the keys used for OAuth2 client creation and instead will have a
+  GoogleOAuth2Client object stored in the 'oauth2_client' field.
+
+Raises:
+  A GoogleAdsValueError if the given yaml file does not contain the
+  information necessary to instantiate a client object - either a
+  required_client_values key was missing or an OAuth2 key was missing.
 
 </pre>
   <dl class="fields">
@@ -904,7 +972,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Oct 25 17:49:23 2016
+    Generated by Epydoc 3.0.1 on Wed Dec  7 17:34:26 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

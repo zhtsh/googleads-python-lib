@@ -133,7 +133,7 @@ Attributes:
         <tr>
           <td><span class="summary-sig"><a href="googleads.dfp.DfpClient-class.html#GetService" class="summary-sig-name">GetService</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">service_name</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201608</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201611</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Creates a service client for the given service.</td>
           <td align="right" valign="top">
@@ -152,7 +152,7 @@ Attributes:
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.dfp.DfpClient-class.html#GetDataDownloader" class="summary-sig-name">GetDataDownloader</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201608</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201611</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Creates a downloader for DFP reports and PQL result sets.</td>
           <td align="right" valign="top">
@@ -200,6 +200,24 @@ Attributes:
     </table>
   </td>
 </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.dfp.DfpClient-class.html#LoadFromString" class="summary-sig-name">LoadFromString</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">yaml_doc</span>)</span><br />
+      Creates a DfpClient with information stored in a yaml string.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.dfp-pysrc.html#DfpClient.LoadFromString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
@@ -308,6 +326,41 @@ Attributes:
   </td>
 </tr>
 </table>
+<a name="LoadFromString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">LoadFromString</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">yaml_doc</span>)</span>
+    <br /><em class="fname">Class Method</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DfpClient.LoadFromString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Creates a DfpClient with information stored in a yaml string.
+
+Args:
+  yaml_doc: The yaml string containing the cached DFP data.
+
+Returns:
+  A DfpClient initialized with the values cached in the yaml string.
+
+Raises:
+  A GoogleAdsValueError if the given yaml string does not contain the
+  information necessary to instantiate a client object - either a
+  required key was missing or an OAuth2 key was missing.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="LoadFromStorage"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -400,7 +453,7 @@ Args:
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetService</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">service_name</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201608</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201611</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -440,7 +493,7 @@ Raises:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetDataDownloader</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201608</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201611</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -501,7 +554,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Oct 25 17:49:23 2016
+    Generated by Epydoc 3.0.1 on Wed Dec  7 17:34:26 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
