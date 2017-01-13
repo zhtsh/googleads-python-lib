@@ -32,6 +32,7 @@ googleads.common._UTILITY_REGISTER_YAML_KEY	googleads.common-module.html#_UTILIT
 googleads.common.GenerateLibSig	googleads.common-module.html#GenerateLibSig
 googleads.common._RecurseOverObject	googleads.common-module.html#_RecurseOverObject
 googleads.common.LoadFromStorage	googleads.common-module.html#LoadFromStorage
+googleads.common.ENABLE_COMPRESSION_KEY	googleads.common-module.html#ENABLE_COMPRESSION_KEY
 googleads.common._ExtractOAuth2Client	googleads.common-module.html#_ExtractOAuth2Client
 googleads.common._ExtractProxyConfig	googleads.common-module.html#_ExtractProxyConfig
 googleads.common._PYTHON_VERSION	googleads.common-module.html#_PYTHON_VERSION
@@ -51,10 +52,10 @@ googleads.oauth2.SCOPES	googleads.oauth2-module.html#SCOPES
 googleads.oauth2.__package__	googleads.oauth2-module.html#__package__
 googleads.oauth2.GetAPIScope	googleads.oauth2-module.html#GetAPIScope
 googleads.util	googleads.util-module.html
-googleads.util.LOGGER_FORMAT	googleads.util-module.html#LOGGER_FORMAT
 googleads.util.GetSudsClientFilter	googleads.util-module.html#GetSudsClientFilter
-googleads.util._SUDS_TRANSPORT_FILTER	googleads.util-module.html#_SUDS_TRANSPORT_FILTER
 googleads.util.__package__	googleads.util-module.html#__package__
+googleads.util.LOGGER_FORMAT	googleads.util-module.html#LOGGER_FORMAT
+googleads.util._SUDS_TRANSPORT_FILTER	googleads.util-module.html#_SUDS_TRANSPORT_FILTER
 googleads.util.GetGoogleAdsCommonFilter	googleads.util-module.html#GetGoogleAdsCommonFilter
 googleads.util.GetSudsTransportFilter	googleads.util-module.html#GetSudsTransportFilter
 googleads.util._COMMON_FILTER	googleads.util-module.html#_COMMON_FILTER
@@ -233,6 +234,7 @@ googleads.oauth2.GoogleServiceAccountClient._OAUTH2_REFRESH_MINUTES_IN_ADVANCE	g
 googleads.oauth2.GoogleServiceAccountClient.CreateHttpHeader	googleads.oauth2.GoogleServiceAccountClient-class.html#CreateHttpHeader
 googleads.oauth2.GoogleServiceAccountClient.__init__	googleads.oauth2.GoogleServiceAccountClient-class.html#__init__
 googleads.util.PatchHelper	googleads.util.PatchHelper-class.html
+googleads.util.PatchHelper._ApplySudsJurkoSendPatch	googleads.util.PatchHelper-class.html#_ApplySudsJurkoSendPatch
 googleads.util.PatchHelper._ApplySudsJurkoAppenderPatch	googleads.util.PatchHelper-class.html#_ApplySudsJurkoAppenderPatch
 googleads.util.PatchHelper.Apply	googleads.util.PatchHelper-class.html#Apply
 googleads.util.UtilityRegistry	googleads.util.UtilityRegistry-class.html

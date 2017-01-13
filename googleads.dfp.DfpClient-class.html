@@ -114,7 +114,8 @@ Attributes:
         <span class="summary-sig-arg">application_name</span>,
         <span class="summary-sig-arg">network_code</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">cache</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">proxy_config</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">proxy_config</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">enable_compression</span>=<span class="summary-sig-default">False</span>)</span><br />
       Initializes a DfpClient.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#DfpClient.__init__">source&nbsp;code</a></span>
@@ -272,7 +273,7 @@ Attributes:
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_OPTIONAL_INIT_VALUES"></a><span class="summary-name">_OPTIONAL_INIT_VALUES</span> = <code title="('network_code', 'https_proxy')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">network_code</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">https_proxy</code><code class="variable-quote">'</code><code class="variable-group">)</code></code>
+        <a href="googleads.dfp.DfpClient-class.html#_OPTIONAL_INIT_VALUES" class="summary-name" onclick="show_private();">_OPTIONAL_INIT_VALUES</a> = <code title="('network_code', 'https_proxy', 'enable_compression')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">network_code</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">https_proxy</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">enabl</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -409,7 +410,8 @@ Raises:
         <span class="sig-arg">application_name</span>,
         <span class="sig-arg">network_code</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">cache</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">proxy_config</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">proxy_config</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">enable_compression</span>=<span class="sig-default">False</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -432,9 +434,13 @@ Args:
   network_code: A string identifying the network code of the network you are
       accessing. All requests other than getAllNetworks and getCurrentUser
       calls require this header to be set.
-  cache: A subclass of suds.cache.Cache; defaults to None.
+  cache: A subclass of suds.cache.Cache. If not set, this will default to an
+      instance of suds.cache.FileCache.
   proxy_config: A googleads.common.ProxyConfig instance or None if a proxy
     isn't being used.
+  enable_compression: A boolean indicating if you want to enable compression
+    of the SOAP response. If True, the SOAP response will use gzip
+    compression, and will be decompressed for you automatically.
 
 </pre>
   <dl class="fields">
@@ -523,6 +529,43 @@ Returns:
 </td></tr></table>
 </div>
 <br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_OPTIONAL_INIT_VALUES"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_OPTIONAL_INIT_VALUES</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">network_code</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">https_proxy</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">enable_compression</code><code class="variable-quote">'</code><code class="variable-group">)</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -554,7 +597,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Dec  7 17:34:26 2016
+    Generated by Epydoc 3.0.1 on Fri Jan 13 14:24:01 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
