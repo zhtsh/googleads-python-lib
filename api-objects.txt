@@ -10,6 +10,7 @@ googleads.common	googleads.common-module.html
 googleads.common._HTTP_PROXY_YAML_KEY	googleads.common-module.html#_HTTP_PROXY_YAML_KEY
 googleads.common._UTILITY_LOCK	googleads.common-module.html#_UTILITY_LOCK
 googleads.common._PROXY_KEYS	googleads.common-module.html#_PROXY_KEYS
+googleads.common._OAUTH2_SERVICE_ACCT_KEYS_OPTIONAL	googleads.common-module.html#_OAUTH2_SERVICE_ACCT_KEYS_OPTIONAL
 googleads.common._IsSudsIterable	googleads.common-module.html#_IsSudsIterable
 googleads.common._PackForSuds	googleads.common-module.html#_PackForSuds
 googleads.common._utility_registry	googleads.common-module.html#_utility_registry
@@ -48,6 +49,7 @@ googleads.dfp.DEFAULT_APPLICATION_NAME	googleads.dfp-module.html#DEFAULT_APPLICA
 googleads.errors	googleads.errors-module.html
 googleads.errors.__package__	googleads.errors-module.html#__package__
 googleads.oauth2	googleads.oauth2-module.html
+googleads.oauth2.DEPRECATED_OAUTH2CLIENT	googleads.oauth2-module.html#DEPRECATED_OAUTH2CLIENT
 googleads.oauth2.SCOPES	googleads.oauth2-module.html#SCOPES
 googleads.oauth2.__package__	googleads.oauth2-module.html#__package__
 googleads.oauth2.GetAPIScope	googleads.oauth2-module.html#GetAPIScope
@@ -233,6 +235,7 @@ googleads.oauth2.GoogleServiceAccountClient.Refresh	googleads.oauth2.GoogleServi
 googleads.oauth2.GoogleServiceAccountClient._OAUTH2_REFRESH_MINUTES_IN_ADVANCE	googleads.oauth2.GoogleServiceAccountClient-class.html#_OAUTH2_REFRESH_MINUTES_IN_ADVANCE
 googleads.oauth2.GoogleServiceAccountClient.CreateHttpHeader	googleads.oauth2.GoogleServiceAccountClient-class.html#CreateHttpHeader
 googleads.oauth2.GoogleServiceAccountClient.__init__	googleads.oauth2.GoogleServiceAccountClient-class.html#__init__
+googleads.oauth2.GoogleServiceAccountClient._FILE_NOT_FOUND_TEMPLATE	googleads.oauth2.GoogleServiceAccountClient-class.html#_FILE_NOT_FOUND_TEMPLATE
 googleads.util.PatchHelper	googleads.util.PatchHelper-class.html
 googleads.util.PatchHelper._ApplySudsJurkoSendPatch	googleads.util.PatchHelper-class.html#_ApplySudsJurkoSendPatch
 googleads.util.PatchHelper._ApplySudsJurkoAppenderPatch	googleads.util.PatchHelper-class.html#_ApplySudsJurkoAppenderPatch
