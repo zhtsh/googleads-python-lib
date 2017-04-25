@@ -74,32 +74,6 @@
 <hr />
 <p>Builds requests used to upload operations for Batch Jobs.</p>
 
-<!-- ==================== NESTED CLASSES ==================== -->
-<a name="section-NestedClasses"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Nested Classes</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-NestedClasses"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder._OPERATION-class.html" class="summary-name" onclick="show_private();">_OPERATION</a><br />
-      Operation(operation_type, service, method)
-    </td>
-  </tr>
-</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -324,23 +298,23 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_ATTRIB_NAMESPACE_SUB"></a><span class="summary-name">_ATTRIB_NAMESPACE_SUB</span> = <code title="re.compile(r'ns[0-1]:')">re.compile(r'ns<code class="re-group">[</code>0<code class="re-op">-</code>1<code class="re-group">]</code>:')</code>
+        <a name="_ATTRIB_NAMESPACE_SUB"></a><span class="summary-name">_ATTRIB_NAMESPACE_SUB</span> = <code title="re.compile('ns[0-1]:')">re.compile('ns[0-1]:')</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#_UPLOAD_PREFIX_TEMPLATE" class="summary-name" onclick="show_private();">_UPLOAD_PREFIX_TEMPLATE</a> = <code title="'''&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#_UPLOAD_PREFIX_TEMPLATE" class="summary-name" onclick="show_private();">_UPLOAD_PREFIX_TEMPLATE</a> = <code title="&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;mutate xmlns=&quot;%s&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instanc\
-e&quot;&gt;'''"><code class="variable-quote">'</code><code class="variable-string">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8</code><code class="variable-ellipsis">...</code></code>
+e&quot;&gt;&quot;&quot;&quot;">&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_UPLOAD_SUFFIX"></a><span class="summary-name">_UPLOAD_SUFFIX</span> = <code title="'&lt;/mutate&gt;'"><code class="variable-quote">'</code><code class="variable-string">&lt;/mutate&gt;</code><code class="variable-quote">'</code></code>
+        <a name="_UPLOAD_SUFFIX"></a><span class="summary-name">_UPLOAD_SUFFIX</span> = <code title="'&lt;/mutate&gt;'">'&lt;/mutate&gt;'</code>
     </td>
   </tr>
 <tr class="private">
@@ -354,15 +328,22 @@ e&quot;&gt;'''"><code class="variable-quote">'</code><code class="variable-strin
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#_OPERATION_MAP" class="summary-name" onclick="show_private();">_OPERATION_MAP</a> = <code title="{'AdGroupAdLabelOperation': Operation(operation_type='AdGroupAdLabelOp\
-eration', service='AdGroupAdService', method='mutateLabel'),
- 'AdGroupAdOperation': Operation(operation_type='AdGroupAdOperation', \
-service='AdGroupAdService', method='mutate'),
- 'AdGroupBidModifierOperation': Operation(operation_type='AdGroupBidMo\
-difierOperation', service='AdGroupBidModifierService', method='mutate'\
-),
- 'AdGroupCriterionLabelOperation': Operation(operation_type='AdGroupCr\
-..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">AdGroupAdLabelOperation</code><code class="variable-quote">'</code><code class="variable-op">: </code>Operation(operati<code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#_OPERATION" class="summary-name" onclick="show_private();">_OPERATION</a> = <code title="namedtuple('Operation', ['operation_type', 'service', 'method'])">namedtuple('Operation', ['operation_type', 'servi<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html#_OPERATION_MAP" class="summary-name" onclick="show_private();">_OPERATION_MAP</a> = <code title="{'AdGroupAdOperation': _OPERATION('AdGroupAdOperation', 'AdGroupAdServ\
+ice', 'mutate'), 'AdGroupAdLabelOperation': _OPERATION('AdGroupAdLabel\
+Operation', 'AdGroupAdService', 'mutateLabel'), 'AdGroupBidModifierOpe\
+ration': _OPERATION('AdGroupBidModifierOperation', 'AdGroupBidModifier\
+Service', 'mutate'), 'AdGroupCriterionOperation': _OPERATION('AdGroupC\
+riterionOperation', 'AdGroupCriterionService', 'mutate'), 'AdGroupCrit\
+erionLabelOperation': _OPERATION('AdGroupCriterionLabelOperation', 'Ad\
+GroupCriterionService', 'mutateLabel'), 'AdGroupExtensionSettingOperat\
+...">{'AdGroupAdOperation': _OPERATION('AdGroupAdO<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 </table>
@@ -756,9 +737,27 @@ Raises:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'''</code><code class="variable-string">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</code>
-<code class="variable-string">&lt;mutate xmlns=&quot;%s&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instanc</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-<code class="variable-string">e&quot;&gt;</code><code class="variable-quote">'''</code>
+&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;mutate xmlns=&quot;%s&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instanc<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+e&quot;&gt;&quot;&quot;&quot;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_OPERATION"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_OPERATION</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+namedtuple('Operation', ['operation_type', 'service', 'method'])
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -776,14 +775,14 @@ Raises:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">AdGroupAdLabelOperation</code><code class="variable-quote">'</code><code class="variable-op">: </code>Operation(operation_type='AdGroupAdLabelOp<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-eration', service='AdGroupAdService', method='mutateLabel')<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">AdGroupAdOperation</code><code class="variable-quote">'</code><code class="variable-op">: </code>Operation(operation_type='AdGroupAdOperation', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-service='AdGroupAdService', method='mutate')<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">AdGroupBidModifierOperation</code><code class="variable-quote">'</code><code class="variable-op">: </code>Operation(operation_type='AdGroupBidMo<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-difierOperation', service='AdGroupBidModifierService', method='mutate'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-)<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">AdGroupCriterionLabelOperation</code><code class="variable-quote">'</code><code class="variable-op">: </code>Operation(operation_type='AdGroupCr<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+{'AdGroupAdOperation': _OPERATION('AdGroupAdOperation', 'AdGroupAdServ<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+ice', 'mutate'), 'AdGroupAdLabelOperation': _OPERATION('AdGroupAdLabel<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+Operation', 'AdGroupAdService', 'mutateLabel'), 'AdGroupBidModifierOpe<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+ration': _OPERATION('AdGroupBidModifierOperation', 'AdGroupBidModifier<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+Service', 'mutate'), 'AdGroupCriterionOperation': _OPERATION('AdGroupC<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+riterionOperation', 'AdGroupCriterionService', 'mutate'), 'AdGroupCrit<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+erionLabelOperation': _OPERATION('AdGroupCriterionLabelOperation', 'Ad<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+GroupCriterionService', 'mutateLabel'), 'AdGroupExtensionSettingOperat<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 <code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
@@ -822,7 +821,7 @@ difierOperation', service='AdGroupBidModifierService', method='mutate'<span clas
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Mar 20 18:46:19 2017
+    Generated by Epydoc 3.0.1 on Tue Apr 25 16:40:45 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
