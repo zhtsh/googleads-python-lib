@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.errors.AdWordsReportError</title>
+  <title>googleads.dfp.PQLHelper</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,8 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.errors-module.html">Module&nbsp;errors</a> ::
-        Class&nbsp;AdWordsReportError
+        <a href="googleads.dfp-module.html">Module&nbsp;dfp</a> ::
+        Class&nbsp;PQLHelper
       </span>
     </td>
     <td>
@@ -54,38 +54,22 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.errors.AdWordsReportError-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.dfp.PQLHelper-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class AdWordsReportError</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.errors-pysrc.html#AdWordsReportError">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class PQLHelper</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.dfp-pysrc.html#PQLHelper">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-              object --+            
-                       |            
-exceptions.BaseException --+        
-                           |        
-        exceptions.Exception --+    
-                               |    
-                  <a href="googleads.errors.GoogleAdsError-class.html">GoogleAdsError</a> --+
-                                   |
-                                  <strong class="uidshort">AdWordsReportError</strong>
+object --+
+         |
+        <strong class="uidshort">PQLHelper</strong>
 </pre>
 
 <hr />
-<pre class="literalblock">
-Error indicating that an AdWords report download request failed.
-
-Attributes:
-  code: The HTTP status code with which the report failed.
-  error: The urllib2.HTTPError (Python 2) or urllib.error.HTTPError
-        (Python 3) describing the failure.
-  content: The actual HTTP response content. This could be something like a
-      404 page or an XML error message from the AdWords report service.
-
-</pre>
+<p>Utility class for PQL.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -104,20 +88,54 @@ Attributes:
     </table>
   </td>
 </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__init__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.errors.AdWordsReportError-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">code</span>,
-        <span class="summary-sig-arg">error</span>,
-        <span class="summary-sig-arg">content</span>,
-        <span class="summary-sig-arg">message</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Initializes an AdWordsReportError.</td>
+          <td><span class="summary-sig"><a href="googleads.dfp.PQLHelper-class.html#GetQueryValuesFromDict" class="summary-sig-name">GetQueryValuesFromDict</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">d</span>)</span><br />
+      Converts a dict of python types into a list of PQL types.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.errors-pysrc.html#AdWordsReportError.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.dfp-pysrc.html#PQLHelper.GetQueryValuesFromDict">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -125,30 +143,22 @@ Attributes:
       
     </td>
   </tr>
-  <tr>
-    <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.Exception</code></b>:
-      <code>__new__</code>
-      </p>
-    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.BaseException</code></b>:
-      <code>__delattr__</code>,
-      <code>__getattribute__</code>,
-      <code>__getitem__</code>,
-      <code>__getslice__</code>,
-      <code>__reduce__</code>,
-      <code>__repr__</code>,
-      <code>__setattr__</code>,
-      <code>__setstate__</code>,
-      <code>__str__</code>,
-      <code>__unicode__</code>
-      </p>
-    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
-      <code>__format__</code>,
-      <code>__hash__</code>,
-      <code>__reduce_ex__</code>,
-      <code>__sizeof__</code>,
-      <code>__subclasshook__</code>
-      </p>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.dfp.PQLHelper-class.html#GetValueRepresentation" class="summary-sig-name">GetValueRepresentation</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Converts a single python value to its PQL representation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.dfp-pysrc.html#PQLHelper.GetValueRepresentation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
 </table>
@@ -171,10 +181,6 @@ Attributes:
 </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.BaseException</code></b>:
-      <code>args</code>,
-      <code>message</code>
-      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__class__</code>
       </p>
@@ -199,42 +205,63 @@ Attributes:
   </td>
 </tr>
 </table>
-<a name="__init__"></a>
+<a name="GetQueryValuesFromDict"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">code</span>,
-        <span class="sig-arg">error</span>,
-        <span class="sig-arg">content</span>,
-        <span class="sig-arg">message</span>=<span class="sig-default">None</span>)</span>
-    <br /><em class="fname">(Constructor)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetQueryValuesFromDict</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">d</span>)</span>
+    <br /><em class="fname">Class Method</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.errors-pysrc.html#AdWordsReportError.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.dfp-pysrc.html#PQLHelper.GetQueryValuesFromDict">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Initializes an AdWordsReportError.
+Converts a dict of python types into a list of PQL types.
 
 Args:
-  code: The HTTP status code number that was returned.
-  error: The urllib2.HTTPError (Python 2) or urllib.error.HTTPError
-      (Python 3) describing the failure.
-  content: The HTTP response body as a string.
-  [optional]
-  message: A user-friendly error message string. If one is not provided, a
-      default message will be used.
+  d: A dictionary of variable names to python types.
+
+Returns:
+  A list of variables formatted for PQL statements.
 
 </pre>
   <dl class="fields">
-    <dt>Overrides:
-        object.__init__
-    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetValueRepresentation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetValueRepresentation</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">value</span>)</span>
+    <br /><em class="fname">Class Method</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.dfp-pysrc.html#PQLHelper.GetValueRepresentation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Converts a single python value to its PQL representation.
+
+Args:
+  value: A python value.
+
+Returns:
+  The value formatted for PQL statements.
+
+</pre>
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>

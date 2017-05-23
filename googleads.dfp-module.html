@@ -100,6 +100,22 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
+        <a href="googleads.dfp.StatementBuilder-class.html" class="summary-name">StatementBuilder</a><br />
+      Provides the ability to programmatically construct PQL queries.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.dfp.PQLHelper-class.html" class="summary-name">PQLHelper</a><br />
+      Utility class for PQL.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
         <a href="googleads.dfp.FilterStatement-class.html" class="summary-name">FilterStatement</a><br />
       A statement object for PQL and get*ByStatement queries.
     </td>
@@ -130,6 +146,23 @@
     </table>
   </td>
 </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.dfp-module.html#_DFPDateTimePacker" class="summary-sig-name" onclick="show_private();">_DFPDateTimePacker</a>(<span class="summary-sig-arg">value</span>)</span><br />
+      Returns dicts formatted for DFP SOAP based on date/datetime.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.dfp-pysrc.html#_DFPDateTimePacker">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
@@ -197,7 +230,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.dfp-module.html#_SERVICE_MAP" class="summary-name" onclick="show_private();">_SERVICE_MAP</a> = <code title="{'v201605':('ActivityGroupService', 'ActivityService', 'AdExclusionRul\
+        <a href="googleads.dfp-module.html#_SERVICE_MAP" class="summary-name" onclick="show_private();">_SERVICE_MAP</a> = <code title="{'v201608':('ActivityGroupService', 'ActivityService', 'AdExclusionRul\
 eService', 'AdRuleService', 'AudienceSegmentService', 'BaseRateService\
 ', 'CompanyService', 'ContactService', 'ContentBundleService', 'Conten\
 tMetadataKeyHierarchyService', 'ContentService', 'CreativeService', 'C\
@@ -205,7 +238,7 @@ reativeSetService', 'CreativeTemplateService', 'CreativeWrapperService\
 ', 'CustomFieldService', 'CustomTargetingService', 'ExchangeRateServic\
 e', 'ForecastService', 'InventoryService', 'LabelService', 'LineItemCr\
 eativeAssociationService', 'LineItemService', 'LineItemTemplateService\
-...">{'v201605':('ActivityGroupService', 'ActivitySe<code class="variable-ellipsis">...</code></code>
+...">{'v201608':('ActivityGroupService', 'ActivitySe<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 </table>
@@ -227,6 +260,34 @@ eativeAssociationService', 'LineItemService', 'LineItemTemplateService\
   </td>
 </tr>
 </table>
+<a name="_DFPDateTimePacker"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_DFPDateTimePacker</span>(<span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.dfp-pysrc.html#_DFPDateTimePacker">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Returns dicts formatted for DFP SOAP based on date/datetime.
+
+Args:
+  value: A date or datetime object to be converted.
+
+Returns:
+  The value object correctly represented for DFP SOAP.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="DfpClassType"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -286,7 +347,7 @@ Returns:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-{'v201605':('ActivityGroupService', 'ActivityService', 'AdExclusionRul<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+{'v201608':('ActivityGroupService', 'ActivityService', 'AdExclusionRul<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 eService', 'AdRuleService', 'AudienceSegmentService', 'BaseRateService<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 ', 'CompanyService', 'ContactService', 'ContentBundleService', 'Conten<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 tMetadataKeyHierarchyService', 'ContentService', 'CreativeService', 'C<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
@@ -332,7 +393,7 @@ eativeAssociationService', 'LineItemService', 'LineItemTemplateService<span clas
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Apr 25 16:50:05 2017
+    Generated by Epydoc 3.0.1 on Tue May 23 09:24:41 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
