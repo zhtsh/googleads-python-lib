@@ -60,19 +60,53 @@
 </b></center><br />
 <h1 class="epydoc">Class Hierarchy</h1>
 <ul class="nomargin-top">
-    <li> <strong class="uidlink">suds.transport.http.HttpTransport</strong>
+    <li> <strong class="uidlink">suds.plugin.Plugin</strong>:
+      <em class="summary">Plugin base.</em>
+    <ul>
+    <li> <strong class="uidlink">suds.plugin.MessagePlugin</strong>:
+      <em class="summary">The base class for suds <i>SOAP message</i> plugins.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.common.LoggingMessagePlugin-class.html">googleads.common.LoggingMessagePlugin</a></strong>:
+      <em class="summary">A MessagePlugin used to log request summaries.</em>
     </li>
-    <li> <strong class="uidlink">suds.plugin.MessagePlugin</strong>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">suds.transport.Transport</strong>:
+      <em class="summary">The transport <i>interface</i>.</em>
+    <ul>
+    <li> <strong class="uidlink">suds.transport.http.HttpTransport</strong>:
+      <em class="summary">Basic HTTP transport implemented using using urllib2, that provides
+        for cookies &amp; proxies but no authentication.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.common.ProxyConfig._SudsProxyTransport-class.html" onclick="show_private();">googleads.common.ProxyConfig._SudsProxyTransport</a></strong>:
+      <em class="summary">A transport that applies the given handlers for usage with a proxy.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink">object</strong>:
       <em class="summary">The most base type</em>
     <ul>
     <li> <strong class="uidlink"><a href="googleads.adwords.BatchJobHelper.AbstractResponseParser-class.html">googleads.adwords.BatchJobHelper.AbstractResponseParser</a></strong>:
       <em class="summary">Interface for parsing responses from the BatchJobService.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.adwords.BatchJobHelper._XMLToDictResponseParser-class.html" onclick="show_private();">googleads.adwords.BatchJobHelper._XMLToDictResponseParser</a></strong>:
+      <em class="summary">Parses responses from the BatchJobService, returning as a 
+        dictionary.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="googleads.adwords.BatchJobHelper.AbstractUploadRequestBuilder-class.html">googleads.adwords.BatchJobHelper.AbstractUploadRequestBuilder</a></strong>:
       <em class="summary">Interface for building requests used to upload batch job 
         operations.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder-class.html" onclick="show_private();">googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder</a></strong>:
+      <em class="summary">Builds requests used to upload operations for Batch Jobs.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="googleads.adwords.AdWordsClient-class.html">googleads.adwords.AdWordsClient</a></strong>:
       <em class="summary">A central location to set headers and create web service clients.</em>
@@ -85,6 +119,25 @@
     <ul>
     <li> <strong class="uidlink"><a href="googleads.errors.GoogleAdsError-class.html">googleads.errors.GoogleAdsError</a></strong>:
       <em class="summary">Parent class of all errors raised by this library.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.errors.AdWordsBatchJobServiceInvalidOperationError-class.html">googleads.errors.AdWordsBatchJobServiceInvalidOperationError</a></strong>:
+      <em class="summary">Error indicating that an upload operation is malformed.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="googleads.errors.AdWordsReportError-class.html">googleads.errors.AdWordsReportError</a></strong>:
+      <em class="summary">Error indicating that an AdWords report download request failed.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.errors.AdWordsReportBadRequestError-class.html">googleads.errors.AdWordsReportBadRequestError</a></strong>:
+      <em class="summary">Error indicating a bad request was made to the AdWords report service.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="googleads.errors.DfpReportError-class.html">googleads.errors.DfpReportError</a></strong>:
+      <em class="summary">Error indicating that a DFP report download request failed.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="googleads.errors.GoogleAdsValueError-class.html">googleads.errors.GoogleAdsValueError</a></strong>:
+      <em class="summary">Error indicating that the user input for a function was invalid.</em>
+    </li>
+    </ul>
     </li>
     </ul>
     </li>
@@ -102,16 +155,49 @@
     <li> <strong class="uidlink">logging.Filter</strong>:
       <em class="summary">Filter instances are used to perform arbitrary filtering of 
         LogRecords.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.util._AbstractDevTokenSOAPFilter-class.html" onclick="show_private();">googleads.util._AbstractDevTokenSOAPFilter</a></strong>:
+      <em class="summary">Interface for sanitizing logs containing SOAP request/response 
+        data.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.util._GoogleAdsCommonFilter-class.html" onclick="show_private();">googleads.util._GoogleAdsCommonFilter</a></strong>:
+      <em class="summary">Removes sensitive data from logs generated by googleads.common.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="googleads.util._SudsClientFilter-class.html" onclick="show_private();">googleads.util._SudsClientFilter</a></strong>:
+      <em class="summary">Removes sensitive data from logs generated by suds.client.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="googleads.util._SudsTransportFilter-class.html" onclick="show_private();">googleads.util._SudsTransportFilter</a></strong>:
+      <em class="summary">Removes sensitive data from logs generated by suds.transport.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="googleads.dfp.FilterStatement-class.html">googleads.dfp.FilterStatement</a></strong>:
       <em class="summary">A statement object for PQL and get*ByStatement queries.</em>
     </li>
     <li> <strong class="uidlink"><a href="googleads.oauth2.GoogleOAuth2Client-class.html">googleads.oauth2.GoogleOAuth2Client</a></strong>:
       <em class="summary">An OAuth2 client for use with Google APIs.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.oauth2.GoogleRefreshTokenClient-class.html">googleads.oauth2.GoogleRefreshTokenClient</a></strong>:
+      <em class="summary">A simple client for using OAuth2 for Google APIs with a refresh token.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="googleads.oauth2.GoogleServiceAccountClient-class.html">googleads.oauth2.GoogleServiceAccountClient</a></strong>:
+      <em class="summary">A simple client for using OAuth2 for Google APIs with a service account.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="googleads.common.HeaderHandler-class.html">googleads.common.HeaderHandler</a></strong>:
       <em class="summary">A generic header handler interface that must be subclassed by each 
         API.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.adwords._AdWordsHeaderHandler-class.html" onclick="show_private();">googleads.adwords._AdWordsHeaderHandler</a></strong>:
+      <em class="summary">Handler which generates the headers for AdWords requests.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="googleads.dfp._DfpHeaderHandler-class.html" onclick="show_private();">googleads.dfp._DfpHeaderHandler</a></strong>:
+      <em class="summary">Handler which sets the headers for a DFP SOAP call.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="googleads.adwords.IncrementalUploadHelper-class.html">googleads.adwords.IncrementalUploadHelper</a></strong>:
       <em class="summary">A utility for uploading operations for a BatchJob incrementally.</em>
@@ -144,6 +230,15 @@
     </li>
     <li> <strong class="uidlink"><a href="googleads.dfp.StatementBuilder._OrderByPair-class.html" onclick="show_private();">googleads.dfp.StatementBuilder._OrderByPair</a></strong>:
       <em class="summary">Stores and serializes a pair of column/ascending values.</em>
+    </li>
+    <li> <strong class="uidlink">tuple</strong>:
+      <em class="summary">tuple() -&gt; empty tuple tuple(iterable) -&gt; tuple initialized 
+        from iterable's items</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder._OPERATION-class.html" onclick="show_private();">googleads.adwords.BatchJobHelper._SudsUploadRequestBuilder._OPERATION</a></strong>:
+      <em class="summary">Operation(operation_type, service, method)</em>
+    </li>
+    </ul>
     </li>
     </ul>
     </li>
@@ -179,7 +274,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue May 23 09:24:41 2017
+    Generated by Epydoc 3.0.1 on Thu Jun  1 12:38:24 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
