@@ -96,11 +96,29 @@ suds.plugin.MessagePlugin --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.common.LoggingMessagePlugin-class.html#sending" class="summary-sig-name">sending</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.common.LoggingMessagePlugin-class.html#marshalled" class="summary-sig-name">marshalled</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">context</span>)</span><br />
-      Suds will send the specified SOAP envelope.</td>
+      Suds will send the specified soap envelope.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.common-pysrc.html#LoggingMessagePlugin.sending">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#LoggingMessagePlugin.marshalled">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common.LoggingMessagePlugin-class.html#parsed" class="summary-sig-name">parsed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">context</span>)</span><br />
+      Suds has sax parsed the received reply.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#LoggingMessagePlugin.parsed">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -111,9 +129,8 @@ suds.plugin.MessagePlugin --+
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>suds.plugin.MessagePlugin</code></b>:
-      <code>marshalled</code>,
-      <code>parsed</code>,
       <code>received</code>,
+      <code>sending</code>,
       <code>unmarshalled</code>
       </p>
     </td>
@@ -137,30 +154,61 @@ suds.plugin.MessagePlugin --+
   </td>
 </tr>
 </table>
-<a name="sending"></a>
+<a name="marshalled"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">sending</span>(<span class="sig-arg">self</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">marshalled</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">context</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.common-pysrc.html#LoggingMessagePlugin.sending">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#LoggingMessagePlugin.marshalled">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Suds will send the specified SOAP envelope. Provides the plugin with 
-  the opportunity to inspect/modify the message text it is sent.</p>
+  <p>Suds will send the specified soap envelope. Provides the plugin with 
+  the opportunity to inspect/modify the envelope Document before it is 
+  sent.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>context</code></strong> - The send context. The <i>envelope</i> is the envelope text.</li>
+        <li><strong class="pname"><code>context</code></strong> - The send context. The <i>envelope</i> is the envelope document.</li>
     </ul></dd>
     <dt>Overrides:
-        suds.plugin.MessagePlugin.sending
+        suds.plugin.MessagePlugin.marshalled
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="parsed"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parsed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">context</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#LoggingMessagePlugin.parsed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Suds has sax parsed the received reply. Provides the plugin with the 
+  opportunity to inspect/modify the sax parsed DOM tree for the reply 
+  before it is unmarshalled.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>context</code></strong> - The reply context. The <i>reply</i> is DOM tree.</li>
+    </ul></dd>
+    <dt>Overrides:
+        suds.plugin.MessagePlugin.parsed
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -198,7 +246,7 @@ suds.plugin.MessagePlugin --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jun  1 12:38:24 2017
+    Generated by Epydoc 3.0.1 on Tue Jun 27 17:12:20 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -279,6 +279,61 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_SanitizeRequestHeaders" class="summary-sig-name" onclick="show_private();">_SanitizeRequestHeaders</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">headers</span>)</span><br />
+      Removes sensitive data from request headers for use in logging.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._SanitizeRequestHeaders">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_ExtractResponseHeaders" class="summary-sig-name" onclick="show_private();">_ExtractResponseHeaders</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">headers</span>)</span><br />
+      Extracts the given headers to a dict for logging.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._ExtractResponseHeaders">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_ExtractRequestSummaryFields" class="summary-sig-name" onclick="show_private();">_ExtractRequestSummaryFields</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">request</span>,
+        <span class="summary-sig-arg">error</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Extract fields used in the summary logs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._ExtractRequestSummaryFields">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#_SerializeAwql" class="summary-sig-name" onclick="show_private();">_SerializeAwql</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">query</span>,
         <span class="summary-sig-arg">file_format</span>)</span><br />
@@ -390,6 +445,13 @@ object --+
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="_REPORT_DEFINITION_NAME"></a><span class="summary-name">_REPORT_DEFINITION_NAME</span> = <code title="'reportDefinition'"><code class="variable-quote">'</code><code class="variable-string">reportDefinition</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_SERVER_PATTERN"></a><span class="summary-name">_SERVER_PATTERN</span> = <code title="re.compile(r'https?://(.+?)/.*')">re.compile(r'https<code class="re-op">?</code>://<code class="re-group">(</code>.<code class="re-op">+?</code><code class="re-group">)</code>/.<code class="re-op">*</code>')</code>
     </td>
   </tr>
 </table>
@@ -950,6 +1012,96 @@ Raises:
   </dl>
 </td></tr></table>
 </div>
+<a name="_SanitizeRequestHeaders"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_SanitizeRequestHeaders</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">headers</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._SanitizeRequestHeaders">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Removes sensitive data from request headers for use in logging.
+
+Args:
+  headers: a dict containing the headers to be sanitized.
+
+Returns:
+  A  dict containing a sanitized copy of the provided headers.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ExtractResponseHeaders"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ExtractResponseHeaders</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">headers</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._ExtractResponseHeaders">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Extracts the given headers to a dict for logging.
+
+Args:
+  headers: a httplib.HTTPMessage instance containing response headers.
+
+Returns:
+  A dict containing the contents of the response headers.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ExtractRequestSummaryFields"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ExtractRequestSummaryFields</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">request</span>,
+        <span class="sig-arg">error</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ReportDownloader._ExtractRequestSummaryFields">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Extract fields used in the summary logs.
+
+Args:
+  request:  a urllib2.Request instance.
+  [optional]
+  error: a urllib2.HttpError instance used to retrieve error details.
+
+Returns:
+  A dict containing the fields to be output in the summary logs.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="_SerializeAwql"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
@@ -1133,7 +1285,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jun  1 12:38:24 2017
+    Generated by Epydoc 3.0.1 on Tue Jun 27 17:12:20 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

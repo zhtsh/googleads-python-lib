@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.dfp._DfpHeaderHandler</title>
+  <title>googleads.oauth2.GoogleAccessTokenClient</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,8 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.dfp-module.html">Module&nbsp;dfp</a> ::
-        Class&nbsp;_DfpHeaderHandler
+        <a href="googleads.oauth2-module.html">Module&nbsp;oauth2</a> ::
+        Class&nbsp;GoogleAccessTokenClient
       </span>
     </td>
     <td>
@@ -54,24 +54,31 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.dfp._DfpHeaderHandler-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.oauth2.GoogleAccessTokenClient-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class _DfpHeaderHandler</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class GoogleAccessTokenClient</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleAccessTokenClient">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-          object --+    
-                   |    
-<a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a> --+
-                       |
-                      <strong class="uidshort">_DfpHeaderHandler</strong>
+        object --+    
+                 |    
+<a href="googleads.oauth2.GoogleOAuth2Client-class.html">GoogleOAuth2Client</a> --+
+                     |
+                    <strong class="uidshort">GoogleAccessTokenClient</strong>
 </pre>
 
 <hr />
-<p>Handler which sets the headers for a DFP SOAP call.</p>
+<p>A simple client for using OAuth2 for Google APIs with an access 
+  token.</p>
+  <p>This class is not capable of supporting any flows other than taking an
+  existing, active access token. It does not matter which of Google's 
+  OAuth2 flows you used to generate the access token (installed 
+  application, web flow, etc.).</p>
+  <p>When the provided access token expires, a GoogleAdsError will be 
+  raised.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -96,12 +103,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp._DfpHeaderHandler-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">dfp_client</span>,
-        <span class="summary-sig-arg">enable_compression</span>)</span><br />
-      Initializes a DfpHeaderHandler.</td>
+          <td><span class="summary-sig"><a href="googleads.oauth2.GoogleAccessTokenClient-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">access_token</span>,
+        <span class="summary-sig-arg">token_expiry</span>)</span><br />
+      Initializes a GoogleAccessTokenClient.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleAccessTokenClient.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -115,11 +122,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp._DfpHeaderHandler-class.html#SetHeaders" class="summary-sig-name">SetHeaders</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">suds_client</span>)</span><br />
-      Sets the SOAP and HTTP headers on the given suds client.</td>
+          <td><span class="summary-sig"><a href="googleads.oauth2.GoogleAccessTokenClient-class.html#CreateHttpHeader" class="summary-sig-name">CreateHttpHeader</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Creates an OAuth2 HTTP header.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.SetHeaders">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleAccessTokenClient.CreateHttpHeader">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -163,18 +169,14 @@
     </table>
   </td>
 </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_PRODUCT_SIG"></a><span class="summary-name">_PRODUCT_SIG</span> = <code title="'DfpApi-Python'"><code class="variable-quote">'</code><code class="variable-string">DfpApi-Python</code><code class="variable-quote">'</code></code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_SOAP_HEADER_CLASS"></a><span class="summary-name">_SOAP_HEADER_CLASS</span> = <code title="'SoapRequestHeader'"><code class="variable-quote">'</code><code class="variable-string">SoapRequestHeader</code><code class="variable-quote">'</code></code>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html">GoogleOAuth2Client</a></code></b> (private):
+      <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html#_GOOGLE_OAUTH2_ENDPOINT" onclick="show_private();">_GOOGLE_OAUTH2_ENDPOINT</a></code>,
+      <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html#_OAUTH2_REFRESH_MINUTES_IN_ADVANCE" onclick="show_private();">_OAUTH2_REFRESH_MINUTES_IN_ADVANCE</a></code>,
+      <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html#_TOKEN_URL" onclick="show_private();">_TOKEN_URL</a></code>,
+      <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html#_USER_AGENT" onclick="show_private();">_USER_AGENT</a></code>
+      </p></div>
     </td>
   </tr>
 </table>
@@ -229,25 +231,22 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">dfp_client</span>,
-        <span class="sig-arg">enable_compression</span>)</span>
+        <span class="sig-arg">access_token</span>,
+        <span class="sig-arg">token_expiry</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleAccessTokenClient.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Initializes a DfpHeaderHandler.
+Initializes a GoogleAccessTokenClient.
 
 Args:
-  dfp_client: The DfpClient whose data will be used to fill in the headers.
-      We retain a reference to this object so that the header handler picks
-      up changes to the client.
-  enable_compression: A boolean indicating if you want to enable compression
-    of the SOAP response. If True, the SOAP response will use gzip
-    compression, and will be decompressed for you automatically.
+  access_token: A string containing your access token.
+  token_expiry: A datetime instance indicating when the given access token
+  expires.
 
 </pre>
   <dl class="fields">
@@ -257,25 +256,38 @@ Args:
   </dl>
 </td></tr></table>
 </div>
-<a name="SetHeaders"></a>
+<a name="CreateHttpHeader"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">SetHeaders</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">suds_client</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">CreateHttpHeader</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.SetHeaders">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleAccessTokenClient.CreateHttpHeader">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Sets the SOAP and HTTP headers on the given suds client.</p>
+  <pre class="literalblock">
+Creates an OAuth2 HTTP header.
+
+The OAuth2 credentials will be refreshed as necessary. In the event that
+the credentials fail to refresh, a message is logged but no exception is
+raised.
+
+Returns:
+  A dictionary containing one entry: the OAuth2 Bearer header under the
+  'Authorization' key.
+
+Raises:
+  GoogleAdsError: If the access token has expired.
+
+</pre>
   <dl class="fields">
     <dt>Overrides:
-        <a href="googleads.common.HeaderHandler-class.html#SetHeaders">common.HeaderHandler.SetHeaders</a>
+        <a href="googleads.oauth2.GoogleOAuth2Client-class.html#CreateHttpHeader">GoogleOAuth2Client.CreateHttpHeader</a>
     </dt>
   </dl>
 </td></tr></table>
