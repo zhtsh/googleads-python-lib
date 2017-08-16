@@ -101,8 +101,7 @@ object --+
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="googleads.adwords.BatchJobHelper._XMLToDictResponseParser-class.html" class="summary-name" onclick="show_private();">_XMLToDictResponseParser</a><br />
-      Parses responses from the BatchJobService, returning as a 
-        dictionary.
+      Parses responses from the BatchJobService, returning as a dictionary.
     </td>
   </tr>
 <tr>
@@ -149,7 +148,7 @@ object --+
           <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">request_builder</span>,
         <span class="summary-sig-arg">response_parser</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201708</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>)</span><br />
       Initializes the BatchJobHelper.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.__init__">source&nbsp;code</a></span>
@@ -166,8 +165,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#GetId" class="summary-sig-name">GetId</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#GetId" class="summary-sig-name">GetId</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Produces a distinct sequential ID for the BatchJobService.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.GetId">source&nbsp;code</a></span>
@@ -184,8 +182,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="GetIncrementalUploadHelper"></a><span class="summary-sig-name">GetIncrementalUploadHelper</span>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a name="GetIncrementalUploadHelper"></a><span class="summary-sig-name">GetIncrementalUploadHelper</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">upload_url</span>,
+        <span class="summary-sig-arg">current_content_length</span>=<span class="summary-sig-default">0</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.GetIncrementalUploadHelper">source&nbsp;code</a></span>
             
@@ -201,8 +200,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#ParseResponse" class="summary-sig-name">ParseResponse</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#ParseResponse" class="summary-sig-name">ParseResponse</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">batch_job_response</span>)</span><br />
       Parses a Batch Job Service response and returns it as a suds object.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.ParseResponse">source&nbsp;code</a></span>
@@ -219,8 +218,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#UploadOperations" class="summary-sig-name">UploadOperations</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper-class.html#UploadOperations" class="summary-sig-name">UploadOperations</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">upload_url</span>,
+        <span class="summary-sig-arg">*operations</span>)</span><br />
       Uploads all operations to the given uploadUrl in a single request.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.UploadOperations">source&nbsp;code</a></span>
@@ -359,7 +359,7 @@ object --+
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">request_builder</span>,
         <span class="sig-arg">response_parser</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201708</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -396,8 +396,7 @@ Args:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetId</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetId</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.GetId">source&nbsp;code</a></span>&nbsp;
@@ -422,8 +421,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseResponse</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseResponse</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">batch_job_response</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.ParseResponse">source&nbsp;code</a></span>&nbsp;
@@ -455,8 +454,9 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">UploadOperations</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">UploadOperations</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">upload_url</span>,
+        <span class="sig-arg">*operations</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.UploadOperations">source&nbsp;code</a></span>&nbsp;
@@ -512,7 +512,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Aug  9 15:41:26 2017
+    Generated by Epydoc 3.0.1 on Wed Aug 16 07:32:26 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
