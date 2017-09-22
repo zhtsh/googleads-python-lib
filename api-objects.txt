@@ -148,6 +148,8 @@ googleads.adwords._AdWordsHeaderHandler._SOAP_HEADER_CLASS	googleads.adwords._Ad
 googleads.adwords._AdWordsHeaderHandler._PRODUCT_SIG	googleads.adwords._AdWordsHeaderHandler-class.html#_PRODUCT_SIG
 googleads.adwords._AdWordsHeaderHandler.GetReportDownloadHeaders	googleads.adwords._AdWordsHeaderHandler-class.html#GetReportDownloadHeaders
 googleads.adwords._AdWordsHeaderHandler.__init__	googleads.adwords._AdWordsHeaderHandler-class.html#__init__
+googleads.common.CommonClient	googleads.common.CommonClient-class.html
+googleads.common.CommonClient.__init__	googleads.common.CommonClient-class.html#__init__
 googleads.common.HeaderHandler	googleads.common.HeaderHandler-class.html
 googleads.common.HeaderHandler.SetHeaders	googleads.common.HeaderHandler-class.html#SetHeaders
 googleads.common.LoggingMessagePlugin	googleads.common.LoggingMessagePlugin-class.html
