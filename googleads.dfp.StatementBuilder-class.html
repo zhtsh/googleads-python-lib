@@ -126,7 +126,7 @@ object --+
         <span class="summary-sig-arg">where</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">order_by</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">order_ascending</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">limit</span>=<span class="summary-sig-default">SUGGESTED_PAGE_LIMIT</span>,
+        <span class="summary-sig-arg">limit</span>=<span class="summary-sig-default">500</span>,
         <span class="summary-sig-arg">offset</span>=<span class="summary-sig-default">0</span>)</span><br />
       Initializes StatementBuilder.</td>
           <td align="right" valign="top">
@@ -144,7 +144,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#ToStatement" class="summary-sig-name">ToStatement</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#ToStatement" class="summary-sig-name">ToStatement</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Builds a PQL string from the current state.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.ToStatement">source&nbsp;code</a></span>
@@ -161,8 +162,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#Select" class="summary-sig-name">Select</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">columns</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#Select" class="summary-sig-name">Select</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Adds a SELECT clause.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.Select">source&nbsp;code</a></span>
@@ -179,8 +180,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#From" class="summary-sig-name">From</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">table</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#From" class="summary-sig-name">From</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Adds a FROM clause.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.From">source&nbsp;code</a></span>
@@ -197,8 +198,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#Where" class="summary-sig-name">Where</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">clause</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#Where" class="summary-sig-name">Where</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Adds a WHERE clause.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.Where">source&nbsp;code</a></span>
@@ -215,8 +216,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#Limit" class="summary-sig-name">Limit</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">limit</span>=<span class="summary-sig-default">SUGGESTED_PAGE_LIMIT</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#Limit" class="summary-sig-name">Limit</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Adds a LIMIT clause.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.Limit">source&nbsp;code</a></span>
@@ -233,8 +234,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#Offset" class="summary-sig-name">Offset</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">value</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#Offset" class="summary-sig-name">Offset</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Adds an OFFSET clause.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.Offset">source&nbsp;code</a></span>
@@ -251,9 +252,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#OrderBy" class="summary-sig-name">OrderBy</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">column</span>,
-        <span class="summary-sig-arg">ascending</span>=<span class="summary-sig-default">True</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#OrderBy" class="summary-sig-name">OrderBy</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Adds an ORDER BY clause.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.OrderBy">source&nbsp;code</a></span>
@@ -270,9 +270,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#WithBindVariable" class="summary-sig-name">WithBindVariable</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">key</span>,
-        <span class="summary-sig-arg">value</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder-class.html#WithBindVariable" class="summary-sig-name">WithBindVariable</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Binds a value to a variable in the statement.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.WithBindVariable">source&nbsp;code</a></span>
@@ -323,35 +322,35 @@ object --+
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_SELECT_PART"></a><span class="summary-name">_SELECT_PART</span> = <code title="'SELECT %s FROM %s'">'SELECT %s FROM %s'</code>
+        <a name="_SELECT_PART"></a><span class="summary-name">_SELECT_PART</span> = <code title="'SELECT %s FROM %s'"><code class="variable-quote">'</code><code class="variable-string">SELECT %s FROM %s</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_WHERE_PART"></a><span class="summary-name">_WHERE_PART</span> = <code title="'WHERE %s'">'WHERE %s'</code>
+        <a name="_WHERE_PART"></a><span class="summary-name">_WHERE_PART</span> = <code title="'WHERE %s'"><code class="variable-quote">'</code><code class="variable-string">WHERE %s</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_ORDER_BY_PART"></a><span class="summary-name">_ORDER_BY_PART</span> = <code title="'ORDER BY %s'">'ORDER BY %s'</code>
+        <a name="_ORDER_BY_PART"></a><span class="summary-name">_ORDER_BY_PART</span> = <code title="'ORDER BY %s'"><code class="variable-quote">'</code><code class="variable-string">ORDER BY %s</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_LIMIT_PART"></a><span class="summary-name">_LIMIT_PART</span> = <code title="'LIMIT %s'">'LIMIT %s'</code>
+        <a name="_LIMIT_PART"></a><span class="summary-name">_LIMIT_PART</span> = <code title="'LIMIT %s'"><code class="variable-quote">'</code><code class="variable-string">LIMIT %s</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_OFFSET_PART"></a><span class="summary-name">_OFFSET_PART</span> = <code title="'OFFSET %s'">'OFFSET %s'</code>
+        <a name="_OFFSET_PART"></a><span class="summary-name">_OFFSET_PART</span> = <code title="'OFFSET %s'"><code class="variable-quote">'</code><code class="variable-string">OFFSET %s</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -411,7 +410,7 @@ object --+
         <span class="sig-arg">where</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">order_by</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">order_ascending</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">limit</span>=<span class="sig-default">SUGGESTED_PAGE_LIMIT</span>,
+        <span class="sig-arg">limit</span>=<span class="sig-default">500</span>,
         <span class="sig-arg">offset</span>=<span class="sig-default">0</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -447,7 +446,8 @@ Args:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">ToStatement</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ToStatement</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.ToStatement">source&nbsp;code</a></span>&nbsp;
@@ -472,8 +472,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">Select</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">columns</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Select</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.Select">source&nbsp;code</a></span>&nbsp;
@@ -501,8 +501,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">From</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">table</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">From</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.From">source&nbsp;code</a></span>&nbsp;
@@ -530,8 +530,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">Where</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">clause</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Where</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.Where">source&nbsp;code</a></span>&nbsp;
@@ -559,8 +559,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">Limit</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">limit</span>=<span class="sig-default">SUGGESTED_PAGE_LIMIT</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Limit</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.Limit">source&nbsp;code</a></span>&nbsp;
@@ -588,8 +588,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">Offset</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">value</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Offset</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.Offset">source&nbsp;code</a></span>&nbsp;
@@ -617,9 +617,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">OrderBy</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">column</span>,
-        <span class="sig-arg">ascending</span>=<span class="sig-default">True</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">OrderBy</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.OrderBy">source&nbsp;code</a></span>&nbsp;
@@ -648,9 +647,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">WithBindVariable</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">key</span>,
-        <span class="sig-arg">value</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">WithBindVariable</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder.WithBindVariable">source&nbsp;code</a></span>&nbsp;
@@ -704,7 +702,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Sep 22 16:02:25 2017
+    Generated by Epydoc 3.0.1 on Wed Oct 11 18:05:04 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
