@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.adwords.BatchJobHelper.AbstractResponseParser</title>
+  <title>googleads.adwords._QueryBuilder</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -44,8 +44,7 @@
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
         <a href="googleads.adwords-module.html">Module&nbsp;adwords</a> ::
-        <a href="googleads.adwords.BatchJobHelper-class.html">Class&nbsp;BatchJobHelper</a> ::
-        Class&nbsp;AbstractResponseParser
+        Class&nbsp;_QueryBuilder
       </span>
     </td>
     <td>
@@ -55,22 +54,23 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.adwords.BatchJobHelper.AbstractResponseParser-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.adwords._QueryBuilder-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class AbstractResponseParser</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.AbstractResponseParser">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class _QueryBuilder</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.adwords-pysrc.html#_QueryBuilder">source&nbsp;code</a></span></p>
 <pre class="base-tree">
 object --+
          |
-        <strong class="uidshort">BatchJobHelper.AbstractResponseParser</strong>
+        <strong class="uidshort">_QueryBuilder</strong>
 </pre>
 
 <hr />
-<p>Interface for parsing responses from the BatchJobService.</p>
+<p>A query builder for building AWQL (AdWords Query Language) 
+  queries.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -95,11 +95,47 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper.AbstractResponseParser-class.html#ParseResponse" class="summary-sig-name">ParseResponse</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">batch_job_response</span>)</span><br />
-      Parses a Batch Job Service response..</td>
+          <td><span class="summary-sig"><a href="googleads.adwords._QueryBuilder-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">query_builder</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Creates the query builder with the optional specified query builder.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.AbstractResponseParser.ParseResponse">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#_QueryBuilder.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords._QueryBuilder-class.html#Select" class="summary-sig-name">Select</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*fields</span>)</span><br />
+      Sets a provided list of fields as selected fields for the query.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#_QueryBuilder.Select">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.adwords._QueryBuilder-class.html#Where" class="summary-sig-name">Where</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">field</span>)</span><br />
+      Creates a WHERE builder using a provided field.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#_QueryBuilder.Where">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -114,7 +150,6 @@ object --+
       <code>__format__</code>,
       <code>__getattribute__</code>,
       <code>__hash__</code>,
-      <code>__init__</code>,
       <code>__new__</code>,
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
@@ -170,27 +205,100 @@ object --+
   </td>
 </tr>
 </table>
-<a name="ParseResponse"></a>
+<a name="__init__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseResponse</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">batch_job_response</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">query_builder</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.AbstractResponseParser.ParseResponse">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#_QueryBuilder.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Parses a Batch Job Service response..
+Creates the query builder with the optional specified query builder.
+
+This class shouldn't be instantiated directly or extended. Use
+ReportQueryBuilder if you want to create a query for reporting or
+ServiceQueryBuilder if you want to create a query for services.
 
 Args:
-  batch_job_response: a str containing the response from the
-  BatchJobService.
+  query_builder: An optional query builder whose properties will be copied
+      over to this instance.
+
+Returns:
+  The query builder.
+
+Raises:
+  GoogleAdsValueError: If the passed query_builder isn't of the QueryBuilder
+      type.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="Select"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Select</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*fields</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#_QueryBuilder.Select">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Sets a provided list of fields as selected fields for the query.
+
+Args:
+  *fields: The specified list of fields to be added to a SELECT clause.
+
+Returns:
+  This query builder.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Where"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Where</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">field</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#_QueryBuilder.Where">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Creates a WHERE builder using a provided field.
+
+Args:
+  field: the field to be added as an argument in the WHERE clause.
+
+Returns:
+  The created WHERE builder.
 
 </pre>
   <dl class="fields">

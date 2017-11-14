@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.adwords.BatchJobHelper.AbstractResponseParser</title>
+  <title>googleads.dfp._DfpPacker</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,9 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.adwords-module.html">Module&nbsp;adwords</a> ::
-        <a href="googleads.adwords.BatchJobHelper-class.html">Class&nbsp;BatchJobHelper</a> ::
-        Class&nbsp;AbstractResponseParser
+        <a href="googleads.dfp-module.html">Module&nbsp;dfp</a> ::
+        Class&nbsp;_DfpPacker
       </span>
     </td>
     <td>
@@ -55,22 +54,24 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.adwords.BatchJobHelper.AbstractResponseParser-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.dfp._DfpPacker-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class AbstractResponseParser</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.AbstractResponseParser">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class _DfpPacker</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpPacker">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">BatchJobHelper.AbstractResponseParser</strong>
+       object --+    
+                |    
+<a href="googleads.common.SudsPacker-class.html">common.SudsPacker</a> --+
+                    |
+                   <strong class="uidshort">_DfpPacker</strong>
 </pre>
 
 <hr />
-<p>Interface for parsing responses from the BatchJobService.</p>
+<p>A utility applying customized packing logic for DFP.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -89,24 +90,6 @@ object --+
     </table>
   </td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.BatchJobHelper.AbstractResponseParser-class.html#ParseResponse" class="summary-sig-name">ParseResponse</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">batch_job_response</span>)</span><br />
-      Parses a Batch Job Service response..</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.AbstractResponseParser.ParseResponse">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -124,6 +107,60 @@ object --+
       <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.dfp._DfpPacker-class.html#Pack" class="summary-sig-name">Pack</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">obj</span>)</span><br />
+      Pack the given object using DFP-specific logic.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpPacker.Pack">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.dfp._DfpPacker-class.html#DfpDateTimePacker" class="summary-sig-name">DfpDateTimePacker</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Returns dicts formatted for DFP SOAP based on date/datetime.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpPacker.DfpDateTimePacker">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
 </table>
@@ -170,27 +207,65 @@ object --+
   </td>
 </tr>
 </table>
-<a name="ParseResponse"></a>
+<a name="Pack"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseResponse</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">batch_job_response</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Pack</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">obj</span>)</span>
+    <br /><em class="fname">Class Method</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#BatchJobHelper.AbstractResponseParser.ParseResponse">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpPacker.Pack">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Parses a Batch Job Service response..
+Pack the given object using DFP-specific logic.
 
 Args:
-  batch_job_response: a str containing the response from the
-  BatchJobService.
+  obj: an object to be packed for suds using DFP-specific logic, if
+      applicable.
+
+Returns:
+  The given object packed with DFP-specific logic for suds, if applicable.
+  Otherwise, returns the given object unmodified.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="googleads.common.SudsPacker-class.html#Pack">common.SudsPacker.Pack</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="DfpDateTimePacker"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DfpDateTimePacker</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">value</span>)</span>
+    <br /><em class="fname">Class Method</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpPacker.DfpDateTimePacker">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Returns dicts formatted for DFP SOAP based on date/datetime.
+
+Args:
+  value: A date or datetime object to be converted.
+
+Returns:
+  The value object correctly represented for DFP SOAP.
 
 </pre>
   <dl class="fields">

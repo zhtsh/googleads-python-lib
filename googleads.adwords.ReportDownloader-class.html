@@ -96,7 +96,7 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">adwords_client</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201710</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initializes a ReportDownloader.</td>
           <td align="right" valign="top">
@@ -132,7 +132,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReport" class="summary-sig-name">DownloadReport</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReport" class="summary-sig-name">DownloadReport</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">report_definition</span>,
+        <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">sys.stdout</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Downloads an AdWords report using a report definition.</td>
           <td align="right" valign="top">
@@ -150,7 +152,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStream" class="summary-sig-name">DownloadReportAsStream</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStream" class="summary-sig-name">DownloadReportAsStream</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">report_definition</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Downloads an AdWords report using a report definition.</td>
           <td align="right" valign="top">
@@ -168,7 +171,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStreamWithAwql" class="summary-sig-name">DownloadReportAsStreamWithAwql</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStreamWithAwql" class="summary-sig-name">DownloadReportAsStreamWithAwql</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">query</span>,
+        <span class="summary-sig-arg">file_format</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Downloads an AdWords report using an AWQL query.</td>
           <td align="right" valign="top">
@@ -186,7 +191,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsString" class="summary-sig-name">DownloadReportAsString</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsString" class="summary-sig-name">DownloadReportAsString</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">report_definition</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Downloads an AdWords report using a report definition.</td>
           <td align="right" valign="top">
@@ -204,7 +210,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStringWithAwql" class="summary-sig-name">DownloadReportAsStringWithAwql</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportAsStringWithAwql" class="summary-sig-name">DownloadReportAsStringWithAwql</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">query</span>,
+        <span class="summary-sig-arg">file_format</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Downloads an AdWords report using an AWQL query.</td>
           <td align="right" valign="top">
@@ -222,7 +230,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportWithAwql" class="summary-sig-name">DownloadReportWithAwql</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="googleads.adwords.ReportDownloader-class.html#DownloadReportWithAwql" class="summary-sig-name">DownloadReportWithAwql</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">query</span>,
+        <span class="summary-sig-arg">file_format</span>,
+        <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">sys.stdout</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Downloads an AdWords report using an AWQL query.</td>
           <td align="right" valign="top">
@@ -423,35 +434,35 @@ object --+
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.ReportDownloader-class.html#_NAMESPACE_FORMAT" class="summary-name" onclick="show_private();">_NAMESPACE_FORMAT</a> = <code title="'https://adwords.google.com/api/adwords/cm/%s'"><code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com/api/adwords/cm</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.ReportDownloader-class.html#_NAMESPACE_FORMAT" class="summary-name" onclick="show_private();">_NAMESPACE_FORMAT</a> = <code title="'https://adwords.google.com/api/adwords/cm/%s'">'https://adwords.google.com/api/adwords/cm<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_END_POINT_FORMAT"></a><span class="summary-name">_END_POINT_FORMAT</span> = <code title="'%s/api/adwords/reportdownload/%s'"><code class="variable-quote">'</code><code class="variable-string">%s/api/adwords/reportdownload/%s</code><code class="variable-quote">'</code></code>
+        <a name="_END_POINT_FORMAT"></a><span class="summary-name">_END_POINT_FORMAT</span> = <code title="'%s/api/adwords/reportdownload/%s'">'%s/api/adwords/reportdownload/%s'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.ReportDownloader-class.html#_SCHEMA_FORMAT" class="summary-name" onclick="show_private();">_SCHEMA_FORMAT</a> = <code title="'%s/api/adwords/reportdownload/%s/reportDefinition.xsd'"><code class="variable-quote">'</code><code class="variable-string">%s/api/adwords/reportdownload/%s/reportDefin</code><code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.ReportDownloader-class.html#_SCHEMA_FORMAT" class="summary-name" onclick="show_private();">_SCHEMA_FORMAT</a> = <code title="'/'.join([_END_POINT_FORMAT, 'reportDefinition.xsd'])">'/'.join([_END_POINT_FORMAT, 'reportDefinitio<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_REPORT_DEFINITION_NAME"></a><span class="summary-name">_REPORT_DEFINITION_NAME</span> = <code title="'reportDefinition'"><code class="variable-quote">'</code><code class="variable-string">reportDefinition</code><code class="variable-quote">'</code></code>
+        <a name="_REPORT_DEFINITION_NAME"></a><span class="summary-name">_REPORT_DEFINITION_NAME</span> = <code title="'reportDefinition'">'reportDefinition'</code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_SERVER_PATTERN"></a><span class="summary-name">_SERVER_PATTERN</span> = <code title="re.compile(r'https?://(.+?)/.*')">re.compile(r'https<code class="re-op">?</code>://<code class="re-group">(</code>.<code class="re-op">+?</code><code class="re-group">)</code>/.<code class="re-op">*</code>')</code>
+        <a name="_SERVER_PATTERN"></a><span class="summary-name">_SERVER_PATTERN</span> = <code title="re.compile('https?://(.+?)/.*')">re.compile('https?://(.+?)/.*')</code>
     </td>
   </tr>
 </table>
@@ -507,7 +518,7 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">adwords_client</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201710</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
         <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -543,7 +554,9 @@ Args:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReport</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReport</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">report_definition</span>,
+        <span class="sig-arg">output</span>=<span class="sig-default">sys.stdout</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -603,7 +616,8 @@ Raises:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStream</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStream</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">report_definition</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -662,7 +676,9 @@ Raises:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStreamWithAwql</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStreamWithAwql</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">query</span>,
+        <span class="sig-arg">file_format</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -723,7 +739,8 @@ Raises:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsString</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsString</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">report_definition</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -782,7 +799,9 @@ Raises:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStringWithAwql</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportAsStringWithAwql</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">query</span>,
+        <span class="sig-arg">file_format</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -843,7 +862,10 @@ Raises:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportWithAwql</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">DownloadReportWithAwql</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">query</span>,
+        <span class="sig-arg">file_format</span>,
+        <span class="sig-arg">output</span>=<span class="sig-default">sys.stdout</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -857,8 +879,8 @@ Downloads an AdWords report using an AWQL query.
 The report contents will be written to the given output.
 
 Args:
-  query: A string containing the query which specifies the data you want
-      your report to include.
+  query: A string or ReportQuery object containing the query which
+      specifies the data you want your report to include.
   file_format: A string representing the output format for your report.
       Acceptable values can be found in our API documentation:
       https://developers.google.com/adwords/api/docs/guides/reporting
@@ -1124,7 +1146,8 @@ Returns:
 Serializes an AWQL query and file format for transport.
 
 Args:
-  query: A string representing the AWQL query used in the report.
+  query: A string or ReportQuery object representing the AWQL query used in
+      the report.
   file_format: A string representing the file format of the generated
       report.
 
@@ -1231,7 +1254,7 @@ Returns:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'</code><code class="variable-string">https://adwords.google.com/api/adwords/cm/%s</code><code class="variable-quote">'</code>
+'https://adwords.google.com/api/adwords/cm/%s'
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -1249,7 +1272,7 @@ Returns:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'</code><code class="variable-string">%s/api/adwords/reportdownload/%s/reportDefinition.xsd</code><code class="variable-quote">'</code>
+'/'.join([_END_POINT_FORMAT, 'reportDefinition.xsd'])
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -1287,7 +1310,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct 11 18:05:03 2017
+    Generated by Epydoc 3.0.1 on Tue Nov 14 16:45:31 2017
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
