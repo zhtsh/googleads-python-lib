@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.dfp.StatementBuilder._OrderByPair</title>
+  <title>googleads.common.ZeepSchemaHelper</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,9 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.dfp-module.html">Module&nbsp;dfp</a> ::
-        <a href="googleads.dfp.StatementBuilder-class.html">Class&nbsp;StatementBuilder</a> ::
-        Class&nbsp;_OrderByPair
+        <a href="googleads.common-module.html">Module&nbsp;common</a> ::
+        Class&nbsp;ZeepSchemaHelper
       </span>
     </td>
     <td>
@@ -55,23 +54,50 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.dfp.StatementBuilder._OrderByPair-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.common.ZeepSchemaHelper-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class _OrderByPair</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class ZeepSchemaHelper</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.common-pysrc.html#ZeepSchemaHelper">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">StatementBuilder._OrderByPair</strong>
+        object --+    
+                 |    
+<a href="googleads.common.GoogleSchemaHelper-class.html">GoogleSchemaHelper</a> --+
+                     |
+                    <strong class="uidshort">ZeepSchemaHelper</strong>
 </pre>
 
 <hr />
-<p>Stores and serializes a pair of column/ascending values.</p>
+<p>Zeep schema helper implementation.</p>
 
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.GoogleSchemaHelper-class.html">GoogleSchemaHelper</a></code></b>:
+      <code><a href="abc.ABCMeta-class.html">__metaclass__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -95,12 +121,15 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder._OrderByPair-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">column</span>,
-        <span class="summary-sig-arg">ascending</span>)</span><br />
-      Initializes a pair of column/ascending values.</td>
+          <td><span class="summary-sig"><a href="googleads.common.ZeepSchemaHelper-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">endpoint</span>,
+        <span class="summary-sig-arg">timeout</span>,
+        <span class="summary-sig-arg">proxy_config</span>,
+        <span class="summary-sig-arg">namespace_override</span>,
+        <span class="summary-sig-arg">cache</span>)</span><br />
+      Initializes a ZeepSchemaHelper.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#ZeepSchemaHelper.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -114,10 +143,12 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder._OrderByPair-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      The string representation of this class is valid PQL.</td>
+          <td><span class="summary-sig"><a href="googleads.common.ZeepSchemaHelper-class.html#GetSoapXMLForComplexType" class="summary-sig-name">GetSoapXMLForComplexType</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">type_name</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Return an XML string representing a SOAP complex type.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__repr__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#ZeepSchemaHelper.GetSoapXMLForComplexType">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -135,11 +166,47 @@ object --+
       <code>__new__</code>,
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
       <code>__setattr__</code>,
       <code>__sizeof__</code>,
       <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__abstractmethods__"></a><span class="summary-name">__abstractmethods__</span> = <code title="frozenset([])"><code class="variable-group">frozenset([</code><code class="variable-group">])</code></code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.GoogleSchemaHelper-class.html">GoogleSchemaHelper</a></code></b> (private):
+      <code><a href="googleads.common.GoogleSchemaHelper-class.html#_abc_cache" onclick="show_private();">_abc_cache</a></code>,
+      <code><a href="googleads.common.GoogleSchemaHelper-class.html#_abc_negative_cache" onclick="show_private();">_abc_negative_cache</a></code>,
+      <code><a href="googleads.common.GoogleSchemaHelper-class.html#_abc_negative_cache_version" onclick="show_private();">_abc_negative_cache_version</a></code>,
+      <code><a href="googleads.common.GoogleSchemaHelper-class.html#_abc_registry" onclick="show_private();">_abc_registry</a></code>
+      </p></div>
     </td>
   </tr>
 </table>
@@ -194,21 +261,28 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">column</span>,
-        <span class="sig-arg">ascending</span>)</span>
+        <span class="sig-arg">endpoint</span>,
+        <span class="sig-arg">timeout</span>,
+        <span class="sig-arg">proxy_config</span>,
+        <span class="sig-arg">namespace_override</span>,
+        <span class="sig-arg">cache</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#ZeepSchemaHelper.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Initializes a pair of column/ascending values.
+Initializes a ZeepSchemaHelper.
 
 Args:
-  column: a string specifying the column name.
-  ascending: a boolean specifying sort order ascending or descending.
+   endpoint: A string representing the URL to connect to.
+   timeout: An integer timeout in MS used to determine connection timeouts.
+   proxy_config: A googleads.common.ProxyConfig instance which represents
+       the proxy settings needed.
+   namespace_override: A string to doctor the WSDL namespace with.
+   cache: An instance of zeep.cache.Base to use for caching.
 
 </pre>
   <dl class="fields">
@@ -218,25 +292,36 @@ Args:
   </dl>
 </td></tr></table>
 </div>
-<a name="__repr__"></a>
+<a name="GetSoapXMLForComplexType"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__repr__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Representation operator)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetSoapXMLForComplexType</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">type_name</span>,
+        <span class="sig-arg">value</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__repr__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#ZeepSchemaHelper.GetSoapXMLForComplexType">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>The string representation of this class is valid PQL.</p>
+  <pre class="literalblock">
+Return an XML string representing a SOAP complex type.
+
+Args:
+  type_name: The name of the type with namespace prefix if necessary.
+  value: A python dictionary to hydrate the type instance with.
+
+Returns:
+  A string containing the SOAP XML for the type.
+
+</pre>
   <dl class="fields">
     <dt>Overrides:
-        object.__repr__
+        <a href="googleads.common.GoogleSchemaHelper-class.html#GetSoapXMLForComplexType">GoogleSchemaHelper.GetSoapXMLForComplexType</a>
     </dt>
   </dl>
 </td></tr></table>

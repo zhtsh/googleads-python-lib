@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.common.ProxyConfig._SudsProxyTransport</title>
+  <title>googleads.common._SudsProxyTransport</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -44,7 +44,6 @@
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
         <a href="googleads.common-module.html">Module&nbsp;common</a> ::
-        <a href="googleads.common.ProxyConfig-class.html">Class&nbsp;ProxyConfig</a> ::
         Class&nbsp;_SudsProxyTransport
       </span>
     </td>
@@ -55,20 +54,20 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.common.ProxyConfig._SudsProxyTransport-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.common._SudsProxyTransport-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class _SudsProxyTransport</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig._SudsProxyTransport">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class _SudsProxyTransport</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.common-pysrc.html#_SudsProxyTransport">source&nbsp;code</a></span></p>
 <pre class="base-tree">
      suds.transport.Transport --+    
                                 |    
 suds.transport.http.HttpTransport --+
                                     |
-                                   <strong class="uidshort">ProxyConfig._SudsProxyTransport</strong>
+                                   <strong class="uidshort">_SudsProxyTransport</strong>
 </pre>
 
 <hr />
@@ -98,12 +97,12 @@ suds.transport.http.HttpTransport --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.common.ProxyConfig._SudsProxyTransport-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">handlers</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.common._SudsProxyTransport-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">timeout</span>,
+        <span class="summary-sig-arg">proxy_config</span>)</span><br />
       Initializes SudsHTTPSTransport.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig._SudsProxyTransport.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#_SudsProxyTransport.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -117,10 +116,10 @@ suds.transport.http.HttpTransport --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.common.ProxyConfig._SudsProxyTransport-class.html#u2handlers" class="summary-sig-name">u2handlers</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.common._SudsProxyTransport-class.html#u2handlers" class="summary-sig-name">u2handlers</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Get a collection of urllib2 handlers to be installed in the opener.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig._SudsProxyTransport.u2handlers">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#_SudsProxyTransport.u2handlers">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -169,12 +168,12 @@ suds.transport.http.HttpTransport --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">handlers</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+        <span class="sig-arg">timeout</span>,
+        <span class="sig-arg">proxy_config</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig._SudsProxyTransport.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#_SudsProxyTransport.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -182,8 +181,8 @@ suds.transport.http.HttpTransport --+
 Initializes SudsHTTPSTransport.
 
 Args:
-  handlers: an iterable of urllib2.BaseHandler subclasses.
-  **kwargs: Keyword arguments.
+  timeout: An integer for the connection timeout time.
+  proxy_config: A ProxyConfig instance representing proxy settings.
 
 </pre>
   <dl class="fields">
@@ -232,7 +231,7 @@ Args:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">u2handlers</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig._SudsProxyTransport.u2handlers">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#_SudsProxyTransport.u2handlers">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -284,7 +283,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Mar  1 16:54:59 2018
+    Generated by Epydoc 3.0.1 on Wed Mar 28 16:31:00 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

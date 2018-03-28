@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.dfp.StatementBuilder._OrderByPair</title>
+  <title>googleads.common.GoogleSchemaHelper</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,9 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.dfp-module.html">Module&nbsp;dfp</a> ::
-        <a href="googleads.dfp.StatementBuilder-class.html">Class&nbsp;StatementBuilder</a> ::
-        Class&nbsp;_OrderByPair
+        <a href="googleads.common-module.html">Module&nbsp;common</a> ::
+        Class&nbsp;GoogleSchemaHelper
       </span>
     </td>
     <td>
@@ -55,23 +54,57 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.dfp.StatementBuilder._OrderByPair-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.common.GoogleSchemaHelper-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class _OrderByPair</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class GoogleSchemaHelper</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.common-pysrc.html#GoogleSchemaHelper">source&nbsp;code</a></span></p>
 <pre class="base-tree">
 object --+
          |
-        <strong class="uidshort">StatementBuilder._OrderByPair</strong>
+        <strong class="uidshort">GoogleSchemaHelper</strong>
 </pre>
 
-<hr />
-<p>Stores and serializes a pair of column/ascending values.</p>
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="googleads.common.SudsSchemaHelper-class.html">SudsSchemaHelper</a></li><li>, <a href="googleads.common.ZeepSchemaHelper-class.html">ZeepSchemaHelper</a></li>  </ul>
+</dd></dl>
 
+<hr />
+<p>Base class for type to xml conversion.</p>
+  <p>Only used for AdWords reporting specialness. A subclass should be 
+  created for each underlying SOAP implementation.</p>
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="abc.ABCMeta-class.html" class="summary-name">__metaclass__</a><br />
+      Metaclass for defining Abstract Base Classes (ABCs).
+    </td>
+  </tr>
+</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -95,29 +128,12 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder._OrderByPair-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">column</span>,
-        <span class="summary-sig-arg">ascending</span>)</span><br />
-      Initializes a pair of column/ascending values.</td>
+          <td><span class="summary-sig"><a href="googleads.common.GoogleSchemaHelper-class.html#GetSoapXMLForComplexType" class="summary-sig-name">GetSoapXMLForComplexType</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">type_name</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Return an XML string representing a SOAP complex type.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__init__">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder._OrderByPair-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      The string representation of this class is valid PQL.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__repr__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#GoogleSchemaHelper.GetSoapXMLForComplexType">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -132,14 +148,69 @@ object --+
       <code>__format__</code>,
       <code>__getattribute__</code>,
       <code>__hash__</code>,
+      <code>__init__</code>,
       <code>__new__</code>,
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
       <code>__setattr__</code>,
       <code>__sizeof__</code>,
       <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__abstractmethods__"></a><span class="summary-name">__abstractmethods__</span> = <code title="frozenset(['GetSoapXMLForComplexType'])"><code class="variable-group">frozenset([</code><code class="variable-quote">'</code><code class="variable-string">GetSoapXMLForComplexType</code><code class="variable-quote">'</code><code class="variable-group">])</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_cache"></a><span class="summary-name">_abc_cache</span> = <code title="&lt;_weakrefset.WeakSet object at 0x7f96241c5a50&gt;">&lt;_weakrefset.WeakSet object at 0x7f96241c5a50&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common.GoogleSchemaHelper-class.html#_abc_negative_cache" class="summary-name" onclick="show_private();">_abc_negative_cache</a> = <code title="&lt;_weakrefset.WeakSet object at 0x7f96241c5ad0&gt;">&lt;_weakrefset.WeakSet object at 0x7f96241<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_negative_cache_version"></a><span class="summary-name">_abc_negative_cache_version</span> = <code title="29">29</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_registry"></a><span class="summary-name">_abc_registry</span> = <code title="&lt;_weakrefset.WeakSet object at 0x7f96241c5990&gt;">&lt;_weakrefset.WeakSet object at 0x7f96241c5990&gt;</code>
     </td>
   </tr>
 </table>
@@ -186,58 +257,75 @@ object --+
   </td>
 </tr>
 </table>
-<a name="__init__"></a>
+<a name="GetSoapXMLForComplexType"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">column</span>,
-        <span class="sig-arg">ascending</span>)</span>
-    <br /><em class="fname">(Constructor)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetSoapXMLForComplexType</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">type_name</span>,
+        <span class="sig-arg">value</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#GoogleSchemaHelper.GetSoapXMLForComplexType">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Initializes a pair of column/ascending values.
+Return an XML string representing a SOAP complex type.
 
 Args:
-  column: a string specifying the column name.
-  ascending: a boolean specifying sort order ascending or descending.
+  type_name: The name of the type with namespace prefix if necessary.
+  value: A python dictionary to hydrate the type instance with.
+
+Returns:
+  A string containing the SOAP XML for the type.
 
 </pre>
   <dl class="fields">
-    <dt>Overrides:
-        object.__init__
-    </dt>
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@abc.abstractmethod</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="__repr__"></a>
-<div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_abc_negative_cache"></a>
+<div class="private">
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__repr__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Representation operator)</em>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__repr__">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
+  <h3 class="epydoc">_abc_negative_cache</h3>
   
-  <p>The string representation of this class is valid PQL.</p>
   <dl class="fields">
-    <dt>Overrides:
-        object.__repr__
-    </dt>
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;_weakrefset.WeakSet object at 0x7f96241c5ad0&gt;
+</pre></td></tr></table>
+</dd>
   </dl>
 </td></tr></table>
 </div>

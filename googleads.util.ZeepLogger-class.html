@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.common.ProxyConfig.Proxy</title>
+  <title>googleads.util.ZeepLogger</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,9 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.common-module.html">Module&nbsp;common</a> ::
-        <a href="googleads.common.ProxyConfig-class.html">Class&nbsp;ProxyConfig</a> ::
-        Class&nbsp;Proxy
+        <a href="googleads.util-module.html">Module&nbsp;util</a> ::
+        Class&nbsp;ZeepLogger
       </span>
     </td>
     <td>
@@ -55,22 +54,31 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.common.ProxyConfig.Proxy-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.util.ZeepLogger-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class Proxy</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class ZeepLogger</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.util-pysrc.html#ZeepLogger">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">ProxyConfig.Proxy</strong>
+                 object --+    
+                          |    
+        zeep.plugins.Plugin --+
+                              |
+             object --+       |
+                      |       |
+         logging.Filter --+   |
+                          |   |
+<a href="googleads.util._AbstractDevTokenSOAPFilter-class.html" onclick="show_private();">_AbstractDevTokenSOAPFilter</a> --+
+                              |
+                             <strong class="uidshort">ZeepLogger</strong>
 </pre>
 
 <hr />
-<p>Defines settings for a proxy connection.</p>
+<p>Log zeep request/response data while removing sensitive 
+  information.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -95,14 +103,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.common.ProxyConfig.Proxy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">host</span>,
-        <span class="summary-sig-arg">port</span>,
-        <span class="summary-sig-arg">username</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">password</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
-      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td><span class="summary-sig"><a href="googleads.util.ZeepLogger-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Instantiates a new ZeepLogger.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.util-pysrc.html#ZeepLogger.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -116,10 +120,34 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.common.ProxyConfig.Proxy-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      str(x)</td>
+          <td><span class="summary-sig"><a href="googleads.util.ZeepLogger-class.html#ingress" class="summary-sig-name">ingress</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">envelope</span>,
+        <span class="summary-sig-arg">http_headers</span>,
+        <span class="summary-sig-arg">operation</span>)</span><br />
+      Overrides the ingress function for response logging.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy.__str__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.util-pysrc.html#ZeepLogger.ingress">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.util.ZeepLogger-class.html#egress" class="summary-sig-name">egress</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">envelope</span>,
+        <span class="summary-sig-arg">http_headers</span>,
+        <span class="summary-sig-arg">operation</span>,
+        <span class="summary-sig-arg">binding_options</span>)</span><br />
+      Overrides the egress function ror request logging.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.util-pysrc.html#ZeepLogger.egress">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -129,6 +157,9 @@ object --+
   </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.util._AbstractDevTokenSOAPFilter-class.html" onclick="show_private();">_AbstractDevTokenSOAPFilter</a></code></b>:
+      <code><a href="googleads.util._AbstractDevTokenSOAPFilter-class.html#filter">filter</a></code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -140,6 +171,7 @@ object --+
       <code>__repr__</code>,
       <code>__setattr__</code>,
       <code>__sizeof__</code>,
+      <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
     </td>
@@ -162,18 +194,13 @@ object --+
     </table>
   </td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="STR_TEMPLATE"></a><span class="summary-name">STR_TEMPLATE</span> = <code title="'%s:%s'"><code class="variable-quote">'</code><code class="variable-string">%s:%s</code><code class="variable-quote">'</code></code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="CRED_TEMPLATE"></a><span class="summary-name">CRED_TEMPLATE</span> = <code title="'%s@%s'"><code class="variable-quote">'</code><code class="variable-string">%s@%s</code><code class="variable-quote">'</code></code>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.util._AbstractDevTokenSOAPFilter-class.html" onclick="show_private();">_AbstractDevTokenSOAPFilter</a></code></b> (private):
+      <code><a href="googleads.util._AbstractDevTokenSOAPFilter-class.html#_AUTHORIZATION_HEADER" onclick="show_private();">_AUTHORIZATION_HEADER</a></code>,
+      <code><a href="googleads.util._AbstractDevTokenSOAPFilter-class.html#_DEVELOPER_TOKEN_SUB" onclick="show_private();">_DEVELOPER_TOKEN_SUB</a></code>,
+      <code><a href="googleads.util._AbstractDevTokenSOAPFilter-class.html#_REDACTED" onclick="show_private();">_REDACTED</a></code>
+      </p></div>
     </td>
   </tr>
 </table>
@@ -227,47 +254,92 @@ object --+
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">host</span>,
-        <span class="sig-arg">port</span>,
-        <span class="sig-arg">username</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">password</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.util-pysrc.html#ZeepLogger.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <p>Instantiates a new ZeepLogger.</p>
   <dl class="fields">
     <dt>Overrides:
         object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="__str__"></a>
+<a name="ingress"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Informal representation operator)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ingress</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">envelope</span>,
+        <span class="sig-arg">http_headers</span>,
+        <span class="sig-arg">operation</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.common-pysrc.html#ProxyConfig.Proxy.__str__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.util-pysrc.html#ZeepLogger.ingress">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>str(x)</p>
+  <pre class="literalblock">
+Overrides the ingress function for response logging.
+
+Args:
+  envelope: An Element with the SOAP request data.
+  http_headers: A dict of the current http headers.
+  operation: The SoapOperation instance.
+
+Returns:
+  A tuple of the envelope and headers.
+
+</pre>
   <dl class="fields">
     <dt>Overrides:
-        object.__str__
-        <dd><em class="note">(inherited documentation)</em></dd>
+        zeep.plugins.Plugin.ingress
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="egress"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">egress</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">envelope</span>,
+        <span class="sig-arg">http_headers</span>,
+        <span class="sig-arg">operation</span>,
+        <span class="sig-arg">binding_options</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.util-pysrc.html#ZeepLogger.egress">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Overrides the egress function ror request logging.
+
+Args:
+  envelope: An Element with the SOAP request data.
+  http_headers: A dict of the current http headers.
+  operation: The SoapOperation instance.
+  binding_options: An options dict for the SOAP binding.
+
+Returns:
+  A tuple of the envelope and headers.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        zeep.plugins.Plugin.egress
     </dt>
   </dl>
 </td></tr></table>
@@ -304,7 +376,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Mar  1 16:54:59 2018
+    Generated by Epydoc 3.0.1 on Wed Mar 28 16:31:00 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

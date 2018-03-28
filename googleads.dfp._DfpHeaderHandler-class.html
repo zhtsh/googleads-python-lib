@@ -73,6 +73,31 @@
 <hr />
 <p>Handler which sets the headers for a DFP SOAP call.</p>
 
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a></code></b>:
+      <code><a href="abc.ABCMeta-class.html">__metaclass__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -115,11 +140,28 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp._DfpHeaderHandler-class.html#SetHeaders" class="summary-sig-name">SetHeaders</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">suds_client</span>)</span><br />
-      Sets the SOAP and HTTP headers on the given suds client.</td>
+          <td><span class="summary-sig"><a href="googleads.dfp._DfpHeaderHandler-class.html#GetSOAPHeaders" class="summary-sig-name">GetSOAPHeaders</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">create_method</span>)</span><br />
+      Returns the SOAP headers required for request authorization.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.SetHeaders">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.GetSOAPHeaders">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.dfp._DfpHeaderHandler-class.html#GetHTTPHeaders" class="summary-sig-name">GetHTTPHeaders</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the HTTP headers required for request authorization.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.GetHTTPHeaders">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -174,7 +216,24 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_SOAP_HEADER_CLASS"></a><span class="summary-name">_SOAP_HEADER_CLASS</span> = <code title="'SoapRequestHeader'"><code class="variable-quote">'</code><code class="variable-string">SoapRequestHeader</code><code class="variable-quote">'</code></code>
+        <a name="_SOAP_HEADER_CLASS"></a><span class="summary-name">_SOAP_HEADER_CLASS</span> = <code title="'ns0:SoapRequestHeader'"><code class="variable-quote">'</code><code class="variable-string">ns0:SoapRequestHeader</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__abstractmethods__"></a><span class="summary-name">__abstractmethods__</span> = <code title="frozenset([])"><code class="variable-group">frozenset([</code><code class="variable-group">])</code></code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a></code></b> (private):
+      <code><a href="googleads.common.HeaderHandler-class.html#_abc_cache" onclick="show_private();">_abc_cache</a></code>,
+      <code><a href="googleads.common.HeaderHandler-class.html#_abc_negative_cache" onclick="show_private();">_abc_negative_cache</a></code>,
+      <code><a href="googleads.common.HeaderHandler-class.html#_abc_negative_cache_version" onclick="show_private();">_abc_negative_cache_version</a></code>,
+      <code><a href="googleads.common.HeaderHandler-class.html#_abc_registry" onclick="show_private();">_abc_registry</a></code>
+      </p></div>
     </td>
   </tr>
 </table>
@@ -257,25 +316,63 @@ Args:
   </dl>
 </td></tr></table>
 </div>
-<a name="SetHeaders"></a>
+<a name="GetSOAPHeaders"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">SetHeaders</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">suds_client</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetSOAPHeaders</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">create_method</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.SetHeaders">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.GetSOAPHeaders">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Sets the SOAP and HTTP headers on the given suds client.</p>
+  <pre class="literalblock">
+Returns the SOAP headers required for request authorization.
+
+Args:
+  create_method: The SOAP library specific method used to instantiate SOAP
+  objects.
+
+Returns:
+  A SOAP object containing the headers.
+
+</pre>
   <dl class="fields">
     <dt>Overrides:
-        <a href="googleads.common.HeaderHandler-class.html#SetHeaders">common.HeaderHandler.SetHeaders</a>
+        <a href="googleads.common.HeaderHandler-class.html#GetSOAPHeaders">common.HeaderHandler.GetSOAPHeaders</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetHTTPHeaders"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetHTTPHeaders</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.dfp-pysrc.html#_DfpHeaderHandler.GetHTTPHeaders">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Returns the HTTP headers required for request authorization.
+
+Returns:
+  A dictionary containing the required headers.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="googleads.common.HeaderHandler-class.html#GetHTTPHeaders">common.HeaderHandler.GetHTTPHeaders</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -312,7 +409,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Mar  1 16:54:59 2018
+    Generated by Epydoc 3.0.1 on Wed Mar 28 16:31:00 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

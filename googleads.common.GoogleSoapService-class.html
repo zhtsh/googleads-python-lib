@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.adwords._AdWordsHeaderHandler</title>
+  <title>googleads.common.GoogleSoapService</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,8 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.adwords-module.html">Module&nbsp;adwords</a> ::
-        Class&nbsp;_AdWordsHeaderHandler
+        <a href="googleads.common-module.html">Module&nbsp;common</a> ::
+        Class&nbsp;GoogleSoapService
       </span>
     </td>
     <td>
@@ -54,24 +54,30 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.adwords._AdWordsHeaderHandler-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.common.GoogleSoapService-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class _AdWordsHeaderHandler</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class GoogleSoapService</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-          object --+    
-                   |    
-<a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a> --+
-                       |
-                      <strong class="uidshort">_AdWordsHeaderHandler</strong>
+object --+
+         |
+        <strong class="uidshort">GoogleSoapService</strong>
 </pre>
 
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="googleads.common.SudsServiceProxy-class.html">SudsServiceProxy</a></li><li>, <a href="googleads.common.ZeepServiceProxy-class.html">ZeepServiceProxy</a></li>  </ul>
+</dd></dl>
+
 <hr />
-<p>Handler which generates the headers for AdWords requests.</p>
+<p>Base class for a SOAP service representation.</p>
+  <p>A subclass should be created for each underlying SOAP 
+  implementation.</p>
 
 <!-- ==================== NESTED CLASSES ==================== -->
 <a name="section-NestedClasses"></a>
@@ -90,11 +96,12 @@
     </table>
   </td>
 </tr>
-  <tr>
-    <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a></code></b>:
-      <code><a href="abc.ABCMeta-class.html">__metaclass__</a></code>
-      </p>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="abc.ABCMeta-class.html" class="summary-name">__metaclass__</a><br />
+      Metaclass for defining Abstract Base Classes (ABCs).
     </td>
   </tr>
 </table>
@@ -121,13 +128,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords._AdWordsHeaderHandler-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">adwords_client</span>,
-        <span class="summary-sig-arg">version</span>,
-        <span class="summary-sig-arg">enable_compression</span>)</span><br />
-      Initializes an AdWordsHeaderHandler.</td>
+          <td><span class="summary-sig"><a href="googleads.common.GoogleSoapService-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">header_handler</span>,
+        <span class="summary-sig-arg">packer</span>)</span><br />
+      Initializes a SOAP service.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -141,11 +147,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords._AdWordsHeaderHandler-class.html#GetSOAPHeaders" class="summary-sig-name">GetSOAPHeaders</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">create_method</span>)</span><br />
-      Returns the SOAP headers required for request authorization.</td>
+          <td><span class="summary-sig"><a href="googleads.common.GoogleSoapService-class.html#CreateSoapElementForType" class="summary-sig-name">CreateSoapElementForType</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">type_name</span>)</span><br />
+      Create an instance of a SOAP type.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.GetSOAPHeaders">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService.CreateSoapElementForType">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -159,10 +165,48 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords._AdWordsHeaderHandler-class.html#GetHTTPHeaders" class="summary-sig-name">GetHTTPHeaders</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the HTTP headers required for request authorization.</td>
+          <td><span class="summary-sig"><a href="googleads.common.GoogleSoapService-class.html#GetRequestXML" class="summary-sig-name">GetRequestXML</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">method</span>,
+        <span class="summary-sig-arg">*args</span>)</span><br />
+      Get the raw SOAP XML for a request.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.GetHTTPHeaders">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService.GetRequestXML">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common.GoogleSoapService-class.html#_WsdlHasMethod" class="summary-sig-name" onclick="show_private();">_WsdlHasMethod</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">method_name</span>)</span><br />
+      Determine if the wsdl contains a method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService._WsdlHasMethod">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common.GoogleSoapService-class.html#_CreateMethod" class="summary-sig-name" onclick="show_private();">_CreateMethod</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">method_name</span>)</span><br />
+      Create a method wrapping an invocation to the SOAP service.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService._CreateMethod">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -176,11 +220,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords._AdWordsHeaderHandler-class.html#GetReportDownloadHeaders" class="summary-sig-name">GetReportDownloadHeaders</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Returns a dictionary of headers for a report download request.</td>
+          <td><span class="summary-sig"><a name="__getattr__"></a><span class="summary-sig-name">__getattr__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">attr</span>)</span><br />
+      Support service.method() syntax.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.GetReportDownloadHeaders">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService.__getattr__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -224,42 +268,42 @@
     </table>
   </td>
 </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_PRODUCT_SIG"></a><span class="summary-name">_PRODUCT_SIG</span> = <code title="'AwApi-Python'"><code class="variable-quote">'</code><code class="variable-string">AwApi-Python</code><code class="variable-quote">'</code></code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="googleads.adwords._AdWordsHeaderHandler-class.html#_SOAP_HEADER_CLASS" class="summary-name" onclick="show_private();">_SOAP_HEADER_CLASS</a> = <code title="'{https://adwords.google.com/api/adwords/cm/%s}SoapHeader'"><code class="variable-quote">'</code><code class="variable-string">{https://adwords.google.com/api/adwords/</code><code class="variable-ellipsis">...</code></code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_CONTENT_TYPE"></a><span class="summary-name">_CONTENT_TYPE</span> = <code title="'application/x-www-form-urlencoded'"><code class="variable-quote">'</code><code class="variable-string">application/x-www-form-urlencoded</code><code class="variable-quote">'</code></code>
-    </td>
-  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__abstractmethods__"></a><span class="summary-name">__abstractmethods__</span> = <code title="frozenset([])"><code class="variable-group">frozenset([</code><code class="variable-group">])</code></code>
+        <a href="googleads.common.GoogleSoapService-class.html#__abstractmethods__" class="summary-name">__abstractmethods__</a> = <code title="frozenset(['CreateSoapElementForType',
+           'GetRequestXML',
+           '_CreateMethod',
+           '_WsdlHasMethod'])"><code class="variable-group">frozenset([</code><code class="variable-quote">'</code><code class="variable-string">CreateSoapElementForType</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
-  <tr>
-    <td colspan="2" class="summary">
-    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a></code></b> (private):
-      <code><a href="googleads.common.HeaderHandler-class.html#_abc_cache" onclick="show_private();">_abc_cache</a></code>,
-      <code><a href="googleads.common.HeaderHandler-class.html#_abc_negative_cache" onclick="show_private();">_abc_negative_cache</a></code>,
-      <code><a href="googleads.common.HeaderHandler-class.html#_abc_negative_cache_version" onclick="show_private();">_abc_negative_cache_version</a></code>,
-      <code><a href="googleads.common.HeaderHandler-class.html#_abc_registry" onclick="show_private();">_abc_registry</a></code>
-      </p></div>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_cache"></a><span class="summary-name">_abc_cache</span> = <code title="&lt;_weakrefset.WeakSet object at 0x7f96241c5f90&gt;">&lt;_weakrefset.WeakSet object at 0x7f96241c5f90&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common.GoogleSoapService-class.html#_abc_negative_cache" class="summary-name" onclick="show_private();">_abc_negative_cache</a> = <code title="&lt;_weakrefset.WeakSet object at 0x7f96241cb050&gt;">&lt;_weakrefset.WeakSet object at 0x7f96241<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_negative_cache_version"></a><span class="summary-name">_abc_negative_cache_version</span> = <code title="29">29</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_registry"></a><span class="summary-name">_abc_registry</span> = <code title="&lt;_weakrefset.WeakSet object at 0x7f96241c5ed0&gt;">&lt;_weakrefset.WeakSet object at 0x7f96241c5ed0&gt;</code>
     </td>
   </tr>
 </table>
@@ -314,28 +358,23 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">adwords_client</span>,
-        <span class="sig-arg">version</span>,
-        <span class="sig-arg">enable_compression</span>)</span>
+        <span class="sig-arg">header_handler</span>,
+        <span class="sig-arg">packer</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Initializes an AdWordsHeaderHandler.
+Initializes a SOAP service.
 
 Args:
-  adwords_client: An AdWordsClient whose data will be used to fill in the
-      headers. We retain a reference to this object so that the header
-      handler picks up changes to the client.
-  version: A string identifying which version of AdWords this header handler
-      will be used for.
-  enable_compression: A boolean indicating if you want to enable compression
-    of the SOAP response. If True, the SOAP response will use gzip
-    compression, and will be decompressed for you automatically.
+  header_handler: A googleads.common.HeaderHandler instance used to set
+  SOAP and HTTP headers.
+  packer: A googleads.common.SoapPacker instance used to transform
+  entities.
 
 </pre>
   <dl class="fields">
@@ -345,117 +384,137 @@ Args:
   </dl>
 </td></tr></table>
 </div>
-<a name="GetSOAPHeaders"></a>
+<a name="CreateSoapElementForType"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetSOAPHeaders</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">create_method</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">CreateSoapElementForType</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">type_name</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.GetSOAPHeaders">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService.CreateSoapElementForType">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Returns the SOAP headers required for request authorization.
+Create an instance of a SOAP type.
 
 Args:
-  create_method: The SOAP library specific method used to instantiate SOAP
-  objects.
+  type_name: The name of the type.
 
 Returns:
-  A SOAP object containing the headers.
+  An instance of type type_name.
 
 </pre>
   <dl class="fields">
-    <dt>Overrides:
-        <a href="googleads.common.HeaderHandler-class.html#GetSOAPHeaders">common.HeaderHandler.GetSOAPHeaders</a>
-    </dt>
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@abc.abstractmethod</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="GetHTTPHeaders"></a>
+<a name="GetRequestXML"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetHTTPHeaders</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetRequestXML</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">method</span>,
+        <span class="sig-arg">*args</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.GetHTTPHeaders">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService.GetRequestXML">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Returns the HTTP headers required for request authorization.
+Get the raw SOAP XML for a request.
+
+Args:
+  method: The method name.
+  *args: A list of arguments to be passed to the method.
 
 Returns:
-  A dictionary containing the required headers.
+  An element containing the raw XML that would be sent as the request.
 
 </pre>
   <dl class="fields">
-    <dt>Overrides:
-        <a href="googleads.common.HeaderHandler-class.html#GetHTTPHeaders">common.HeaderHandler.GetHTTPHeaders</a>
-    </dt>
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@abc.abstractmethod</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="GetReportDownloadHeaders"></a>
-<div>
+<a name="_WsdlHasMethod"></a>
+<div class="private">
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetReportDownloadHeaders</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_WsdlHasMethod</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">method_name</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.GetReportDownloadHeaders">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService._WsdlHasMethod">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Returns a dictionary of headers for a report download request.
-
-Note that the given keyword arguments will override any settings configured
-from the googleads.yaml file.
+Determine if the wsdl contains a method.
 
 Args:
-  **kwargs: Optional keyword arguments.
-
-Keyword Arguments:
-  client_customer_id: A string containing a client_customer_id intended to
-    override the default value set by the AdWordsClient.
-  include_zero_impressions: A boolean indicating whether the report should
-    show rows with zero impressions.
-  skip_report_header: A boolean indicating whether to include a header row
-      containing the report name and date range. If false or not specified,
-      report output will include the header row.
-  skip_column_header: A boolean indicating whether to include column names
-      in reports. If false or not specified, report output will include the
-      column names.
-  skip_report_summary: A boolean indicating whether to include a summary row
-      containing the report totals. If false or not specified, report output
-      will include the summary row.
-  use_raw_enum_values: A boolean indicating whether to return enum field
-      values as enums instead of display values.
+  method_name: The name of the method to search.
 
 Returns:
-  A dictionary containing the headers configured for downloading a report.
-
-Raises:
-  GoogleAdsValueError: If one or more of the report header keyword arguments
-    is invalid.
+  True if the method is in the WSDL, otherwise False.
 
 </pre>
   <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@abc.abstractmethod</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_CreateMethod"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_CreateMethod</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">method_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#GoogleSoapService._CreateMethod">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Create a method wrapping an invocation to the SOAP service.
+
+Args:
+  method_name: A string identifying the name of the SOAP method to call.
+
+Returns:
+  A callable that can be used to make the desired SOAP request.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@abc.abstractmethod</code></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -478,19 +537,40 @@ Raises:
   </td>
 </tr>
 </table>
-<a name="_SOAP_HEADER_CLASS"></a>
-<div class="private">
+<a name="__abstractmethods__"></a>
+<div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">_SOAP_HEADER_CLASS</h3>
+  <h3 class="epydoc">__abstractmethods__</h3>
   
   <dl class="fields">
   </dl>
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'</code><code class="variable-string">{https://adwords.google.com/api/adwords/cm/%s}SoapHeader</code><code class="variable-quote">'</code>
+<code class="variable-group">frozenset([</code><code class="variable-quote">'</code><code class="variable-string">CreateSoapElementForType</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+           <code class="variable-quote">'</code><code class="variable-string">GetRequestXML</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+           <code class="variable-quote">'</code><code class="variable-string">_CreateMethod</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+           <code class="variable-quote">'</code><code class="variable-string">_WsdlHasMethod</code><code class="variable-quote">'</code><code class="variable-group">])</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_abc_negative_cache"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_abc_negative_cache</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;_weakrefset.WeakSet object at 0x7f96241cb050&gt;
 </pre></td></tr></table>
 </dd>
   </dl>

@@ -96,13 +96,61 @@
       A utility for configuring the usage of a proxy.
     </td>
   </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common._ZeepProxyTransport-class.html" class="summary-name" onclick="show_private();">_ZeepProxyTransport</a><br />
+      A Zeep transport which configures caching, proxy support, and 
+        timeouts.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common._SudsProxyTransport-class.html" class="summary-name" onclick="show_private();">_SudsProxyTransport</a><br />
+      A transport that applies the given handlers for usage with a proxy.
+    </td>
+  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.common.SudsPacker-class.html" class="summary-name">SudsPacker</a><br />
-      A utility class to be passed to _PackForSuds for customized 
-        packing.
+        <a href="googleads.common.SoapPacker-class.html" class="summary-name">SoapPacker</a><br />
+      A utility class to be passed to argument packing functions.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common.GoogleSchemaHelper-class.html" class="summary-name">GoogleSchemaHelper</a><br />
+      Base class for type to xml conversion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common.SudsSchemaHelper-class.html" class="summary-name">SudsSchemaHelper</a><br />
+      Suds schema helper implementation.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common.ZeepSchemaHelper-class.html" class="summary-name">ZeepSchemaHelper</a><br />
+      Zeep schema helper implementation.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common.GoogleSoapService-class.html" class="summary-name">GoogleSoapService</a><br />
+      Base class for a SOAP service representation.
     </td>
   </tr>
 <tr>
@@ -111,6 +159,22 @@
     </td><td class="summary">
         <a href="googleads.common.SudsServiceProxy-class.html" class="summary-name">SudsServiceProxy</a><br />
       Wraps a suds service object, allowing custom logic to be injected.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common._ZeepAuthHeaderPlugin-class.html" class="summary-name" onclick="show_private();">_ZeepAuthHeaderPlugin</a><br />
+      A zeep plugin responsible for setting our custom HTTP headers.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common.ZeepServiceProxy-class.html" class="summary-name">ZeepServiceProxy</a><br />
+      Wraps a zeep service object, allowing custom logic to be injected.
     </td>
   </tr>
 <tr>
@@ -248,24 +312,6 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.common-module.html#_ExtractProxy" class="summary-sig-name" onclick="show_private();">_ExtractProxy</a>(<span class="summary-sig-arg">proxy_yaml_key</span>,
-        <span class="summary-sig-arg">proxy_config_data</span>)</span><br />
-      Extracts a ProxyConfig.Proxy from the proxy_config for a given key.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.common-pysrc.html#_ExtractProxy">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
           <td><span class="summary-sig"><a href="googleads.common-module.html#_PackForSuds" class="summary-sig-name" onclick="show_private();">_PackForSuds</a>(<span class="summary-sig-arg">obj</span>,
         <span class="summary-sig-arg">factory</span>,
         <span class="summary-sig-arg">packer</span>=<span class="summary-sig-default">None</span>)</span><br />
@@ -338,11 +384,60 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="googleads.common-module.html#AddToUtilityRegistry" class="summary-sig-name">AddToUtilityRegistry</a>(<span class="summary-sig-arg">utility_name</span>)</span><br />
+      Directly add a utility to the registry, not a decorator.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#AddToUtilityRegistry">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="googleads.common-module.html#RegisterUtility" class="summary-sig-name">RegisterUtility</a>(<span class="summary-sig-arg">utility_name</span>,
         <span class="summary-sig-arg">version_mapping</span>=<span class="summary-sig-default">None</span>)</span><br />
       Decorator that registers a class with the given utility name.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.common-pysrc.html#RegisterUtility">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetSchemaHelperForLibrary"></a><span class="summary-sig-name">GetSchemaHelperForLibrary</span>(<span class="summary-sig-arg">lib_name</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#GetSchemaHelperForLibrary">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetServiceClassForLibrary"></a><span class="summary-sig-name">GetServiceClassForLibrary</span>(<span class="summary-sig-arg">lib_name</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#GetServiceClassForLibrary">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -427,7 +522,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_PY_VERSION_MICRO"></a><span class="summary-name">_PY_VERSION_MICRO</span> = <code title="9">9</code>
+        <a name="_PY_VERSION_MICRO"></a><span class="summary-name">_PY_VERSION_MICRO</span> = <code title="13">13</code>
     </td>
   </tr>
 <tr class="private">
@@ -443,14 +538,14 @@ compatibility with this library, upgrade to Python 2.7.9 or higher.'"><code clas
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'10.1.0'"><code class="variable-quote">'</code><code class="variable-string">10.1.0</code><code class="variable-quote">'</code></code>
+        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'11.0.0'"><code class="variable-quote">'</code><code class="variable-string">11.0.0</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/10.1.0'"><code class="variable-quote">'</code><code class="variable-string">googleads/10.1.0</code><code class="variable-quote">'</code></code>
+        <a name="_COMMON_LIB_SIG"></a><span class="summary-name">_COMMON_LIB_SIG</span> = <code title="'googleads/11.0.0'"><code class="variable-quote">'</code><code class="variable-string">googleads/11.0.0</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -464,14 +559,14 @@ compatibility with this library, upgrade to Python 2.7.9 or higher.'"><code clas
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_HTTP_PROXY_YAML_KEY"></a><span class="summary-name">_HTTP_PROXY_YAML_KEY</span> = <code title="'http_proxy'"><code class="variable-quote">'</code><code class="variable-string">http_proxy</code><code class="variable-quote">'</code></code>
+        <a name="_HTTP_PROXY_YAML_KEY"></a><span class="summary-name">_HTTP_PROXY_YAML_KEY</span> = <code title="'http'"><code class="variable-quote">'</code><code class="variable-string">http</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_HTTPS_PROXY_YAML_KEY"></a><span class="summary-name">_HTTPS_PROXY_YAML_KEY</span> = <code title="'https_proxy'"><code class="variable-quote">'</code><code class="variable-string">https_proxy</code><code class="variable-quote">'</code></code>
+        <a name="_HTTPS_PROXY_YAML_KEY"></a><span class="summary-name">_HTTPS_PROXY_YAML_KEY</span> = <code title="'https'"><code class="variable-quote">'</code><code class="variable-string">https</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -485,7 +580,7 @@ compatibility with this library, upgrade to Python 2.7.9 or higher.'"><code clas
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_PYTHON_VERSION"></a><span class="summary-name">_PYTHON_VERSION</span> = <code title="'Python/2.7.9'"><code class="variable-quote">'</code><code class="variable-string">Python/2.7.9</code><code class="variable-quote">'</code></code>
+        <a name="_PYTHON_VERSION"></a><span class="summary-name">_PYTHON_VERSION</span> = <code title="'Python/2.7.13'"><code class="variable-quote">'</code><code class="variable-string">Python/2.7.13</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -506,14 +601,7 @@ compatibility with this library, upgrade to Python 2.7.9 or higher.'"><code clas
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.common-module.html#_OAUTH2_SERVICE_ACCT_KEYS_OPTIONAL" class="summary-name" onclick="show_private();">_OAUTH2_SERVICE_ACCT_KEYS_OPTIONAL</a> = <code title="('delegated_account', 'service_account_email')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">delegated_account</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">se</code><code class="variable-ellipsis">...</code></code>
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="_PROXY_KEYS"></a><span class="summary-name">_PROXY_KEYS</span> = <code title="('host', 'port')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">host</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">port</code><code class="variable-quote">'</code><code class="variable-group">)</code></code>
+        <a name="_OAUTH2_SERVICE_ACCT_KEYS_OPTIONAL"></a><span class="summary-name">_OAUTH2_SERVICE_ACCT_KEYS_OPTIONAL</span> = <code title="('delegated_account')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">delegated_account</code><code class="variable-quote">'</code><code class="variable-group">)</code></code>
     </td>
   </tr>
 <tr>
@@ -521,6 +609,13 @@ compatibility with this library, upgrade to Python 2.7.9 or higher.'"><code clas
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="ENABLE_COMPRESSION_KEY"></a><span class="summary-name">ENABLE_COMPRESSION_KEY</span> = <code title="'enable_compression'"><code class="variable-quote">'</code><code class="variable-string">enable_compression</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SOAP_IMPLEMENTATION_KEY"></a><span class="summary-name">SOAP_IMPLEMENTATION_KEY</span> = <code title="'soap_impl'"><code class="variable-quote">'</code><code class="variable-string">soap_impl</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
@@ -765,44 +860,6 @@ Raises:
   </dl>
 </td></tr></table>
 </div>
-<a name="_ExtractProxy"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ExtractProxy</span>(<span class="sig-arg">proxy_yaml_key</span>,
-        <span class="sig-arg">proxy_config_data</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.common-pysrc.html#_ExtractProxy">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <pre class="literalblock">
-Extracts a ProxyConfig.Proxy from the proxy_config for a given key.
-
-Args:
-  proxy_yaml_key: a key specifying the type of proxy for which data is being
-    loaded.
-  proxy_config_data: a dict containing the proxy configurations loaded from
-    the YAML file.
-
-Returns:
-  If the proxy_yaml_key exists in the proxy_config_data, this will return a
-  ProxyConfig.Proxy instance initialized with the data associated with it.
-  Otherwise, this will return None.
-
-Raises:
-  A GoogleAdsValueError if one of the required keys specified by _PROXY_KEYS
-  is missing.
-
-</pre>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
 <a name="_PackForSuds"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
@@ -834,7 +891,7 @@ Args:
       for instances of unpacked dictionaries or lists.
   factory: The suds.client.Factory object which can create instances of the
       classes generated from the WSDL.
-  packer: An optional subclass of googleads.common.SudsPacker that provides
+  packer: An optional subclass of googleads.common.SoapPacker that provides
       customized packing logic.
 
 Returns:
@@ -899,6 +956,31 @@ Configures the logging of utilities in the User-Agent.
 Args:
   value: a bool indicating that you want to include utility names in the
     User-Agent if set True, otherwise, these will not be added.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AddToUtilityRegistry"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AddToUtilityRegistry</span>(<span class="sig-arg">utility_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#AddToUtilityRegistry">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Directly add a utility to the registry, not a decorator.
+
+Args:
+  utility_name: The name of the utility to add.
 
 </pre>
   <dl class="fields">
@@ -1055,24 +1137,6 @@ Returns:
   </dl>
 </td></tr></table>
 </div>
-<a name="_OAUTH2_SERVICE_ACCT_KEYS_OPTIONAL"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">_OAUTH2_SERVICE_ACCT_KEYS_OPTIONAL</h3>
-  
-  <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-<code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">delegated_account</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">service_account_email</code><code class="variable-quote">'</code><code class="variable-group">)</code>
-</pre></td></tr></table>
-</dd>
-  </dl>
-</td></tr></table>
-</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -1105,7 +1169,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Mar  1 16:54:59 2018
+    Generated by Epydoc 3.0.1 on Wed Mar 28 16:31:00 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

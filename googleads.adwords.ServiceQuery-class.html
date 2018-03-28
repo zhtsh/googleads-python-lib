@@ -115,7 +115,7 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.ServiceQuery-class.html#NextPage" class="summary-sig-name">NextPage</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">page_size</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">page</span>=<span class="summary-sig-default">None</span>)</span><br />
       Sets the LIMIT clause of the AWQL to the next page.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQuery.NextPage">source&nbsp;code</a></span>
@@ -133,8 +133,7 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.ServiceQuery-class.html#HasNext" class="summary-sig-name">HasNext</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">page</span>,
-        <span class="summary-sig-arg">page_size</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">page</span>)</span><br />
       Checks if there is still a page left to query.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQuery.HasNext">source&nbsp;code</a></span>
@@ -195,6 +194,59 @@ object --+
       <code>__sizeof__</code>,
       <code>__subclasshook__</code>
       </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.ServiceQuery-class.html#_BID_LANDSCAPE_PAGES" class="summary-name" onclick="show_private();">_BID_LANDSCAPE_PAGES</a> = <code title="('AdGroupBidLandscapePage', 'CriterionBidLandscapePage')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">AdGroupBidLandscapePage</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">CriterionB</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_LANDSCAPE_POINTS"></a><span class="summary-name">_LANDSCAPE_POINTS</span> = <code title="'landscapePoints'"><code class="variable-quote">'</code><code class="variable-string">landscapePoints</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_TOTAL_NUM_ENTRIES"></a><span class="summary-name">_TOTAL_NUM_ENTRIES</span> = <code title="'totalNumEntries'"><code class="variable-quote">'</code><code class="variable-string">totalNumEntries</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_ENTRIES"></a><span class="summary-name">_ENTRIES</span> = <code title="'entries'"><code class="variable-quote">'</code><code class="variable-string">entries</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_PAGE_TYPE"></a><span class="summary-name">_PAGE_TYPE</span> = <code title="'Page.Type'"><code class="variable-quote">'</code><code class="variable-string">Page.Type</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -275,7 +327,7 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">NextPage</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">page_size</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">page</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQuery.NextPage">source&nbsp;code</a></span>&nbsp;
@@ -285,15 +337,17 @@ object --+
   <pre class="literalblock">
 Sets the LIMIT clause of the AWQL to the next page.
 
-This method is meant to be used with HasNext().
-The page_size is necessary when using DataService, as its paging mechanism
-is different from other services. For details, see
+This method is meant to be used with HasNext(). When using DataService,
+page is needed, as its paging mechanism is different from other services.
+For details, see
 https://developers.google.com/adwords/api/docs/guides/bid-landscapes#paging_through_results.
-When the page_size is None, this object's page size is used instead.
 
 Args:
-  page_size: The optional page size used to increment the index in the LIMIT
-      clause.
+  page: An optional dict-like page returned in an API response, where the
+      type depends on the configured SOAP client. The page contains the
+      'totalNumEntries' key whose value represents the total number of
+      results from making the query to the AdWords API services. This page
+      is required when using this method with DataService.
 
 Returns:
   This service query object.
@@ -315,8 +369,7 @@ Raises:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">HasNext</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">page</span>,
-        <span class="sig-arg">page_size</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">page</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQuery.HasNext">source&nbsp;code</a></span>&nbsp;
@@ -326,18 +379,15 @@ Raises:
   <pre class="literalblock">
 Checks if there is still a page left to query.
 
-This method is meant to be used with NextPage().
-The page_size is necessary when using DataService, as its paging mechanism
-is different from other services. For details, see
+This method is meant to be used with NextPage(). When using DataService,
+the paging mechanism is different from other services. For details, see
 https://developers.google.com/adwords/api/docs/guides/bid-landscapes#paging_through_results.
-When the page_size is None, this object's page size is used instead.
 
 Args:
-  page: A dict containing the 'totalNumEntries' key whose value represents
-      the total number of results from making the query to the AdWords API
-      services.
-  page_size: The optional page size used to increment the index in the LIMIT
-      clause.
+  page: A dict-like page returned in an API response, where the type depends
+      on the configured SOAP client. The page contains the 'totalNumEntries'
+      key whose value represents the total number of results from making the
+      query to the AdWords API services.
 
 Returns:
   True if there is still a page left.
@@ -407,6 +457,43 @@ Yields:
 </td></tr></table>
 </div>
 <br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_BID_LANDSCAPE_PAGES"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_BID_LANDSCAPE_PAGES</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">AdGroupBidLandscapePage</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">CriterionBidLandscapePage</code><code class="variable-quote">'</code><code class="variable-group">)</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -438,7 +525,7 @@ Yields:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Mar  1 16:54:59 2018
+    Generated by Epydoc 3.0.1 on Wed Mar 28 16:31:00 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.dfp.StatementBuilder._OrderByPair</title>
+  <title>googleads.common._ZeepAuthHeaderPlugin</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,9 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.dfp-module.html">Module&nbsp;dfp</a> ::
-        <a href="googleads.dfp.StatementBuilder-class.html">Class&nbsp;StatementBuilder</a> ::
-        Class&nbsp;_OrderByPair
+        <a href="googleads.common-module.html">Module&nbsp;common</a> ::
+        Class&nbsp;_ZeepAuthHeaderPlugin
       </span>
     </td>
     <td>
@@ -55,22 +54,24 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.dfp.StatementBuilder._OrderByPair-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.common._ZeepAuthHeaderPlugin-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class _OrderByPair</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class _ZeepAuthHeaderPlugin</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.common-pysrc.html#_ZeepAuthHeaderPlugin">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">StatementBuilder._OrderByPair</strong>
+         object --+    
+                  |    
+zeep.plugins.Plugin --+
+                      |
+                     <strong class="uidshort">_ZeepAuthHeaderPlugin</strong>
 </pre>
 
 <hr />
-<p>Stores and serializes a pair of column/ascending values.</p>
+<p>A zeep plugin responsible for setting our custom HTTP headers.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -95,12 +96,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder._OrderByPair-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">column</span>,
-        <span class="summary-sig-arg">ascending</span>)</span><br />
-      Initializes a pair of column/ascending values.</td>
+          <td><span class="summary-sig"><a href="googleads.common._ZeepAuthHeaderPlugin-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">header_handler</span>)</span><br />
+      Instantiate a new _ZeepAuthHeaderPlugin.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#_ZeepAuthHeaderPlugin.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -114,10 +114,14 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.StatementBuilder._OrderByPair-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      The string representation of this class is valid PQL.</td>
+          <td><span class="summary-sig"><a href="googleads.common._ZeepAuthHeaderPlugin-class.html#egress" class="summary-sig-name">egress</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">envelope</span>,
+        <span class="summary-sig-arg">http_headers</span>,
+        <span class="summary-sig-arg">operation</span>,
+        <span class="summary-sig-arg">binding_options</span>)</span><br />
+      Overriding the egress function to set our headers.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__repr__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.common-pysrc.html#_ZeepAuthHeaderPlugin.egress">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -127,6 +131,9 @@ object --+
   </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>zeep.plugins.Plugin</code></b>:
+      <code>ingress</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -135,6 +142,7 @@ object --+
       <code>__new__</code>,
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
       <code>__setattr__</code>,
       <code>__sizeof__</code>,
       <code>__str__</code>,
@@ -194,21 +202,19 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">column</span>,
-        <span class="sig-arg">ascending</span>)</span>
+        <span class="sig-arg">header_handler</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#_ZeepAuthHeaderPlugin.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
   <pre class="literalblock">
-Initializes a pair of column/ascending values.
+Instantiate a new _ZeepAuthHeaderPlugin.
 
 Args:
-  column: a string specifying the column name.
-  ascending: a boolean specifying sort order ascending or descending.
+  header_handler: A googleads.common.HeaderHandler instance.
 
 </pre>
   <dl class="fields">
@@ -218,25 +224,40 @@ Args:
   </dl>
 </td></tr></table>
 </div>
-<a name="__repr__"></a>
+<a name="egress"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__repr__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Representation operator)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">egress</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">envelope</span>,
+        <span class="sig-arg">http_headers</span>,
+        <span class="sig-arg">operation</span>,
+        <span class="sig-arg">binding_options</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#StatementBuilder._OrderByPair.__repr__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.common-pysrc.html#_ZeepAuthHeaderPlugin.egress">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>The string representation of this class is valid PQL.</p>
+  <pre class="literalblock">
+Overriding the egress function to set our headers.
+
+Args:
+  envelope: An Element with the SOAP request data.
+  http_headers: A dict of the current http headers.
+  operation: The SoapOperation instance.
+  binding_options: An options dict for the SOAP binding.
+
+Returns:
+  A tuple of the envelope and headers.
+
+</pre>
   <dl class="fields">
     <dt>Overrides:
-        object.__repr__
+        zeep.plugins.Plugin.egress
     </dt>
   </dl>
 </td></tr></table>
