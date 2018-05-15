@@ -73,6 +73,31 @@
 <hr />
 <p>Handler which generates the headers for AdWords requests.</p>
 
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a></code></b>:
+      <code><a href="abc.ABCMeta-class.html">__metaclass__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -99,7 +124,8 @@
           <td><span class="summary-sig"><a href="googleads.adwords._AdWordsHeaderHandler-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">adwords_client</span>,
         <span class="summary-sig-arg">version</span>,
-        <span class="summary-sig-arg">enable_compression</span>)</span><br />
+        <span class="summary-sig-arg">enable_compression</span>,
+        <span class="summary-sig-arg">custom_http_headers</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initializes an AdWordsHeaderHandler.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#_AdWordsHeaderHandler.__init__">source&nbsp;code</a></span>
@@ -203,28 +229,38 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_PRODUCT_SIG"></a><span class="summary-name">_PRODUCT_SIG</span> = <code title="'AwApi-Python'">'AwApi-Python'</code>
+        <a name="_PRODUCT_SIG"></a><span class="summary-name">_PRODUCT_SIG</span> = <code title="'AwApi-Python'"><code class="variable-quote">'</code><code class="variable-string">AwApi-Python</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords._AdWordsHeaderHandler-class.html#_SOAP_HEADER_CLASS" class="summary-name" onclick="show_private();">_SOAP_HEADER_CLASS</a> = <code title="'{https://adwords.google.com/api/adwords/cm/%s}SoapHeader'">'{https://adwords.google.com/api/adwords/<code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords._AdWordsHeaderHandler-class.html#_SOAP_HEADER_CLASS" class="summary-name" onclick="show_private();">_SOAP_HEADER_CLASS</a> = <code title="'{https://adwords.google.com/api/adwords/cm/%s}SoapHeader'"><code class="variable-quote">'</code><code class="variable-string">{https://adwords.google.com/api/adwords/</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_CONTENT_TYPE"></a><span class="summary-name">_CONTENT_TYPE</span> = <code title="'application/x-www-form-urlencoded'">'application/x-www-form-urlencoded'</code>
+        <a name="_CONTENT_TYPE"></a><span class="summary-name">_CONTENT_TYPE</span> = <code title="'application/x-www-form-urlencoded'"><code class="variable-quote">'</code><code class="variable-string">application/x-www-form-urlencoded</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__abstractmethods__"></a><span class="summary-name">__abstractmethods__</span> = <code title="frozenset([])"><code class="variable-group">frozenset([</code><code class="variable-group">])</code></code>
     </td>
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a></code></b>:
-      <code><a href="googleads.common.HeaderHandler-class.html#__metaclass__">__metaclass__</a></code>
-      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.common.HeaderHandler-class.html">common.HeaderHandler</a></code></b> (private):
+      <code><a href="googleads.common.HeaderHandler-class.html#_abc_cache" onclick="show_private();">_abc_cache</a></code>,
+      <code><a href="googleads.common.HeaderHandler-class.html#_abc_negative_cache" onclick="show_private();">_abc_negative_cache</a></code>,
+      <code><a href="googleads.common.HeaderHandler-class.html#_abc_negative_cache_version" onclick="show_private();">_abc_negative_cache_version</a></code>,
+      <code><a href="googleads.common.HeaderHandler-class.html#_abc_registry" onclick="show_private();">_abc_registry</a></code>
+      </p></div>
     </td>
   </tr>
 </table>
@@ -281,7 +317,8 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">adwords_client</span>,
         <span class="sig-arg">version</span>,
-        <span class="sig-arg">enable_compression</span>)</span>
+        <span class="sig-arg">enable_compression</span>,
+        <span class="sig-arg">custom_http_headers</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -301,6 +338,8 @@ Args:
   enable_compression: A boolean indicating if you want to enable compression
     of the SOAP response. If True, the SOAP response will use gzip
     compression, and will be decompressed for you automatically.
+  custom_http_headers: A dictionary of custom HTTP headers to send with all
+    requests.
 
 </pre>
   <dl class="fields">
@@ -455,7 +494,7 @@ Raises:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-'{https://adwords.google.com/api/adwords/cm/%s}SoapHeader'
+<code class="variable-quote">'</code><code class="variable-string">{https://adwords.google.com/api/adwords/cm/%s}SoapHeader</code><code class="variable-quote">'</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -493,7 +532,7 @@ Raises:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Apr  6 15:53:57 2018
+    Generated by Epydoc 3.0.1 on Tue May 15 14:54:13 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

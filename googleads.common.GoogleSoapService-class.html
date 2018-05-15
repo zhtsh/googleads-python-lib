@@ -68,11 +68,43 @@ object --+
         <strong class="uidshort">GoogleSoapService</strong>
 </pre>
 
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="googleads.common.SudsServiceProxy-class.html">SudsServiceProxy</a></li><li>, <a href="googleads.common.ZeepServiceProxy-class.html">ZeepServiceProxy</a></li>  </ul>
+</dd></dl>
+
 <hr />
 <p>Base class for a SOAP service representation.</p>
   <p>A subclass should be created for each underlying SOAP 
   implementation.</p>
 
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="abc.ABCMeta-class.html" class="summary-name">__metaclass__</a><br />
+      Metaclass for defining Abstract Base Classes (ABCs).
+    </td>
+  </tr>
+</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -240,7 +272,38 @@ object --+
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__metaclass__"></a><span class="summary-name">__metaclass__</span> = <code title="abc.ABCMeta">abc.ABCMeta</code>
+        <a href="googleads.common.GoogleSoapService-class.html#__abstractmethods__" class="summary-name">__abstractmethods__</a> = <code title="frozenset(['CreateSoapElementForType',
+           'GetRequestXML',
+           '_CreateMethod',
+           '_WsdlHasMethod'])"><code class="variable-group">frozenset([</code><code class="variable-quote">'</code><code class="variable-string">CreateSoapElementForType</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_cache"></a><span class="summary-name">_abc_cache</span> = <code title="&lt;_weakrefset.WeakSet object at 0x7f40c325a710&gt;">&lt;_weakrefset.WeakSet object at 0x7f40c325a710&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.common.GoogleSoapService-class.html#_abc_negative_cache" class="summary-name" onclick="show_private();">_abc_negative_cache</a> = <code title="&lt;_weakrefset.WeakSet object at 0x7f40c325a0d0&gt;">&lt;_weakrefset.WeakSet object at 0x7f40c32<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_negative_cache_version"></a><span class="summary-name">_abc_negative_cache_version</span> = <code title="172">172</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_registry"></a><span class="summary-name">_abc_registry</span> = <code title="&lt;_weakrefset.WeakSet object at 0x7f40c325a190&gt;">&lt;_weakrefset.WeakSet object at 0x7f40c325a190&gt;</code>
     </td>
   </tr>
 </table>
@@ -456,6 +519,64 @@ Returns:
 </td></tr></table>
 </div>
 <br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__abstractmethods__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">__abstractmethods__</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">frozenset([</code><code class="variable-quote">'</code><code class="variable-string">CreateSoapElementForType</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+           <code class="variable-quote">'</code><code class="variable-string">GetRequestXML</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+           <code class="variable-quote">'</code><code class="variable-string">_CreateMethod</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+           <code class="variable-quote">'</code><code class="variable-string">_WsdlHasMethod</code><code class="variable-quote">'</code><code class="variable-group">])</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_abc_negative_cache"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_abc_negative_cache</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;_weakrefset.WeakSet object at 0x7f40c325a0d0&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -487,7 +608,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Apr  6 15:53:57 2018
+    Generated by Epydoc 3.0.1 on Tue May 15 14:54:13 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
