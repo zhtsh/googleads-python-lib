@@ -269,6 +269,45 @@ Attributes:
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="googleads.common.ZeepServiceProxy-class.html#_DiscoverElementTypeFromLocalname" class="summary-sig-name" onclick="show_private();">_DiscoverElementTypeFromLocalname</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">type_localname</span>)</span><br />
+      Searches all namespaces for a type by name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#ZeepServiceProxy._DiscoverElementTypeFromLocalname">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.common.ZeepServiceProxy-class.html#_CreateComplexTypeFromData" class="summary-sig-name" onclick="show_private();">_CreateComplexTypeFromData</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">elem_type</span>,
+        <span class="summary-sig-arg">type_is_override</span>,
+        <span class="summary-sig-arg">data</span>,
+        <span class="summary-sig-arg">set_type_attrs</span>)</span><br />
+      Initialize a SOAP element with specific data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.common-pysrc.html#ZeepServiceProxy._CreateComplexTypeFromData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a name="_GetZeepFormattedSOAPHeaders"></a><span class="summary-sig-name">_GetZeepFormattedSOAPHeaders</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns a dict with SOAP headers in the right format for zeep.</td>
           <td align="right" valign="top">
@@ -689,6 +728,75 @@ Returns:
   </dl>
 </td></tr></table>
 </div>
+<a name="_DiscoverElementTypeFromLocalname"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_DiscoverElementTypeFromLocalname</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">type_localname</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#ZeepServiceProxy._DiscoverElementTypeFromLocalname">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Searches all namespaces for a type by name.
+
+Args:
+  type_localname: The name of the type.
+
+Returns:
+  A fully qualified SOAP type with the specified name.
+
+Raises:
+  A zeep.exceptions.LookupError if the type cannot be found in any
+    namespace.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_CreateComplexTypeFromData"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_CreateComplexTypeFromData</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">elem_type</span>,
+        <span class="sig-arg">type_is_override</span>,
+        <span class="sig-arg">data</span>,
+        <span class="sig-arg">set_type_attrs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.common-pysrc.html#ZeepServiceProxy._CreateComplexTypeFromData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Initialize a SOAP element with specific data.
+
+Args:
+  elem_type: The type of the element to create.
+  type_is_override: A boolean specifying if the type is being overridden.
+  data: The data to hydrate the type with.
+  set_type_attrs: A boolean indicating whether or not attributes that end
+    in .Type should be set. This is only necessary for batch job service.
+
+Returns:
+  An fully initialized SOAP element.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="_CreateMethod"></a>
 <div class="private">
 <table class="details" border="1" cellpadding="3"
@@ -753,7 +861,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue May 15 14:54:13 2018
+    Generated by Epydoc 3.0.1 on Thu Jun  7 11:24:01 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
