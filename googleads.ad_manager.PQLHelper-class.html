@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.dfp.FilterStatement</title>
+  <title>googleads.ad_manager.PQLHelper</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,8 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.dfp-module.html">Module&nbsp;dfp</a> ::
-        Class&nbsp;FilterStatement
+        <a href="googleads.ad_manager-module.html">Module&nbsp;ad_manager</a> ::
+        Class&nbsp;PQLHelper
       </span>
     </td>
     <td>
@@ -54,25 +54,22 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.dfp.FilterStatement-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.ad_manager.PQLHelper-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class FilterStatement</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.dfp-pysrc.html#FilterStatement">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class PQLHelper</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.ad_manager-pysrc.html#PQLHelper">source&nbsp;code</a></span></p>
 <pre class="base-tree">
 object --+
          |
-        <strong class="uidshort">FilterStatement</strong>
+        <strong class="uidshort">PQLHelper</strong>
 </pre>
 
 <hr />
-<p>A statement object for PQL and get*ByStatement queries.</p>
-  <p>The FilterStatement object allows for user control of limit/offset. It
-  automatically limits queries to the suggested page limit if not 
-  explicitly set.</p>
+<p>Utility class for PQL.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -91,44 +88,6 @@ object --+
     </table>
   </td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.FilterStatement-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">where_clause</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">values</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">limit</span>=<span class="summary-sig-default">SUGGESTED_PAGE_LIMIT</span>,
-        <span class="summary-sig-arg">offset</span>=<span class="summary-sig-default">0</span>)</span><br />
-      x.__init__(...) initializes x; see help(type(x)) for signature</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#FilterStatement.__init__">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="ToStatement"></a><span class="summary-sig-name">ToStatement</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns this statement object in the format DFP requires.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#FilterStatement.ToStatement">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -136,6 +95,7 @@ object --+
       <code>__format__</code>,
       <code>__getattribute__</code>,
       <code>__hash__</code>,
+      <code>__init__</code>,
       <code>__new__</code>,
       <code>__reduce__</code>,
       <code>__reduce_ex__</code>,
@@ -145,6 +105,60 @@ object --+
       <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.ad_manager.PQLHelper-class.html#GetQueryValuesFromDict" class="summary-sig-name">GetQueryValuesFromDict</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">d</span>)</span><br />
+      Converts a dict of python types into a list of PQL types.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#PQLHelper.GetQueryValuesFromDict">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="googleads.ad_manager.PQLHelper-class.html#GetValueRepresentation" class="summary-sig-name">GetValueRepresentation</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Converts a single python value to its PQL representation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#PQLHelper.GetValueRepresentation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
 </table>
@@ -191,31 +205,63 @@ object --+
   </td>
 </tr>
 </table>
-<a name="__init__"></a>
+<a name="GetQueryValuesFromDict"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">where_clause</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">values</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">limit</span>=<span class="sig-default">SUGGESTED_PAGE_LIMIT</span>,
-        <span class="sig-arg">offset</span>=<span class="sig-default">0</span>)</span>
-    <br /><em class="fname">(Constructor)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetQueryValuesFromDict</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">d</span>)</span>
+    <br /><em class="fname">Class Method</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#FilterStatement.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#PQLHelper.GetQueryValuesFromDict">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <pre class="literalblock">
+Converts a dict of python types into a list of PQL types.
+
+Args:
+  d: A dictionary of variable names to python types.
+
+Returns:
+  A list of variables formatted for PQL statements.
+
+</pre>
   <dl class="fields">
-    <dt>Overrides:
-        object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
-    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetValueRepresentation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetValueRepresentation</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">value</span>)</span>
+    <br /><em class="fname">Class Method</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#PQLHelper.GetValueRepresentation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Converts a single python value to its PQL representation.
+
+Args:
+  value: A python value.
+
+Returns:
+  The value formatted for PQL statements.
+
+</pre>
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -251,7 +297,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jul 24 15:39:51 2018
+    Generated by Epydoc 3.0.1 on Tue Aug 21 15:52:09 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

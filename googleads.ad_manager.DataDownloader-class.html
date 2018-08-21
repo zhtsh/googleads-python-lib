@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.dfp.DataDownloader</title>
+  <title>googleads.ad_manager.DataDownloader</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,7 +43,7 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.dfp-module.html">Module&nbsp;dfp</a> ::
+        <a href="googleads.ad_manager-module.html">Module&nbsp;ad_manager</a> ::
         Class&nbsp;DataDownloader
       </span>
     </td>
@@ -54,14 +54,14 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.dfp.DataDownloader-class.html"
+            >]&nbsp;|&nbsp;<a href="googleads.ad_manager.DataDownloader-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class DataDownloader</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader">source&nbsp;code</a></span></p>
+<h1 class="epydoc">Class DataDownloader</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader">source&nbsp;code</a></span></p>
 <pre class="base-tree">
 object --+
          |
@@ -95,13 +95,13 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.DataDownloader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">dfp_client</span>,
+          <td><span class="summary-sig"><a href="googleads.ad_manager.DataDownloader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ad_manager_client</span>,
         <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initializes a DataDownloader.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.__init__">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.__init__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -118,7 +118,7 @@ object --+
           <td><span class="summary-sig"><a name="_GetReportService"></a><span class="summary-sig-name">_GetReportService</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Lazily initializes a report service client.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader._GetReportService">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader._GetReportService">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -135,7 +135,7 @@ object --+
           <td><span class="summary-sig"><a name="_GetPqlService"></a><span class="summary-sig-name">_GetPqlService</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Lazily initializes a PQL service client.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader._GetPqlService">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader._GetPqlService">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -149,11 +149,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.DataDownloader-class.html#WaitForReport" class="summary-sig-name">WaitForReport</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.ad_manager.DataDownloader-class.html#WaitForReport" class="summary-sig-name">WaitForReport</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">report_job</span>)</span><br />
       Runs a report, then waits (blocks) for the report to finish generating.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.WaitForReport">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.WaitForReport">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -167,7 +167,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.DataDownloader-class.html#DownloadReportToFile" class="summary-sig-name">DownloadReportToFile</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.ad_manager.DataDownloader-class.html#DownloadReportToFile" class="summary-sig-name">DownloadReportToFile</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">report_job_id</span>,
         <span class="summary-sig-arg">export_format</span>,
         <span class="summary-sig-arg">outfile</span>,
@@ -176,7 +176,7 @@ object --+
         <span class="summary-sig-arg">use_gzip_compression</span>=<span class="summary-sig-default">True</span>)</span><br />
       Downloads report data and writes it to a file.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.DownloadReportToFile">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.DownloadReportToFile">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -190,12 +190,12 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.DataDownloader-class.html#DownloadPqlResultToList" class="summary-sig-name">DownloadPqlResultToList</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.ad_manager.DataDownloader-class.html#DownloadPqlResultToList" class="summary-sig-name">DownloadPqlResultToList</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">pql_query</span>,
         <span class="summary-sig-arg">values</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads the results of a PQL query to a list.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.DownloadPqlResultToList">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.DownloadPqlResultToList">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -209,13 +209,13 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.DataDownloader-class.html#DownloadPqlResultToCsv" class="summary-sig-name">DownloadPqlResultToCsv</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.ad_manager.DataDownloader-class.html#DownloadPqlResultToCsv" class="summary-sig-name">DownloadPqlResultToCsv</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">pql_query</span>,
         <span class="summary-sig-arg">file_handle</span>,
         <span class="summary-sig-arg">values</span>=<span class="summary-sig-default">None</span>)</span><br />
       Downloads the results of a PQL query to CSV.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.DownloadPqlResultToCsv">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.DownloadPqlResultToCsv">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -229,11 +229,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.DataDownloader-class.html#_ConvertValueForCsv" class="summary-sig-name" onclick="show_private();">_ConvertValueForCsv</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.ad_manager.DataDownloader-class.html#_ConvertValueForCsv" class="summary-sig-name" onclick="show_private();">_ConvertValueForCsv</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">pql_value</span>)</span><br />
       Sanitizes a field value from a Value object to a CSV suitable format.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader._ConvertValueForCsv">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader._ConvertValueForCsv">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -247,13 +247,13 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.DataDownloader-class.html#_PageThroughPqlSet" class="summary-sig-name" onclick="show_private();">_PageThroughPqlSet</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.ad_manager.DataDownloader-class.html#_PageThroughPqlSet" class="summary-sig-name" onclick="show_private();">_PageThroughPqlSet</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">pql_query</span>,
         <span class="summary-sig-arg">output_function</span>,
         <span class="summary-sig-arg">values</span>)</span><br />
       Pages through a pql_query and performs an action (output_function).</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader._PageThroughPqlSet">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader._PageThroughPqlSet">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -267,11 +267,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.dfp.DataDownloader-class.html#_ConvertDateTimeToOffset" class="summary-sig-name" onclick="show_private();">_ConvertDateTimeToOffset</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="googleads.ad_manager.DataDownloader-class.html#_ConvertDateTimeToOffset" class="summary-sig-name" onclick="show_private();">_ConvertDateTimeToOffset</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">date_time_value</span>)</span><br />
       Converts the PQL formatted response for a dateTime object.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader._ConvertDateTimeToOffset">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader._ConvertDateTimeToOffset">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -349,13 +349,13 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">dfp_client</span>,
+        <span class="sig-arg">ad_manager_client</span>,
         <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
         <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.__init__">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -363,13 +363,14 @@ object --+
 Initializes a DataDownloader.
 
 Args:
-  dfp_client: The DfpClient whose attributes will be used to authorize your
-      report download and PQL query requests.
+  ad_manager_client: The AdManagerClient whose attributes will be used to
+      authorize your report download and PQL query requests.
   [optional]
-  version: A string identifying the DFP version to connect to. This defaults
-      to what is currently the latest version. This will be updated in
-      future releases to point to what is then the latest version.
-  server: A string identifying the webserver hosting the DFP API.
+  version: A string identifying the Ad Manager version to connect to.
+      This defaults to what is currently the latest version. This will be
+      updated in future releases to point to what is then the
+      latest version.
+  server: A string identifying the webserver hosting the Ad Manager API.
 
 </pre>
   <dl class="fields">
@@ -390,7 +391,7 @@ Args:
         <span class="sig-arg">report_job</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.WaitForReport">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.WaitForReport">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -405,7 +406,7 @@ Returns:
   The completed report job's ID as a string.
 
 Raises:
-  A DfpReportError if the report job fails to complete.
+  An AdManagerReportError if the report job fails to complete.
 
 </pre>
   <dl class="fields">
@@ -428,7 +429,7 @@ Raises:
         <span class="sig-arg">use_gzip_compression</span>=<span class="sig-default">True</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.DownloadReportToFile">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.DownloadReportToFile">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -464,7 +465,7 @@ Args:
         <span class="sig-arg">values</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.DownloadPqlResultToList">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.DownloadPqlResultToList">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -500,7 +501,7 @@ Returns:
         <span class="sig-arg">values</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader.DownloadPqlResultToCsv">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader.DownloadPqlResultToCsv">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -531,7 +532,7 @@ Args:
         <span class="sig-arg">pql_value</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader._ConvertValueForCsv">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader._ConvertValueForCsv">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -563,7 +564,7 @@ Returns:
         <span class="sig-arg">values</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader._PageThroughPqlSet">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader._PageThroughPqlSet">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -594,7 +595,7 @@ Args:
         <span class="sig-arg">date_time_value</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.dfp-pysrc.html#DataDownloader._ConvertDateTimeToOffset">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.ad_manager-pysrc.html#DataDownloader._ConvertDateTimeToOffset">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -647,7 +648,7 @@ Returns:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jul 24 15:39:51 2018
+    Generated by Epydoc 3.0.1 on Tue Aug 21 15:52:09 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
