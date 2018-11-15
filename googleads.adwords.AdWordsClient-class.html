@@ -118,8 +118,8 @@ Attributes:
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">developer_token</span>,
         <span class="summary-sig-arg">oauth2_client</span>,
-        <span class="summary-sig-arg">user_agent</span>=<span class="summary-sig-default">_DEFAULT_USER_AGENT</span>,
-        <span class="summary-sig-arg">soap_impl</span>=<span class="summary-sig-default">'zeep'</span>,
+        <span class="summary-sig-arg">user_agent</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">unknown</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">soap_impl</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">zeep</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">timeout</span>=<span class="summary-sig-default">3600</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Initializes an AdWordsClient.</td>
@@ -159,7 +159,7 @@ Attributes:
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetBatchJobHelper" class="summary-sig-name">GetBatchJobHelper</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201809</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Returns a BatchJobHelper to work with the BatchJobService.</td>
           <td align="right" valign="top">
@@ -178,7 +178,7 @@ Attributes:
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="googleads.adwords.AdWordsClient-class.html#GetReportDownloader" class="summary-sig-name">GetReportDownloader</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">v201809</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">server</span>=<span class="summary-sig-default">None</span>)</span><br />
       Creates a downloader for AdWords reports.</td>
           <td align="right" valign="top">
@@ -302,29 +302,33 @@ Attributes:
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_YAML_KEY"></a><span class="summary-name">_YAML_KEY</span> = <code title="'adwords'">'adwords'</code>
+        <a name="_YAML_KEY"></a><span class="summary-name">_YAML_KEY</span> = <code title="'adwords'"><code class="variable-quote">'</code><code class="variable-string">adwords</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_REQUIRED_INIT_VALUES"></a><span class="summary-name">_REQUIRED_INIT_VALUES</span> = <code title="'developer_token',">'developer_token',</code>
+        <a name="_REQUIRED_INIT_VALUES"></a><span class="summary-name">_REQUIRED_INIT_VALUES</span> = <code title="('developer_token')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">developer_token</code><code class="variable-quote">'</code><code class="variable-group">)</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="googleads.adwords.AdWordsClient-class.html#_OPTIONAL_INIT_VALUES" class="summary-name" onclick="show_private();">_OPTIONAL_INIT_VALUES</a> = <code title="'validate_only', 'partial_failure', 'client_customer_id', 'user_agent'\
-, 'report_downloader_headers', googleads.common.ENABLE_COMPRESSION_KEY">'validate_only', 'partial_failure', 'c<code class="variable-ellipsis">...</code></code>
+        <a href="googleads.adwords.AdWordsClient-class.html#_OPTIONAL_INIT_VALUES" class="summary-name" onclick="show_private();">_OPTIONAL_INIT_VALUES</a> = <code title="('validate_only',
+ 'partial_failure',
+ 'client_customer_id',
+ 'user_agent',
+ 'report_downloader_headers',
+ 'enable_compression')"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">validate_only</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">partial_failure</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="_SOAP_SERVICE_FORMAT"></a><span class="summary-name">_SOAP_SERVICE_FORMAT</span> = <code title="'%s/api/adwords/%s/%s/%s?wsdl'">'%s/api/adwords/%s/%s/%s?wsdl'</code>
+        <a name="_SOAP_SERVICE_FORMAT"></a><span class="summary-name">_SOAP_SERVICE_FORMAT</span> = <code title="'%s/api/adwords/%s/%s/%s?wsdl'"><code class="variable-quote">'</code><code class="variable-string">%s/api/adwords/%s/%s/%s?wsdl</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -452,8 +456,8 @@ Raises:
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">developer_token</span>,
         <span class="sig-arg">oauth2_client</span>,
-        <span class="sig-arg">user_agent</span>=<span class="sig-default">_DEFAULT_USER_AGENT</span>,
-        <span class="sig-arg">soap_impl</span>=<span class="sig-default">'zeep'</span>,
+        <span class="sig-arg">user_agent</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">unknown</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">soap_impl</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">zeep</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">timeout</span>=<span class="sig-default">3600</span>,
         <span class="sig-arg">**kwargs</span>)</span>
     <br /><em class="fname">(Constructor)</em>
@@ -565,7 +569,7 @@ Raises:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetBatchJobHelper</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201809</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -602,7 +606,7 @@ Returns:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">GetReportDownloader</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">version</span>=<span class="sig-default">sorted(_SERVICE_MAP.keys()) [-1]</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">v201809</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">server</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -688,8 +692,12 @@ Args:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-'validate_only', 'partial_failure', 'client_customer_id', 'user_agent'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-, 'report_downloader_headers', googleads.common.ENABLE_COMPRESSION_KEY
+<code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">validate_only</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">partial_failure</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">client_customer_id</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">user_agent</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">report_downloader_headers</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">enable_compression</code><code class="variable-quote">'</code><code class="variable-group">)</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -727,7 +735,7 @@ Args:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Sep 21 16:31:14 2018
+    Generated by Epydoc 3.0.1 on Thu Nov 15 15:49:05 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

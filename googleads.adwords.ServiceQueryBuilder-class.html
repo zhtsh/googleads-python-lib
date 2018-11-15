@@ -73,6 +73,32 @@
 <hr />
 <p>A query builder for building AWQL queries for services.</p>
 
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.ServiceQueryBuilder._ORDER_BY_CLAUSE-class.html" class="summary-name" onclick="show_private();">_ORDER_BY_CLAUSE</a><br />
+      OrderByClause(field, direction)
+    </td>
+  </tr>
+</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -114,8 +140,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#Select" class="summary-sig-name">Select</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">*fields</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#Select" class="summary-sig-name">Select</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Sets a provided list of fields as selected fields for the query.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.Select">source&nbsp;code</a></span>
@@ -132,9 +158,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#OrderBy" class="summary-sig-name">OrderBy</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">field</span>,
-        <span class="summary-sig-arg">ascending</span>=<span class="summary-sig-default">True</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#OrderBy" class="summary-sig-name">OrderBy</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Adds the provided field to the order-by list with the provided direction.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.OrderBy">source&nbsp;code</a></span>
@@ -151,9 +176,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#Limit" class="summary-sig-name">Limit</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">start_index</span>,
-        <span class="summary-sig-arg">page_size</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#Limit" class="summary-sig-name">Limit</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Sets the LIMIT clause using the provided start index and page size.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.Limit">source&nbsp;code</a></span>
@@ -170,7 +194,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#Build" class="summary-sig-name">Build</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#Build" class="summary-sig-name">Build</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Builds a ServiceQuery object containing AWQL queries.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.Build">source&nbsp;code</a></span>
@@ -187,29 +212,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#select" class="summary-sig-name">select</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">select</span>)</span><br />
-      Sets the select set of the query to the copy of provided value.</td>
+          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#Where" class="summary-sig-name">Where</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Creates a WHERE builder using a provided field.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.select">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.adwords.ServiceQueryBuilder-class.html#order_by_list" class="summary-sig-name">order_by_list</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">order_by_list</span>)</span><br />
-      Sets the order-by list of the query to the copy of provided value.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.order_by_list">source&nbsp;code</a></span>
+            <span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.Where">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -219,9 +226,6 @@
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.adwords._QueryBuilder-class.html" onclick="show_private();">_QueryBuilder</a></code></b>:
-      <code><a href="googleads.adwords._QueryBuilder-class.html#Where">Where</a></code>
-      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -236,31 +240,6 @@
       <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
-    </td>
-  </tr>
-</table>
-<!-- ==================== CLASS VARIABLES ==================== -->
-<a name="section-ClassVariables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="googleads.adwords.ServiceQueryBuilder-class.html#_ORDER_BY_CLAUSE" class="summary-name" onclick="show_private();">_ORDER_BY_CLAUSE</a> = <code title="namedtuple('OrderByClause', ['field', 'direction'])">namedtuple('OrderByClause', ['field', 'dire<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 </table>
@@ -281,6 +260,22 @@
     </table>
   </td>
 </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.ServiceQueryBuilder-class.html#select" class="summary-name">select</a><br />
+      Gets the select set of the query.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="googleads.adwords.ServiceQueryBuilder-class.html#order_by_list" class="summary-name">order_by_list</a><br />
+      Gets the order-by list of the query.
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
@@ -357,8 +352,8 @@ Raises:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">Select</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">*fields</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Select</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.Select">source&nbsp;code</a></span>&nbsp;
@@ -392,9 +387,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">OrderBy</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">field</span>,
-        <span class="sig-arg">ascending</span>=<span class="sig-default">True</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">OrderBy</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.OrderBy">source&nbsp;code</a></span>&nbsp;
@@ -424,9 +418,8 @@ Returns:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">Limit</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">start_index</span>,
-        <span class="sig-arg">page_size</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Limit</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.Limit">source&nbsp;code</a></span>&nbsp;
@@ -459,7 +452,8 @@ Raises:
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">Build</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Build</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.Build">source&nbsp;code</a></span>&nbsp;
@@ -480,27 +474,74 @@ Raises:
   </dl>
 </td></tr></table>
 </div>
-<a name="select"></a>
+<a name="Where"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">select</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">select</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Where</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.select">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.Where">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Sets the select set of the query to the copy of provided value.</p>
+  <pre class="literalblock">
+Creates a WHERE builder using a provided field.
+
+Args:
+  field: the field to be added as an argument in the WHERE clause.
+
+Returns:
+  The created WHERE builder.
+
+</pre>
   <dl class="fields">
-    <dt>Decorators:</dt>
-    <dd><ul class="nomargin-top">
-        <li><code>@select.setter</code></li>
-    </ul></dd>
+    <dt>Overrides:
+        <a href="googleads.adwords._QueryBuilder-class.html#Where">_QueryBuilder.Where</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="select"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">select</h3>
+  <p>Gets the select set of the query.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.select(<span class="summary-sig-arg">self</span>)</span>
+        - Gets the select set of the query.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.select(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">select</span>)</span>
+        - Sets the select set of the query to the copy of provided value.
+    </dd>
   </dl>
 </td></tr></table>
 </div>
@@ -509,59 +550,18 @@ Raises:
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">order_by_list</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">order_by_list</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.adwords-pysrc.html#ServiceQueryBuilder.order_by_list">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Sets the order-by list of the query to the copy of provided value.</p>
+  <h3 class="epydoc">order_by_list</h3>
+  <p>Gets the order-by list of the query.</p>
   <dl class="fields">
-    <dt>Decorators:</dt>
-    <dd><ul class="nomargin-top">
-        <li><code>@order_by_list.setter</code></li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
-<a name="section-ClassVariableDetails"></a>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variable Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariableDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="_ORDER_BY_CLAUSE"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">_ORDER_BY_CLAUSE</h3>
-  
-  <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-namedtuple('OrderByClause', ['field', 'direction'])
-</pre></td></tr></table>
-</dd>
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.order_by_list(<span class="summary-sig-arg">self</span>)</span>
+        - Gets the order-by list of the query.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.order_by_list(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">order_by_list</span>)</span>
+        - Sets the order-by list of the query to the copy of provided value.
+    </dd>
   </dl>
 </td></tr></table>
 </div>
@@ -597,7 +597,7 @@ namedtuple('OrderByClause', ['field', 'direction'])
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Sep 21 16:31:14 2018
+    Generated by Epydoc 3.0.1 on Thu Nov 15 15:49:05 2018
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>googleads.oauth2.GoogleRefreshTokenClient</title>
+  <title>abc.ABCMeta</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -42,9 +42,9 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        <a href="googleads-module.html">Package&nbsp;googleads</a> ::
-        <a href="googleads.oauth2-module.html">Module&nbsp;oauth2</a> ::
-        Class&nbsp;GoogleRefreshTokenClient
+        abc ::
+        ABCMeta ::
+        Class&nbsp;ABCMeta
       </span>
     </td>
     <td>
@@ -54,37 +54,32 @@
     onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="googleads.oauth2.GoogleRefreshTokenClient-class.html"
+            >]&nbsp;|&nbsp;<a href="abc.ABCMeta-class.html"
             target="_top">no&nbsp;frames</a>]</span></td></tr>
       </table>
     </td>
   </tr>
 </table>
-<!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class GoogleRefreshTokenClient</h1><p class="nomargin-top"><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient">source&nbsp;code</a></span></p>
+<!-- ==================== TYPE DESCRIPTION ==================== -->
+<h1 class="epydoc">Type ABCMeta</h1><p class="nomargin-top"></p>
 <pre class="base-tree">
-               object --+        
-                        |        
-       <a href="googleads.oauth2.GoogleOAuth2Client-class.html">GoogleOAuth2Client</a> --+    
-                            |    
-<a href="googleads.oauth2.GoogleRefreshableOAuth2Client-class.html">GoogleRefreshableOAuth2Client</a> --+
-                                |
-                               <strong class="uidshort">GoogleRefreshTokenClient</strong>
+object --+    
+         |    
+      type --+
+             |
+            <strong class="uidshort">ABCMeta</strong>
 </pre>
 
 <hr />
-<pre class="literalblock">
-A simple client for using OAuth2 for Google APIs with a refresh token.
-
-This class is not capable of supporting any flows other than taking an
-existing, active refresh token and generating credentials from it. It does not
-matter which of Google's OAuth2 flows you used to generate the refresh
-token (installed application, web flow, etc.).
-
-Attributes:
-  proxy_info: A ProxyInfo instance used for refresh requests.
-
-</pre>
+<p>Metaclass for defining Abstract Base Classes (ABCs).</p>
+  <p>Use this metaclass to create an ABC.  An ABC can be subclassed 
+  directly, and then acts as a mix-in class.  You can also register 
+  unrelated concrete classes (even built-in classes) and unrelated ABCs as 
+  'virtual subclasses' -- these and their descendants will be considered 
+  subclasses of the registering ABC by the built-in issubclass() function, 
+  but the registering ABC won't show up in their MRO (Method Resolution 
+  Order) nor will method implementations defined by the registering ABC be 
+  callable (not even via super()).</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -105,18 +100,51 @@ Attributes:
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="abc.ABCMeta-class.html#__instancecheck__" class="summary-sig-name">__instancecheck__</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">instance</span>)</span><br />
+      Override for isinstance(instance, cls).</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="abc.ABCMeta-class.html#__subclasscheck__" class="summary-sig-name">__subclasscheck__</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">subclass</span>)</span><br />
+      Override for issubclass(subclass, cls).</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.oauth2.GoogleRefreshTokenClient-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">client_id</span>,
-        <span class="summary-sig-arg">client_secret</span>,
-        <span class="summary-sig-arg">refresh_token</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Initializes a GoogleRefreshTokenClient.</td>
+          <td><span class="summary-sig"><a name="_dump_registry"></a><span class="summary-sig-name">_dump_registry</span>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">file</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Debug helper to print the ABC registry.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.__init__">source&nbsp;code</a></span>
+            
             
           </td>
         </tr>
@@ -130,27 +158,11 @@ Attributes:
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="googleads.oauth2.GoogleRefreshTokenClient-class.html#CreateHttpHeader" class="summary-sig-name">CreateHttpHeader</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Creates an OAuth2 HTTP header.</td>
+          <td><span class="summary-sig"><a name="register"></a><span class="summary-sig-name">register</span>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">subclass</span>)</span><br />
+      Register a virtual subclass of an ABC.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.CreateHttpHeader">source&nbsp;code</a></span>
             
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="googleads.oauth2.GoogleRefreshTokenClient-class.html#Refresh" class="summary-sig-name">Refresh</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Uses the Refresh Token to retrieve and set a new Access Token.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.Refresh">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -160,20 +172,68 @@ Attributes:
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+    <p class="indent-wrapped-lines"><b>Inherited from <code>type</code></b>:
+      <code>__call__</code>,
       <code>__delattr__</code>,
-      <code>__format__</code>,
+      <code>__eq__</code>,
+      <code>__ge__</code>,
       <code>__getattribute__</code>,
+      <code>__gt__</code>,
       <code>__hash__</code>,
-      <code>__new__</code>,
-      <code>__reduce__</code>,
-      <code>__reduce_ex__</code>,
+      <code>__init__</code>,
+      <code>__le__</code>,
+      <code>__lt__</code>,
+      <code>__ne__</code>,
       <code>__repr__</code>,
       <code>__setattr__</code>,
+      <code>__subclasses__</code>,
+      <code>mro</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__format__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
       <code>__sizeof__</code>,
       <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== STATIC METHODS ==================== -->
+<a name="section-StaticMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Static Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-StaticMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">a new object with type S, a subtype of T</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="abc.ABCMeta-class.html#__new__" class="summary-sig-name">__new__</a>(<span class="summary-sig-arg">mcls</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">bases</span>,
+        <span class="summary-sig-arg">namespace</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
     </td>
   </tr>
 </table>
@@ -194,13 +254,11 @@ Attributes:
     </table>
   </td>
 </tr>
-  <tr>
-    <td colspan="2" class="summary">
-    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html">GoogleOAuth2Client</a></code></b> (private):
-      <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html#_GOOGLE_OAUTH2_ENDPOINT" onclick="show_private();">_GOOGLE_OAUTH2_ENDPOINT</a></code>,
-      <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html#_TOKEN_URL" onclick="show_private();">_TOKEN_URL</a></code>,
-      <code><a href="googleads.oauth2.GoogleOAuth2Client-class.html#_USER_AGENT" onclick="show_private();">_USER_AGENT</a></code>
-      </p></div>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_abc_invalidation_counter"></a><span class="summary-name">_abc_invalidation_counter</span> = <code title="28">28</code>
     </td>
   </tr>
 </table>
@@ -223,6 +281,18 @@ Attributes:
 </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>type</code></b>:
+      <code>__abstractmethods__</code>,
+      <code>__base__</code>,
+      <code>__bases__</code>,
+      <code>__basicsize__</code>,
+      <code>__dictoffset__</code>,
+      <code>__flags__</code>,
+      <code>__itemsize__</code>,
+      <code>__mro__</code>,
+      <code>__name__</code>,
+      <code>__weakrefoffset__</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__class__</code>
       </p>
@@ -247,109 +317,78 @@ Attributes:
   </td>
 </tr>
 </table>
-<a name="__init__"></a>
+<a name="__instancecheck__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">client_id</span>,
-        <span class="sig-arg">client_secret</span>,
-        <span class="sig-arg">refresh_token</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
-    <br /><em class="fname">(Constructor)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__instancecheck__</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">instance</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.__init__">source&nbsp;code</a></span>&nbsp;
+    >&nbsp;
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-Initializes a GoogleRefreshTokenClient.
-
-Args:
-  client_id: A string containing your client ID.
-  client_secret: A string containing your client secret.
-  refresh_token: A string containing your refresh token.
-  **kwargs: Keyword arguments.
-
-Keyword Arguments:
-  access_token: A string containing your access token.
-  token_expiry: A datetime instance indicating when the given access token
-  expires.
-  proxy_config: A googleads.common.ProxyConfig instance or None if a proxy
-    isn't being used.
-
-</pre>
+  <p>Override for isinstance(instance, cls).</p>
   <dl class="fields">
+    <dt>Returns: bool</dt>
     <dt>Overrides:
-        object.__init__
+        type.__instancecheck__
     </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="CreateHttpHeader"></a>
+<a name="__new__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">CreateHttpHeader</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__new__</span>(<span class="sig-arg">mcls</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">bases</span>,
+        <span class="sig-arg">namespace</span>)</span>
+    <br /><em class="fname">Static Method</em>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.CreateHttpHeader">source&nbsp;code</a></span>&nbsp;
+    >&nbsp;
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-Creates an OAuth2 HTTP header.
-
-The OAuth2 credentials will be refreshed as necessary. In the event that
-the credentials fail to refresh, a message is logged but no exception is
-raised.
-
-Returns:
-  A dictionary containing one entry: the OAuth2 Bearer header under the
-  'Authorization' key.
-
-Raises:
-  google.auth.exceptions.RefreshError: If the refresh fails.
-
-</pre>
+  
   <dl class="fields">
+    <dt>Returns: a new object with type S, a subtype of T</dt>
     <dt>Overrides:
-        <a href="googleads.oauth2.GoogleOAuth2Client-class.html#CreateHttpHeader">GoogleOAuth2Client.CreateHttpHeader</a>
+        object.__new__
+        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="Refresh"></a>
+<a name="__subclasscheck__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">Refresh</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__subclasscheck__</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">subclass</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="googleads.oauth2-pysrc.html#GoogleRefreshTokenClient.Refresh">source&nbsp;code</a></span>&nbsp;
+    >&nbsp;
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-Uses the Refresh Token to retrieve and set a new Access Token.
-
-Raises:
-  google.auth.exceptions.RefreshError: If the refresh fails.
-
-</pre>
+  <p>Override for issubclass(subclass, cls).</p>
   <dl class="fields">
+    <dt>Returns: bool</dt>
     <dt>Overrides:
-        <a href="googleads.oauth2.GoogleRefreshableOAuth2Client-class.html#Refresh">GoogleRefreshableOAuth2Client.Refresh</a>
+        type.__subclasscheck__
     </dt>
   </dl>
 </td></tr></table>
