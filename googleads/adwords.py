@@ -1730,6 +1730,9 @@ class ReportDownloader(object):
     if sys.version_info[0] == 3:
       post_body = bytes(post_body, 'utf8')
 
+    timeout = kwargs.get('timeout', None)
+    if 'timeout' in kwargs:
+      kwargs.pop('timeout')
     request = urllib2.Request(
         self._end_point, post_body,
         self._header_handler.GetReportDownloadHeaders(**kwargs))
@@ -1739,7 +1742,10 @@ class ReportDownloader(object):
                              self._SanitizeRequestHeaders(request.headers),
                              post_body)
 
-      response = self.url_opener.open(request)
+      if timeout is not None:
+        response = self.url_opener.open(request, timeout=timeout)
+      else:
+        response = self.url_opener.open(request)
 
       if _report_logger.isEnabledFor(logging.INFO):
         _report_logger.info(
